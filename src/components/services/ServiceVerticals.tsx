@@ -6,7 +6,7 @@ import GlassCard from '@/components/ui/GlassCard';
 import ScrollReveal from '@/components/ui/ScrollReveal';
 import SectionHeading from '@/components/ui/SectionHeading';
 import { SERVICE_VERTICALS } from '@/data/agencyData';
-import { Code, Cpu, ShoppingBag, Palette, CheckCircle2, Layers, CpuIcon, Sparkles } from 'lucide-react';
+import { Code, Cpu, ShoppingBag, Palette, CheckCircle2, Layers, CpuIcon, Sparkles, Smartphone, BookOpen } from 'lucide-react';
 import styles from './ServiceVerticals.module.css';
 
 export default function ServiceVerticals() {
@@ -20,6 +20,10 @@ export default function ServiceVerticals() {
         return <ShoppingBag size={30} />;
       case 'Palette':
         return <Palette size={30} />;
+      case 'Smartphone':
+        return <Smartphone size={30} />;
+      case 'BookOpen':
+        return <BookOpen size={30} />;
       default:
         return <Code size={30} />;
     }
@@ -32,10 +36,10 @@ export default function ServiceVerticals() {
           badge="In-Depth Capabilities"
           title={
             <>
-              4 Core Engineering & <span className="text-gradient">Design Verticals</span>
+              Comprehensive Engineering & <span className="text-gradient">Product Verticals</span>
             </>
           }
-          subtitle="Explore our specialized services built for scale, performance, and revenue impact."
+          subtitle="Explore our specialized services built for scale, mobile app stores, e-books, and revenue impact."
         />
 
         {SERVICE_VERTICALS.map((vertical, idx) => (

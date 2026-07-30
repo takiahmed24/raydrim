@@ -441,6 +441,58 @@ export const SERVICE_VERTICALS: ServiceVerticalDetail[] = [
       'Design Token Package',
     ],
   },
+  {
+    id: 'mobile-app-development',
+    slug: 'mobile-app-development',
+    title: 'Mobile & App Store Engineering',
+    subtitle: 'Native iOS (Swift), Android (Kotlin), React Native & App Store Publishing',
+    description:
+      'High-performance mobile applications built for Apple App Store and Google Play Store. We engineer cross-platform React Native apps, in-app purchase systems, and native mobile UI.',
+    iconName: 'Smartphone',
+    capabilities: [
+      'iOS & Android Cross-Platform Mobile Engineering',
+      'App Store Optimization (ASO) & Submission Management',
+      'In-App Purchases (IAP) & Subscription Monetization',
+      'Push Notifications, Offline Telemetry & Biometrics',
+      'React Native, Expo & Flutter Core Applications',
+    ],
+    techStack: ['React Native', 'Swift', 'Kotlin', 'Expo', 'RevenueCat', 'Firebase'],
+    metrics: [
+      { label: 'App Store Approval', value: '100% Rate' },
+      { label: 'Avg App Store Rating', value: '4.9 ⭐' },
+    ],
+    deliverables: [
+      'App Store & Play Store Binary Submissions',
+      'Full Native Source Code Repository',
+      'In-App Purchase Integration',
+      'Push Notification Architecture',
+    ],
+  },
+  {
+    id: 'digital-ebooks-products',
+    slug: 'digital-ebooks-products',
+    title: 'Digital E-Books & Developer Toolkits',
+    subtitle: 'Technical E-Books, Architecture Guides & Whop Storefront Passes',
+    description:
+      'Comprehensive software engineering e-books, system architecture blueprints, and instant digital passes. Published directly on Whop and our digital marketplace.',
+    iconName: 'BookOpen',
+    capabilities: [
+      'Production Next.js & Cloud Architecture E-Books',
+      'System Design Blueprints & Developer Checklists',
+      'Instant Pass & Whop Storefront Digital Downloads',
+      'Exclusive Technical Masterclasses & Guides',
+    ],
+    techStack: ['Whop API', 'Markdown / PDF', 'Stripe Digital', 'Next.js'],
+    metrics: [
+      { label: 'Digital Downloads', value: '10,000+' },
+      { label: 'Reader Rating', value: '4.95 / 5' },
+    ],
+    deliverables: [
+      'PDF & ePub E-Book Bundles',
+      'Source Code Companion Repositories',
+      'Instant Whop Membership Access',
+    ],
+  },
 ];
 
 // 5-Step Delivery Process
