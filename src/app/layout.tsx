@@ -17,12 +17,15 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'Raydrim — Premium Digital Agency & Software House',
+  title: 'Raydrim — Premium Digital Agency, Mobile Apps & Software House',
   description:
-    'Raydrim builds high-performance web applications, AI integrations, and luxury brand experiences for visionary global clients.',
+    'Raydrim builds high-performance web applications, iOS & Google Play Store mobile apps, technical e-books, and AI integrations for visionary global clients.',
   keywords: [
     'Digital Agency',
     'Next.js Development',
+    'Google Play Store App Development',
+    'iOS App Development',
+    'Technical E-Books & Software Guides',
     'AI Solutions',
     'Web Design',
     'Software House',

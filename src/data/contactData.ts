@@ -11,10 +11,12 @@ export const CONTACT_INFO = {
 
 export const SERVICE_OPTIONS = [
   'Web Applications',
+  'Mobile Apps (iOS & Google Play Store)',
   'E-Commerce Platforms',
   'Cloud Architecture',
   'Brand Identity & UI/UX',
   'AI Solutions & Automation',
+  'Digital E-Books & Technical Guides',
   'Custom Enterprise Consulting',
 ] as const;
 

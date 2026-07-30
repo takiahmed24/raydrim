@@ -471,24 +471,26 @@ export const SERVICE_VERTICALS: ServiceVerticalDetail[] = [
   {
     id: 'digital-ebooks-products',
     slug: 'digital-ebooks-products',
-    title: 'Digital E-Books & Developer Toolkits',
-    subtitle: 'Technical E-Books, Architecture Guides & Whop Storefront Passes',
+    title: 'Digital E-Books & Google Play Store Publishing',
+    subtitle: 'Technical E-Books, Google Play Books Publishing & Whop Storefront Passes',
     description:
-      'Comprehensive software engineering e-books, system architecture blueprints, and instant digital passes. Published directly on Whop and our digital marketplace.',
+      'Comprehensive software engineering e-books, technical guides, and app store publications. We write, format, and publish digital e-books to Google Play Books, Apple Books, Whop, and direct marketplaces.',
     iconName: 'BookOpen',
     capabilities: [
-      'Production Next.js & Cloud Architecture E-Books',
+      'Production Next.js, AI & Cloud Architecture E-Books',
+      'Google Play Books & Apple Books E-Book Publishing',
       'System Design Blueprints & Developer Checklists',
       'Instant Pass & Whop Storefront Digital Downloads',
       'Exclusive Technical Masterclasses & Guides',
     ],
-    techStack: ['Whop API', 'Markdown / PDF', 'Stripe Digital', 'Next.js'],
+    techStack: ['Google Play Books API', 'Whop API', 'Markdown / PDF / ePub', 'Stripe Digital', 'Next.js'],
     metrics: [
       { label: 'Digital Downloads', value: '10,000+' },
-      { label: 'Reader Rating', value: '4.95 / 5' },
+      { label: 'Reader Rating', value: '4.95 / 5 ⭐' },
     ],
     deliverables: [
-      'PDF & ePub E-Book Bundles',
+      'Google Play Books & Apple Books Listing',
+      'PDF, ePub & Kindle E-Book Master Files',
       'Source Code Companion Repositories',
       'Instant Whop Membership Access',
     ],
