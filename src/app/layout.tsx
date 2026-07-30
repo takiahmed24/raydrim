@@ -61,7 +61,7 @@ export default function RootLayout({
     telephone: '+8801873691022',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: '11618 Masterpara, Dhaka Uttor City Corporation',
+      streetAddress: 'Dhaka-1230',
       addressLocality: 'Dhaka',
       postalCode: '1230',
       addressCountry: 'BD',

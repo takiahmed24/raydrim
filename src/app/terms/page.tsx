@@ -237,7 +237,7 @@ export default function TermsOfServicePage() {
                 <p><strong>Business Owner:</strong> Muhammad Taki Ahmed</p>
                 <p><strong>Email:</strong> <a href="mailto:muhammadtakiahmed@icloud.com" className={styles.contactLink}>muhammadtakiahmed@icloud.com</a></p>
                 <p><strong>Phone / Mobile:</strong> +880 1873-691022</p>
-                <p><strong>Registered Address:</strong> 11618 Masterpara, Dhaka Uttor City Corporation, Dhaka 1230, Bangladesh</p>
+                <p><strong>Registered Address:</strong> Dhaka-1230, Bangladesh</p>
                 <p><strong>US Banking Address:</strong> JPMorgan Chase Bank N.A., 270 Park Avenue, New York, NY 10017, USA</p>
                 <p><strong>Domain:</strong> <a href="https://raydrim.com" className={styles.contactLink}>https://raydrim.com</a></p>
               </div>

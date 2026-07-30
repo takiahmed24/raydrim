@@ -127,7 +127,7 @@ export default function Footer() {
               </li>
               <li className={styles.contactItem}>
                 <MapPin size={18} className={styles.contactIcon} />
-                <span>11618 Masterpara, Dhaka 1230, Bangladesh</span>
+                <span>Dhaka-1230, Bangladesh</span>
               </li>
               <li className={styles.contactItem}>
                 <Phone size={18} className={styles.contactIcon} />

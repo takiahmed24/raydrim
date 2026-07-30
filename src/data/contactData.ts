@@ -2,7 +2,7 @@ export const CONTACT_INFO = {
   owner: 'Muhammad Taki Ahmed',
   email: 'muhammadtakiahmed@icloud.com',
   phone: '+880 1873-691022',
-  address: '11618 Masterpara, Dhaka Uttor City Corporation, Dhaka 1230, Bangladesh',
+  address: 'Dhaka-1230, Bangladesh',
   usBankAddress: 'JPMorgan Chase Bank N.A., 270 Park Avenue, New York, NY 10017, USA',
   hours: 'Mon – Fri: 8:00 AM – 6:00 PM EST / BST',
   responseTime: '< 2 Hours Guaranteed SLA',
