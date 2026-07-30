@@ -1,0 +1,101 @@
+.matrixSection {
+  margin-bottom: 90px;
+}
+
+.tableWrapper {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--glass-border);
+  background: var(--jungle-800);
+  backdrop-filter: var(--glass-blur);
+  box-shadow: var(--shadow-card);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  min-width: 800px;
+}
+
+.table th,
+.table td {
+  padding: 18px 24px;
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.table th {
+  background: rgba(10, 31, 20, 0.9);
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--cream-100);
+}
+
+.featureColHeader {
+  width: 40%;
+}
+
+.tierColHeader {
+  width: 20%;
+  text-align: center;
+}
+
+.popularHeader {
+  color: var(--jungle-400) !important;
+  background: rgba(34, 197, 94, 0.08) !important;
+}
+
+.categoryHeaderRow td {
+  background: rgba(22, 77, 51, 0.4);
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--jungle-300);
+  padding: 14px 24px;
+}
+
+.row:hover td {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.featureCell {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--cream-100);
+}
+
+.valCell {
+  text-align: center;
+  font-size: 0.92rem;
+  color: var(--cream-200);
+}
+
+.popularValCell {
+  background: rgba(34, 197, 94, 0.03);
+}
+
+.checkIcon {
+  color: var(--jungle-400);
+  margin: 0 auto;
+}
+
+.crossIcon {
+  color: rgba(255, 255, 255, 0.2);
+  margin: 0 auto;
+}
+
+.valText {
+  font-weight: 600;
+  color: var(--cream-100);
+}
+
+@media (max-width: 768px) {
+  .table th,
+  .table td {
+    padding: 14px 16px;
+  }
+}

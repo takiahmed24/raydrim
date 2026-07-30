@@ -1,0 +1,98 @@
+.section {
+  padding: 50px 0;
+  border-top: 1px solid rgba(74, 222, 128, 0.1);
+  border-bottom: 1px solid rgba(74, 222, 128, 0.1);
+  background: rgba(10, 31, 20, 0.4);
+  position: relative;
+  overflow: hidden;
+}
+
+.label {
+  text-align: center;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--cream-400);
+  margin-bottom: 30px;
+}
+
+.marqueeContainer {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  white-space: nowrap;
+  display: flex;
+}
+
+.marqueeContainer::before,
+.marqueeContainer::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.marqueeContainer::before {
+  left: 0;
+  background: linear-gradient(to right, var(--jungle-950), transparent);
+}
+
+.marqueeContainer::after {
+  right: 0;
+  background: linear-gradient(to left, var(--jungle-950), transparent);
+}
+
+.track {
+  display: flex;
+  gap: 60px;
+  animation: scrollMarquee 25s linear infinite;
+  min-width: 100%;
+}
+
+.logoItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 24px;
+  background: rgba(15, 46, 30, 0.5);
+  border: 1px solid rgba(74, 222, 128, 0.12);
+  border-radius: var(--radius-md);
+  transition: all 0.3s ease;
+}
+
+.logoItem:hover {
+  border-color: rgba(74, 222, 128, 0.35);
+  background: rgba(22, 77, 51, 0.6);
+  transform: translateY(-2px);
+}
+
+.symbol {
+  font-size: 1.3rem;
+}
+
+.logoName {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--cream-100);
+}
+
+.logoCategory {
+  font-size: 0.75rem;
+  color: var(--jungle-400);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+@keyframes scrollMarquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

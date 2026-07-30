@@ -1,0 +1,67 @@
+.section {
+  padding: 100px 0 120px;
+  position: relative;
+}
+
+.box {
+  background: linear-gradient(135deg, rgba(22, 77, 51, 0.85) 0%, rgba(10, 31, 20, 0.95) 100%);
+  border: 1px solid rgba(74, 222, 128, 0.35);
+  border-radius: var(--radius-xl);
+  padding: 70px 50px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.glowPattern {
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 800px;
+  height: 400px;
+  background: radial-gradient(ellipse at center, rgba(74, 222, 128, 0.25) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.badge {
+  display: inline-block;
+  margin-bottom: 16px;
+}
+
+.title {
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  font-weight: 800;
+  color: var(--cream-100);
+  line-height: 1.15;
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  font-size: 1.15rem;
+  color: var(--cream-200);
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 600px) {
+  .box {
+    padding: 40px 24px;
+  }
+}

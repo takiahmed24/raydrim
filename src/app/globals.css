@@ -1,0 +1,215 @@
+/* ==========================================================================
+   Raydrim Digital Agency - Jungle Luxe Design System
+   ========================================================================== */
+
+:root {
+  /* Jungle Palette */
+  --jungle-950: #05140d;
+  --jungle-900: #0a1f14;
+  --jungle-850: #0c2719;
+  --jungle-800: #0f2e1e;
+  --jungle-700: #164d33;
+  --jungle-600: #1a6b42;
+  --jungle-500: #22c55e;
+  --jungle-400: #4ade80;
+  --jungle-300: #86efac;
+  --jungle-200: #bbf7d0;
+  --jungle-100: #dcfce7;
+
+  /* Accent Colors */
+  --emerald-glow: #10b981;
+  --gold-500: #eab308;
+  --gold-400: #facc15;
+  --gold-300: #fef08a;
+
+  /* Cream & Neutral */
+  --cream-100: #fafdf7;
+  --cream-200: #e8f0e0;
+  --cream-300: #c5d4b8;
+  --cream-400: #9cb08e;
+  --text-primary: #fafdf7;
+  --text-muted: #9cb08e;
+  --text-dark: #0a1f14;
+
+  /* Glassmorphism */
+  --glass-bg: rgba(15, 46, 30, 0.65);
+  --glass-bg-hover: rgba(22, 77, 51, 0.75);
+  --glass-bg-subtle: rgba(10, 31, 20, 0.45);
+  --glass-border: rgba(74, 222, 128, 0.18);
+  --glass-border-hover: rgba(74, 222, 128, 0.4);
+  --glass-border-gold: rgba(234, 179, 8, 0.3);
+  --glass-blur: blur(16px);
+
+  /* Gradients */
+  --grad-jungle: linear-gradient(135deg, #22c55e 0%, #164d33 100%);
+  --grad-accent: linear-gradient(135deg, #4ade80 0%, #22c55e 50%, #164d33 100%);
+  --grad-gold: linear-gradient(135deg, #fef08a 0%, #eab308 100%);
+  --grad-text: linear-gradient(135deg, #ffffff 20%, #86efac 100%);
+  --grad-text-gold: linear-gradient(135deg, #ffffff 20%, #facc15 100%);
+  --grad-surface: linear-gradient(180deg, rgba(15, 46, 30, 0.8) 0%, rgba(10, 31, 20, 0.95) 100%);
+
+  /* Border Radii */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-full: 9999px;
+
+  /* Shadows & Glows */
+  --shadow-glow: 0 0 30px rgba(34, 197, 94, 0.2);
+  --shadow-glow-lg: 0 0 60px rgba(74, 222, 128, 0.25);
+  --shadow-glow-gold: 0 0 30px rgba(234, 179, 8, 0.25);
+  --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.45);
+  --shadow-card-hover: 0 16px 48px rgba(0, 0, 0, 0.6);
+
+  /* Fonts */
+  --font-heading: var(--font-outfit), 'Outfit', system-ui, sans-serif;
+  --font-body: var(--font-inter), 'Inter', system-ui, sans-serif;
+
+  /* Layout */
+  --container-max: 1280px;
+  --header-height: 80px;
+}
+
+/* CSS Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+body {
+  background-color: var(--jungle-950);
+  background-image: 
+    radial-gradient(circle at 15% 15%, rgba(34, 197, 94, 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 85% 65%, rgba(22, 77, 51, 0.12) 0%, transparent 45%);
+  background-attachment: fixed;
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+}
+
+/* Typography Defaults */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+input, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--jungle-950);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--jungle-700);
+  border-radius: var(--radius-full);
+  border: 2px solid var(--jungle-950);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--jungle-500);
+}
+
+/* Text Selection */
+::selection {
+  background: rgba(74, 222, 128, 0.3);
+  color: var(--jungle-300);
+}
+
+/* Utility Classes */
+.text-gradient {
+  background: var(--grad-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-gold {
+  background: var(--grad-text-gold);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glow-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  background: rgba(34, 197, 94, 0.12);
+  border: 1px solid rgba(74, 222, 128, 0.3);
+  border-radius: var(--radius-full);
+  color: var(--jungle-400);
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  backdrop-filter: blur(8px);
+}
+
+.pulse-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--jungle-400);
+  box-shadow: 0 0 10px var(--jungle-400);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(74, 222, 128, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(74, 222, 128, 0);
+  }
+}
+
+.main-content {
+  min-height: calc(100vh - var(--header-height));
+  position: relative;
+  z-index: 1;
+}

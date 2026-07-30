@@ -1,0 +1,138 @@
+.section {
+  padding: 100px 0;
+  position: relative;
+}
+
+.timeline {
+  position: relative;
+  max-width: 900px;
+  margin: 50px auto 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--jungle-600), var(--jungle-400), var(--jungle-600));
+  transform: translateX(-50%);
+}
+
+.timelineItem {
+  position: relative;
+  margin-bottom: 50px;
+  width: 50%;
+}
+
+.timelineItem:nth-child(odd) {
+  left: 0;
+  padding-right: 40px;
+  text-align: right;
+}
+
+.timelineItem:nth-child(even) {
+  left: 50%;
+  padding-left: 40px;
+  text-align: left;
+}
+
+.dot {
+  position: absolute;
+  top: 24px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--jungle-400);
+  border: 4px solid var(--jungle-950);
+  box-shadow: 0 0 12px var(--jungle-400);
+  z-index: 2;
+}
+
+.timelineItem:nth-child(odd) .dot {
+  right: -10px;
+}
+
+.timelineItem:nth-child(even) .dot {
+  left: -10px;
+}
+
+.card {
+  padding: 28px;
+  border-radius: var(--radius-lg);
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: var(--glass-blur);
+  transition: all 0.3s ease;
+}
+
+.timelineItem:hover .card {
+  border-color: rgba(74, 222, 128, 0.4);
+  box-shadow: var(--shadow-glow);
+}
+
+.yearHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.timelineItem:nth-child(odd) .yearHeader {
+  justify-content: flex-end;
+}
+
+.year {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--jungle-400);
+}
+
+.badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--cream-100);
+  background: rgba(34, 197, 94, 0.15);
+  border: 1px solid rgba(74, 222, 128, 0.25);
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+}
+
+.itemTitle {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--cream-100);
+  margin-bottom: 10px;
+}
+
+.itemDesc {
+  font-size: 0.9rem;
+  color: var(--cream-200);
+  line-height: 1.55;
+}
+
+@media (max-width: 768px) {
+  .timeline::before {
+    left: 20px;
+  }
+  
+  .timelineItem {
+    width: 100% !important;
+    left: 0 !important;
+    padding-left: 50px !important;
+    padding-right: 0 !important;
+    text-align: left !important;
+  }
+  
+  .dot {
+    left: 10px !important;
+  }
+  
+  .timelineItem:nth-child(odd) .yearHeader {
+    justify-content: flex-start;
+  }
+}

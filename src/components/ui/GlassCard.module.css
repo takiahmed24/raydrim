@@ -1,0 +1,62 @@
+.card {
+  position: relative;
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  overflow: hidden;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.variantDefault {
+  background: var(--glass-bg);
+  border-color: var(--glass-border);
+}
+
+.variantAccent {
+  background: linear-gradient(
+    135deg,
+    rgba(22, 77, 51, 0.7) 0%,
+    rgba(15, 46, 30, 0.85) 100%
+  );
+  border-color: rgba(74, 222, 128, 0.3);
+}
+
+.variantSubtle {
+  background: var(--glass-bg-subtle);
+  border-color: rgba(74, 222, 128, 0.1);
+}
+
+.hoverLift:hover {
+  transform: translateY(-6px);
+  background: var(--glass-bg-hover);
+  border-color: var(--glass-border-hover);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.glowOnHover:hover {
+  box-shadow: var(--shadow-glow);
+}
+
+.glowOnHover::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(74, 222, 128, 0.6),
+    transparent
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.glowOnHover:hover::after {
+  opacity: 1;
+}

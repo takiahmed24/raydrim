@@ -1,0 +1,92 @@
+.container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 48px;
+}
+
+.tabsList {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-full);
+  backdrop-filter: var(--glass-blur);
+  overflow-x: auto;
+  max-width: 100%;
+  scrollbar-width: none;
+}
+
+.tabsList::-webkit-scrollbar {
+  display: none;
+}
+
+.tabButton {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border-radius: var(--radius-full);
+  font-family: var(--font-heading);
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--cream-300);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: color 0.25s ease;
+}
+
+.tabButton:hover {
+  color: var(--cream-100);
+}
+
+.activeTab {
+  color: var(--jungle-950) !important;
+  font-weight: 700;
+}
+
+.activeBg {
+  position: absolute;
+  inset: 0;
+  background: var(--grad-jungle);
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-glow);
+  z-index: 0;
+}
+
+.tabLabel {
+  position: relative;
+  z-index: 1;
+}
+
+.countBadge {
+  position: relative;
+  z-index: 1;
+  font-size: 0.75rem;
+  padding: 2px 7px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.12);
+  color: inherit;
+}
+
+.activeTab .countBadge {
+  background: rgba(10, 31, 20, 0.25);
+  color: var(--jungle-950);
+}
+
+@media (max-width: 768px) {
+  .tabsList {
+    width: 100%;
+    justify-content: flex-start;
+    padding: 6px;
+  }
+
+  .tabButton {
+    padding: 8px 14px;
+    font-size: 0.85rem;
+  }
+}

@@ -1,0 +1,92 @@
+.section {
+  padding: 100px 0;
+  position: relative;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  align-items: stretch;
+}
+
+.card {
+  padding: 44px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.iconBox {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-md);
+  background: rgba(34, 197, 94, 0.15);
+  border: 1px solid rgba(74, 222, 128, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--jungle-400);
+}
+
+.tag {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--jungle-400);
+}
+
+.title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--cream-100);
+  margin-bottom: 16px;
+  line-height: 1.25;
+}
+
+.body {
+  font-size: 1rem;
+  color: var(--cream-200);
+  line-height: 1.7;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.highlightList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(74, 222, 128, 0.15);
+}
+
+.highlightItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.92rem;
+  color: var(--cream-100);
+  font-weight: 500;
+}
+
+.checkIcon {
+  color: var(--jungle-400);
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

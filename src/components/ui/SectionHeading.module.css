@@ -1,0 +1,45 @@
+.wrapper {
+  margin-bottom: 3.5rem;
+  position: relative;
+}
+
+.alignLeft {
+  text-align: left;
+}
+
+.alignCenter {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 800px;
+}
+
+.alignRight {
+  text-align: right;
+  margin-left: auto;
+}
+
+.badgeWrapper {
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  font-weight: 800;
+  line-height: 1.15;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  font-size: clamp(1rem, 1.8vw, 1.25rem);
+  color: var(--text-muted);
+  line-height: 1.6;
+  max-width: 680px;
+}
+
+.alignCenter .subtitle {
+  margin-left: auto;
+  margin-right: auto;
+}

@@ -1,0 +1,121 @@
+.section {
+  padding: 100px 0 120px;
+  position: relative;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-top: 50px;
+}
+
+.officeCard {
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  position: relative;
+}
+
+.topRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.iconBox {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  background: rgba(34, 197, 94, 0.15);
+  border: 1px solid rgba(74, 222, 128, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--jungle-400);
+}
+
+.hqBadge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--gold-400);
+  background: rgba(234, 179, 8, 0.12);
+  border: 1px solid rgba(234, 179, 8, 0.3);
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+}
+
+.city {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--cream-100);
+  margin-bottom: 4px;
+}
+
+.country {
+  font-size: 0.85rem;
+  color: var(--jungle-400);
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.address {
+  font-size: 0.88rem;
+  color: var(--cream-200);
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.timezone {
+  font-size: 0.78rem;
+  color: var(--cream-400);
+  padding-top: 12px;
+  border-top: 1px solid rgba(74, 222, 128, 0.12);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.metricsBanner {
+  margin-top: 60px;
+  padding: 40px;
+  background: linear-gradient(135deg, rgba(15, 46, 30, 0.8) 0%, rgba(10, 31, 20, 0.95) 100%);
+  border: 1px solid rgba(74, 222, 128, 0.2);
+  border-radius: var(--radius-xl);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  text-align: center;
+}
+
+.metricVal {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--cream-100);
+  margin-bottom: 4px;
+}
+
+.metricSub {
+  font-size: 0.85rem;
+  color: var(--cream-400);
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .metricsBanner {
+    grid-template-columns: 1fr;
+  }
+}

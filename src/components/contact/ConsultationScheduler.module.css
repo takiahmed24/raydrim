@@ -1,0 +1,116 @@
+.section {
+  padding-bottom: 100px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.card {
+  padding: 36px !important;
+  background: var(--jungle-800) !important;
+  border: 1px solid var(--glass-border) !important;
+  border-radius: var(--radius-xl) !important;
+  height: 100%;
+}
+
+.cardTitle {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--cream-100);
+  margin-bottom: 12px;
+}
+
+.titleIcon {
+  color: var(--jungle-400);
+}
+
+.cardDesc {
+  font-size: 0.95rem;
+  color: var(--cream-200);
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.slotsList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.slotItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  background: rgba(10, 31, 20, 0.6);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-md);
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.slotItem:hover {
+  border-color: var(--jungle-400);
+  background: rgba(10, 31, 20, 0.8);
+}
+
+.slotTime {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--jungle-400);
+  font-size: 0.95rem;
+}
+
+.slotLabel {
+  font-size: 0.88rem;
+  color: var(--cream-200);
+}
+
+.bookBadge {
+  font-size: 0.78rem;
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  background: rgba(34, 197, 94, 0.15);
+  color: var(--jungle-300);
+  font-weight: 600;
+}
+
+.faqList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.faqItem {
+  padding: 16px 20px;
+  background: rgba(10, 31, 20, 0.5);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-md);
+}
+
+.faqQuestion {
+  font-family: var(--font-heading);
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: var(--cream-100);
+  margin-bottom: 6px;
+}
+
+.faqAnswer {
+  font-size: 0.9rem;
+  color: var(--cream-300);
+  line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
