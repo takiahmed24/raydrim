@@ -6,6 +6,7 @@ export const CONTACT_INFO = {
   usBankAddress: 'JPMorgan Chase Bank N.A., 270 Park Avenue, New York, NY 10017, USA',
   hours: 'Mon – Fri: 8:00 AM – 6:00 PM EST / BST',
   responseTime: '< 2 Hours Guaranteed SLA',
+  whopStore: 'https://whop.com/raydrim',
 };
 
 export const SERVICE_OPTIONS = [

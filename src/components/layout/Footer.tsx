@@ -23,6 +23,7 @@ const QUICK_LINKS = [
   { label: 'Pricing', href: '/pricing' },
   { label: 'Blog', href: '/blog' },
   { label: 'Contact Us', href: '/contact' },
+  { label: 'Whop Store 🛍️', href: 'https://whop.com/raydrim', external: true },
 ];
 
 const SERVICE_LINKS = [
@@ -87,9 +88,15 @@ export default function Footer() {
             <ul className={styles.linksList}>
               {QUICK_LINKS.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className={styles.link}>
-                    {link.label}
-                  </Link>
+                  {link.external ? (
+                    <a href={link.href} target="_blank" rel="noopener noreferrer" className={styles.link}>
+                      {link.label}
+                    </a>
+                  ) : (
+                    <Link href={link.href} className={styles.link}>
+                      {link.label}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>

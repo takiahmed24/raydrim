@@ -5,7 +5,7 @@ import Container from '@/components/ui/Container';
 import GlassCard from '@/components/ui/GlassCard';
 import Button from '@/components/ui/Button';
 import ScrollReveal from '@/components/ui/ScrollReveal';
-import { MessageSquarePlus, ArrowRight, Sparkles } from 'lucide-react';
+import { MessageSquarePlus, ArrowRight, Sparkles, ShoppingBag } from 'lucide-react';
 import styles from './CustomQuoteBanner.module.css';
 
 export default function CustomQuoteBanner() {
@@ -20,15 +20,15 @@ export default function CustomQuoteBanner() {
               <div className={styles.leftCol}>
                 <div className={styles.badge}>
                   <Sparkles size={14} />
-                  <span>Bespoke Architecture & Advisory</span>
+                  <span>Bespoke Architecture & Digital Marketplace</span>
                 </div>
-                <h2 className={styles.title}>Need a Custom Enterprise Scope or Dedicated Pod?</h2>
+                <h2 className={styles.title}>Custom Enterprise Scope or Instant Digital Passes?</h2>
                 <p className={styles.description}>
-                  We design custom contracts for multi-cloud migrations, white-glove AI agent deployment, multi-region compliance, and dedicated senior engineering teams.
+                  Choose a custom contract for multi-cloud migrations, AI agent deployment, and dedicated engineering pods, or visit our instant digital storefront on Whop for pre-built Passes & Memberships.
                 </p>
               </div>
 
-              <div className={styles.rightCol}>
+              <div className={styles.rightCol} style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
                 <Button
                   href="/contact?plan=enterprise"
                   variant="gold"
@@ -36,6 +36,14 @@ export default function CustomQuoteBanner() {
                   icon={<ArrowRight size={20} />}
                 >
                   Request Custom Proposal
+                </Button>
+                <Button
+                  href="https://whop.com/raydrim"
+                  variant="secondary"
+                  size="lg"
+                  icon={<ShoppingBag size={18} />}
+                >
+                  Visit Whop Marketplace 🛍️
                 </Button>
               </div>
             </div>
