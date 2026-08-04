@@ -33,7 +33,7 @@ const SECTIONS = [
   { id: 'overview', title: '1. Overview & Commitment', icon: ShieldCheck },
   { id: 'data-collection', title: '2. Information We Collect', icon: Database },
   { id: 'data-usage', title: '3. How We Use Data', icon: Eye },
-  { id: 'cookies-policy', title: '4. Cookies & Analytics', icon: Cookie },
+  { id: 'cookies-policy', title: '4. Cookies, Advertising & Analytics', icon: Cookie },
   { id: 'client-confidentiality', title: '5. Client Confidentiality', icon: Lock },
   { id: 'third-party-infra', title: '6. Third-Party Infrastructure', icon: Server },
   { id: 'data-security', title: '7. Security Standards', icon: Lock },
@@ -143,14 +143,29 @@ export default function PrivacyPolicyPage() {
             <section id="cookies-policy" className={styles.section}>
               <h2 className={styles.sectionTitle}>
                 <Cookie className={styles.sectionTitleIcon} size={22} />
-                4. Cookies & Analytics Policy
+                4. Cookies, Advertising & Analytics Policy
               </h2>
               <p className={styles.text}>
-                We use strictly necessary functional cookies and privacy-focused analytics to ensure optimal web functionality.
+                Raydrim uses cookies and similar tracking technologies on our website to provide core functionality, analyze traffic, and serve relevant advertisements. The types of cookies we use include:
               </p>
+              <ul className={styles.list}>
+                <li className={styles.listItem}>
+                  <strong>Strictly Necessary Cookies:</strong> Essential for website navigation, session management, and security. These cookies cannot be disabled.
+                </li>
+                <li className={styles.listItem}>
+                  <strong>Analytics Cookies:</strong> We use privacy-focused analytics to understand how visitors interact with our site, measure page performance, and improve user experience.
+                </li>
+                <li className={styles.listItem}>
+                  <strong>Advertising Cookies (Third-Party):</strong> We partner with <strong>Google AdSense</strong> to display advertisements on our website. Google, as a third-party vendor, uses cookies — including the DoubleClick DART cookie — to serve ads based on your visits to raydrim.com and other websites on the Internet. These cookies enable Google and its advertising partners to serve targeted advertisements based on your browsing activity across websites.
+                </li>
+              </ul>
               <div className={styles.highlightBox}>
                 <p className={styles.text} style={{ margin: 0 }}>
-                  <strong>No Ad Tracking:</strong> Raydrim does NOT use cross-site behavioral tracking cookies, nor do we sell, rent, or trade personal data to third-party ad networks under any circumstances.
+                  <strong>Your Ad Choices & Opt-Out:</strong> You may opt out of personalized advertising by visiting{' '}
+                  <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener noreferrer" className={styles.contactLink}>Google Ads Settings</a>.
+                  You can also opt out of third-party vendor cookie usage for personalized advertising by visiting{' '}
+                  <a href="https://www.aboutads.info/choices/" target="_blank" rel="noopener noreferrer" className={styles.contactLink}>www.aboutads.info</a>.
+                  For users in the European Economic Area (EEA) and United Kingdom, non-essential advertising cookies are only placed after you grant explicit consent via our cookie consent mechanism. You may withdraw consent at any time by clearing your browser cookies or adjusting your cookie preferences.
                 </p>
               </div>
             </section>
