@@ -18,9 +18,12 @@ import ScrollReveal from '@/components/ui/ScrollReveal';
 import styles from './privacy.module.css';
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy | Raydrim Digital Agency',
+  title: 'Privacy Policy',
   description:
     'Read Raydrim Digital Agency’s GDPR & CCPA compliant Privacy Policy detailing how we collect, process, protect, and handle client data.',
+  alternates: {
+    canonical: 'https://raydrim.com/privacy',
+  },
   openGraph: {
     title: 'Privacy Policy | Raydrim Digital Agency',
     description:

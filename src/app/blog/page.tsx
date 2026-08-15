@@ -3,14 +3,24 @@ import { getAllBlogPosts, getAllCategories } from '@/data/blog-posts';
 import BlogClient from './BlogClient';
 
 export const metadata: Metadata = {
-  title: 'Blog & Technical Insights | Raydrim Digital Agency',
+  title: 'Engineering Blog & Technical Guides',
   description:
-    'Explore engineering guides, CRO strategies, cloud architecture benchmarks, and digital brand design insights from the Raydrim team.',
+    'Explore engineering guides, CRO strategies, cloud architecture benchmarks, technical e-book publishing, and mobile app architecture insights.',
+  alternates: {
+    canonical: 'https://raydrim.com/blog',
+  },
   openGraph: {
-    title: 'Blog & Technical Insights | Raydrim Digital Agency',
+    title: 'Engineering Blog & Technical Guides | Raydrim Digital Agency',
     description:
-      'Explore engineering guides, CRO strategies, cloud architecture benchmarks, and digital brand design insights.',
+      'Explore engineering guides, CRO strategies, cloud architecture benchmarks, technical e-book publishing, and mobile app architecture insights.',
     url: 'https://raydrim.com/blog',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Engineering Blog & Technical Guides | Raydrim Digital Agency',
+    description:
+      'Explore engineering guides, CRO strategies, cloud architecture benchmarks, technical e-book publishing, and mobile app architecture insights.',
   },
 };
 

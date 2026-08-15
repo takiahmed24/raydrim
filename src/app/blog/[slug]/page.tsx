@@ -26,14 +26,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   if (!post) {
     return {
-      title: 'Article Not Found | Raydrim Insights',
+      title: 'Article Not Found',
     };
   }
 
   return {
-    title: `${post.title} | Raydrim Blog`,
+    title: post.title,
     description: post.excerpt,
-    keywords: [post.category, ...(post.tags || []), 'Raydrim Agency'],
+    keywords: [post.category, ...(post.tags || []), 'Raydrim Engineering'],
+    alternates: {
+      canonical: `https://raydrim.com/blog/${post.slug}`,
+    },
     openGraph: {
       title: post.title,
       description: post.excerpt,
@@ -70,11 +73,46 @@ export default async function BlogPostPage({ params }: Props) {
   const relatedPosts = getRelatedBlogPosts(post.slug, post.category, 3);
   const shareUrl = `https://raydrim.com/blog/${post.slug}`;
 
+  const jsonLdArticle = {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: post.title,
+    description: post.excerpt,
+    image: [post.image],
+    datePublished: post.date,
+    dateModified: post.date,
+    author: {
+      '@type': 'Person',
+      name: post.author.name,
+      jobTitle: post.author.role,
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Raydrim Digital Agency',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://raydrim.com/logo.png',
+      },
+    },
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': `https://raydrim.com/blog/${post.slug}`,
+    },
+  };
+
   return (
-    <BlogDetailClient
-      post={post}
-      relatedPosts={relatedPosts}
-      shareUrl={shareUrl}
-    />
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(jsonLdArticle),
+        }}
+      />
+      <BlogDetailClient
+        post={post}
+        relatedPosts={relatedPosts}
+        shareUrl={shareUrl}
+      />
+    </>
   );
 }

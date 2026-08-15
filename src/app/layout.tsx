@@ -17,7 +17,11 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'Raydrim — Premium Digital Agency, Mobile Apps & Software House',
+  metadataBase: new URL('https://raydrim.com'),
+  title: {
+    default: 'Raydrim — Premium Digital Agency, Mobile Apps & Software House',
+    template: '%s | Raydrim Digital Agency',
+  },
   description:
     'Raydrim builds high-performance web applications, iOS & Google Play Store mobile apps, technical e-books, and AI integrations for visionary global clients.',
   keywords: [
@@ -30,15 +34,41 @@ export const metadata: Metadata = {
     'Web Design',
     'Software House',
     'Raydrim',
+    'Software Engineering',
+    'Custom Software',
   ],
-  authors: [{ name: 'Raydrim Team' }],
+  authors: [{ name: 'Muhammad Taki Ahmed', url: 'https://raydrim.com' }],
+  creator: 'Muhammad Taki Ahmed',
+  publisher: 'Raydrim Digital Agency',
+  alternates: {
+    canonical: '/',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
   openGraph: {
     title: 'Raydrim — Premium Digital Agency & Software House',
     description:
-      'Raydrim builds high-performance web applications, AI integrations, and luxury brand experiences.',
+      'Raydrim builds high-performance web applications, AI integrations, mobile apps, and luxury brand experiences.',
     url: 'https://raydrim.com',
     siteName: 'Raydrim',
+    locale: 'en_US',
     type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Raydrim — Premium Digital Agency & Software House',
+    description:
+      'Raydrim builds high-performance web applications, AI integrations, and luxury brand experiences.',
+    creator: '@takiahmed24',
   },
   verification: {
     google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || '',

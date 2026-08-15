@@ -16,11 +16,14 @@ import { CONTACT_INFO } from '@/data/contactData';
 import styles from './security.module.css';
 
 export const metadata: Metadata = {
-  title: 'Security & System Compliance | Raydrim Digital Agency',
+  title: 'Security & Compliance Standards',
   description:
     'Learn about Raydrim’s SOC-2, TLS 1.3, AES-256 encryption, zero-trust cloud architecture, and cybersecurity standards.',
+  alternates: {
+    canonical: 'https://raydrim.com/security',
+  },
   openGraph: {
-    title: 'Security & System Compliance | Raydrim Digital Agency',
+    title: 'Security & Compliance Standards | Raydrim Digital Agency',
     description:
       'Raydrim Security Standard — Comprehensive overview of cloud security, data encryption, and access controls.',
     url: 'https://raydrim.com/security',

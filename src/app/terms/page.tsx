@@ -17,9 +17,12 @@ import ScrollReveal from '@/components/ui/ScrollReveal';
 import styles from './terms.module.css';
 
 export const metadata: Metadata = {
-  title: 'Terms of Service | Raydrim Digital Agency',
+  title: 'Terms of Service',
   description:
     'Read the official Terms of Service governing services provided by Raydrim Digital Agency, including IP ownership, retainer agreements, and service contracts.',
+  alternates: {
+    canonical: 'https://raydrim.com/terms',
+  },
   openGraph: {
     title: 'Terms of Service | Raydrim Digital Agency',
     description:
