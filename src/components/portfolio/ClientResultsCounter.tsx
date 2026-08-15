@@ -7,7 +7,7 @@ import AnimatedCounter from '@/components/ui/AnimatedCounter';
 import ScrollReveal from '@/components/ui/ScrollReveal';
 import Button from '@/components/ui/Button';
 import { PORTFOLIO_STATS } from '@/data/portfolioData';
-import { ArrowRight, Sparkles } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import styles from './ClientResultsCounter.module.css';
 
 export default function ClientResultsCounter() {

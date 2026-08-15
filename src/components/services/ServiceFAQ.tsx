@@ -6,7 +6,7 @@ import SectionHeading from '@/components/ui/SectionHeading';
 import Button from '@/components/ui/Button';
 import ScrollReveal from '@/components/ui/ScrollReveal';
 import { SERVICE_FAQS } from '@/data/agencyData';
-import { ChevronDown, Sparkles, MessageSquare } from 'lucide-react';
+import { ChevronDown, ArrowRight, MessageSquare } from 'lucide-react';
 import styles from './ServiceFAQ.module.css';
 
 export default function ServiceFAQ() {
@@ -64,8 +64,8 @@ export default function ServiceFAQ() {
             </p>
 
             <div className={styles.ctaButtons}>
-              <Button href="/contact" variant="primary" size="lg" icon={<Sparkles size={20} />}>
-                Start Project Scope
+              <Button href="/contact" variant="primary" size="lg" icon={<ArrowRight size={20} />}>
+                Request Project Proposal
               </Button>
               <Button href="/contact" variant="secondary" size="lg" icon={<MessageSquare size={20} />}>
                 Talk to Lead Architect

@@ -3,7 +3,7 @@
 import React from 'react';
 import Container from '@/components/ui/Container';
 import ScrollReveal from '@/components/ui/ScrollReveal';
-import { CheckCircle2, Shield, Sparkles } from 'lucide-react';
+import { CheckCircle2, Shield } from 'lucide-react';
 import styles from './PricingHero.module.css';
 
 export default function PricingHero() {

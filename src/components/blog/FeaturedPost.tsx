@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { Calendar, Clock, ArrowRight, Sparkles } from 'lucide-react';
+import { Calendar, Clock, ArrowRight, Award } from 'lucide-react';
 import { BlogPost } from '@/types';
 import Button from '../ui/Button';
 import styles from './FeaturedPost.module.css';
@@ -20,7 +20,7 @@ export default function FeaturedPost({ post }: FeaturedPostProps) {
     <div className={styles.featuredBanner}>
       <div className={styles.imageCol}>
         <span className={styles.featuredTag}>
-          <Sparkles size={13} /> Featured Article
+          <Award size={13} /> Featured Article
         </span>
         <img
           src={post.image}

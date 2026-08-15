@@ -5,7 +5,7 @@ import GlassCard from '@/components/ui/GlassCard';
 import Button from '@/components/ui/Button';
 import ScrollReveal from '@/components/ui/ScrollReveal';
 import { PRICING_TIERS } from '@/data/pricingData';
-import { CheckCircle2, Clock, Sparkles, ArrowRight } from 'lucide-react';
+import { CheckCircle2, Clock, ArrowRight } from 'lucide-react';
 import styles from './PricingCards.module.css';
 
 export default function PricingCards() {
@@ -60,7 +60,7 @@ export default function PricingCards() {
                   variant={isPopular ? 'primary' : 'secondary'}
                   size="lg"
                   fullWidth={true}
-                  icon={isPopular ? <Sparkles size={18} /> : <ArrowRight size={18} />}
+                  icon={<ArrowRight size={18} />}
                 >
                   {tier.ctaText}
                 </Button>

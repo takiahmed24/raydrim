@@ -5,7 +5,7 @@ import Container from '@/components/ui/Container';
 import Button from '@/components/ui/Button';
 import GlassCard from '@/components/ui/GlassCard';
 import ScrollReveal from '@/components/ui/ScrollReveal';
-import { ArrowRight, Sparkles, Zap, ShieldCheck, Award } from 'lucide-react';
+import { ArrowRight, Zap, ShieldCheck, Award } from 'lucide-react';
 import styles from './Hero.module.css';
 
 export default function Hero() {
@@ -39,7 +39,7 @@ export default function Hero() {
               <Button href="/services" variant="primary" size="lg" icon={<ArrowRight size={20} />}>
                 Explore Services
               </Button>
-              <Button href="/contact" variant="secondary" size="lg" icon={<Sparkles size={20} />}>
+              <Button href="/contact" variant="secondary" size="lg" icon={<Zap size={20} />}>
                 Book Consultation
               </Button>
             </div>

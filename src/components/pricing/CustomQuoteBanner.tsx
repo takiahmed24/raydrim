@@ -5,7 +5,7 @@ import Container from '@/components/ui/Container';
 import GlassCard from '@/components/ui/GlassCard';
 import Button from '@/components/ui/Button';
 import ScrollReveal from '@/components/ui/ScrollReveal';
-import { MessageSquarePlus, ArrowRight, Sparkles, ShoppingBag } from 'lucide-react';
+import { MessageSquarePlus, ArrowRight, Zap, ShoppingBag } from 'lucide-react';
 import styles from './CustomQuoteBanner.module.css';
 
 export default function CustomQuoteBanner() {
@@ -18,10 +18,10 @@ export default function CustomQuoteBanner() {
 
             <div className={styles.innerContent}>
               <div className={styles.leftCol}>
-                <div className={styles.badge}>
-                  <Sparkles size={14} />
-                  <span>Bespoke Architecture & Digital Marketplace</span>
-                </div>
+                <span className="editorial-badge">
+                  <Zap size={14} style={{ marginRight: '4px', verticalAlign: 'middle' }} />
+                  Enterprise Engineering Pods
+                </span>
                 <h2 className={styles.title}>Custom Enterprise Scope or Instant Digital Passes?</h2>
                 <p className={styles.description}>
                   Choose a custom contract for multi-cloud migrations, AI agent deployment, and dedicated engineering pods, or visit our instant digital storefront on Whop for pre-built Passes & Memberships.

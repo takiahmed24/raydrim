@@ -6,7 +6,7 @@ import GlassCard from '@/components/ui/GlassCard';
 import ScrollReveal from '@/components/ui/ScrollReveal';
 import SectionHeading from '@/components/ui/SectionHeading';
 import { SERVICE_VERTICALS } from '@/data/agencyData';
-import { Code, Cpu, ShoppingBag, Palette, CheckCircle2, Layers, CpuIcon, Sparkles, Smartphone, BookOpen } from 'lucide-react';
+import { Code, Cpu, ShoppingBag, Palette, CheckCircle2, Layers, CpuIcon, Smartphone, BookOpen } from 'lucide-react';
 import styles from './ServiceVerticals.module.css';
 
 export default function ServiceVerticals() {
@@ -94,7 +94,7 @@ export default function ServiceVerticals() {
                     </div>
 
                     <h3 className={styles.blockTitle} style={{ marginTop: '20px' }}>
-                      <Sparkles size={18} className={styles.checkIcon} />
+                      <CheckCircle2 size={18} className={styles.checkIcon} />
                       Key Deliverables
                     </h3>
                     <ul className={styles.deliverablesList}>

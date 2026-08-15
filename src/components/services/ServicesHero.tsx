@@ -4,7 +4,7 @@ import React from 'react';
 import Container from '@/components/ui/Container';
 import Button from '@/components/ui/Button';
 import ScrollReveal from '@/components/ui/ScrollReveal';
-import { ArrowRight, Sparkles } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import styles from './ServicesHero.module.css';
 
 export default function ServicesHero() {
@@ -36,7 +36,7 @@ export default function ServicesHero() {
 
         <ScrollReveal direction="up" delay={0.4}>
           <div className={styles.actions}>
-            <Button href="/contact" variant="primary" size="lg" icon={<Sparkles size={20} />}>
+            <Button href="/contact" variant="primary" size="lg" icon={<ArrowRight size={20} />}>
               Start a Project
             </Button>
             <Button href="#verticals" variant="secondary" size="lg" icon={<ArrowRight size={20} />}>
