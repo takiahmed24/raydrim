@@ -127,6 +127,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${spaceGrotesk.variable} ${inter.variable}`}>
       <head>
+        <meta name="google-adsense-account" content="ca-pub-4263728957042690" />
         <script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4263728957042690"
