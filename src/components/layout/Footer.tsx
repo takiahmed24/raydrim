@@ -3,13 +3,13 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import {
-  Sparkles,
   Mail,
   MapPin,
   Phone,
   ArrowRight,
   CheckCircle,
 } from 'lucide-react';
+import { RaydrimIcon } from '@/components/ui/RaydrimLogo';
 import { TwitterIcon, LinkedinIcon, GithubIcon, InstagramIcon } from '@/components/ui/SocialIcons';
 import Container from '../ui/Container';
 import Button from '../ui/Button';
@@ -54,10 +54,8 @@ export default function Footer() {
         <div className={styles.grid}>
           {/* Col 1: Branding */}
           <div className={styles.brandCol}>
-            <Link href="/" className={styles.logo}>
-              <div className={styles.logoIcon}>
-                <Sparkles size={22} />
-              </div>
+            <Link href="/" className={styles.logo} aria-label="Raydrim Home">
+              <RaydrimIcon size={32} />
               <span>
                 Raydrim<span className={styles.logoDot}>.</span>
                 <span className={styles.logoCom}>com</span>

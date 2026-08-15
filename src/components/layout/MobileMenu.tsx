@@ -4,7 +4,8 @@ import React, { useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, ArrowRight, Sparkles, Mail, Phone, MapPin } from 'lucide-react';
+import { X, ArrowRight, Mail, MapPin } from 'lucide-react';
+import { RaydrimIcon } from '@/components/ui/RaydrimLogo';
 import Button from '../ui/Button';
 import styles from './MobileMenu.module.css';
 
@@ -41,9 +42,7 @@ export default function MobileMenu({ isOpen, onClose, links }: MobileMenuProps) 
         >
           <div className={styles.header}>
             <Link href="/" className={styles.logo} onClick={onClose}>
-              <div className={styles.logoIcon}>
-                <Sparkles size={20} />
-              </div>
+              <RaydrimIcon size={30} />
               <span>
                 Raydrim<span className={styles.logoDot}>.</span>
                 <span className={styles.logoCom}>com</span>

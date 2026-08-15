@@ -3,7 +3,8 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Menu, Sparkles, ArrowRight } from 'lucide-react';
+import { Menu, ArrowRight } from 'lucide-react';
+import { RaydrimIcon } from '@/components/ui/RaydrimLogo';
 import Container from '../ui/Container';
 import Button from '../ui/Button';
 import MobileMenu from './MobileMenu';
@@ -42,10 +43,8 @@ export default function Navbar() {
       <header className={`${styles.header} ${scrolled ? styles.scrolled : ''}`}>
         <Container size="lg">
           <div className={styles.navContainer}>
-            <Link href="/" className={styles.logo}>
-              <div className={styles.logoIcon}>
-                <Sparkles size={20} />
-              </div>
+            <Link href="/" className={styles.logo} aria-label="Raydrim Home">
+              <RaydrimIcon size={30} />
               <span>
                 Raydrim<span className={styles.logoDot}>.</span>
                 <span className={styles.logoCom}>com</span>
