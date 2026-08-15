@@ -1,12 +1,12 @@
 import type { Metadata } from 'next';
-import { Outfit, Inter } from 'next/font/google';
+import { Space_Grotesk, Inter } from 'next/font/google';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import './globals.css';
 
-const outfit = Outfit({
+const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],
-  variable: '--font-outfit',
+  variable: '--font-space-grotesk',
   display: 'swap',
 });
 
@@ -92,7 +92,7 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en" className={`${outfit.variable} ${inter.variable}`}>
+    <html lang="en" className={`${spaceGrotesk.variable} ${inter.variable}`}>
       <head>
         <script
           async

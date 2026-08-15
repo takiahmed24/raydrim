@@ -1,18 +1,22 @@
 .section {
-  padding: 80px 0 100px;
+  padding: clamp(80px, 10vw, 130px) 0;
   position: relative;
+  border-bottom: 1px solid var(--rule);
 }
 
 .verticalBlock {
-  margin-bottom: 90px;
+  margin-bottom: 70px;
   scroll-margin-top: 100px;
 }
 
 .card {
-  padding: 48px;
-  border-radius: var(--radius-xl);
+  padding: 44px;
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-md);
   position: relative;
   overflow: hidden;
+  box-shadow: 0 4px 20px rgba(22, 21, 15, 0.03);
 }
 
 .topRow {
@@ -20,7 +24,7 @@
   grid-template-columns: 1fr 1.2fr;
   gap: 40px;
   align-items: start;
-  margin-bottom: 40px;
+  margin-bottom: 36px;
 }
 
 .headerInfo {
@@ -29,35 +33,37 @@
 }
 
 .iconBox {
-  width: 56px;
-  height: 56px;
-  border-radius: var(--radius-md);
-  background: rgba(34, 197, 94, 0.15);
-  border: 1px solid rgba(74, 222, 128, 0.3);
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-sm);
+  background: var(--ink);
+  border: 1px solid var(--ink);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--jungle-400);
+  color: var(--bg);
   margin-bottom: 20px;
 }
 
 .title {
   font-size: 2.2rem;
-  font-weight: 800;
-  color: var(--cream-100);
+  font-weight: 700;
+  color: var(--ink);
   margin-bottom: 8px;
+  letter-spacing: -0.035em;
 }
 
 .subtitle {
+  font-family: var(--font-heading);
   font-size: 1.05rem;
-  color: var(--jungle-400);
+  color: var(--accent);
   font-weight: 600;
   margin-bottom: 16px;
 }
 
 .desc {
   font-size: 1rem;
-  color: var(--cream-200);
+  color: var(--ink-soft);
   line-height: 1.65;
 }
 
@@ -65,10 +71,10 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
-  background: rgba(10, 31, 20, 0.6);
+  background: var(--bg);
   padding: 24px;
-  border-radius: var(--radius-lg);
-  border: 1px solid rgba(74, 222, 128, 0.15);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--rule);
 }
 
 .metricBox {
@@ -81,13 +87,14 @@
 .metricValue {
   font-family: var(--font-heading);
   font-size: 2.2rem;
-  font-weight: 800;
-  color: var(--cream-100);
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: -0.03em;
 }
 
 .metricLabel {
   font-size: 0.82rem;
-  color: var(--cream-400);
+  color: var(--ink-soft);
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
@@ -97,13 +104,14 @@
   grid-template-columns: 1fr 1fr;
   gap: 40px;
   padding-top: 36px;
-  border-top: 1px solid rgba(74, 222, 128, 0.15);
+  border-top: 1px solid var(--rule);
 }
 
 .blockTitle {
+  font-family: var(--font-heading);
   font-size: 1.1rem;
   font-weight: 700;
-  color: var(--cream-100);
+  color: var(--ink);
   margin-bottom: 16px;
   display: flex;
   align-items: center;
@@ -122,11 +130,11 @@
   align-items: flex-start;
   gap: 12px;
   font-size: 0.95rem;
-  color: var(--cream-200);
+  color: var(--ink-soft);
 }
 
 .checkIcon {
-  color: var(--jungle-400);
+  color: var(--accent);
   margin-top: 3px;
   flex-shrink: 0;
 }
@@ -140,9 +148,9 @@
 
 .techBadge {
   font-size: 0.85rem;
-  color: var(--jungle-400);
-  background: rgba(34, 197, 94, 0.1);
-  border: 1px solid rgba(74, 222, 128, 0.25);
+  color: var(--accent);
+  background: rgba(255, 77, 46, 0.08);
+  border: 1px solid rgba(255, 77, 46, 0.2);
   padding: 6px 14px;
   border-radius: var(--radius-full);
   font-weight: 600;
@@ -157,11 +165,11 @@
 
 .deliverableItem {
   font-size: 0.88rem;
-  color: var(--cream-300);
-  background: rgba(15, 46, 30, 0.5);
+  color: var(--ink-soft);
+  background: var(--bg);
   padding: 8px 14px;
-  border-radius: var(--radius-md);
-  border: 1px solid rgba(74, 222, 128, 0.1);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--rule);
 }
 
 @media (max-width: 900px) {
@@ -170,6 +178,6 @@
   }
   
   .card {
-    padding: 30px;
+    padding: 28px;
   }
 }

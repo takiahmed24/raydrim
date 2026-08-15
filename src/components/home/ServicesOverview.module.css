@@ -1,13 +1,14 @@
 .section {
-  padding: 100px 0;
+  padding: clamp(80px, 10vw, 130px) 0;
   position: relative;
+  border-bottom: 1px solid var(--rule);
 }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 30px;
-  margin-top: 50px;
+  margin-top: 40px;
 }
 
 .card {
@@ -16,10 +17,19 @@
   flex-direction: column;
   justify-content: space-between;
   padding: 36px;
-  border-radius: var(--radius-lg);
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-md);
   position: relative;
   overflow: hidden;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.25s var(--ease), border-color 0.25s var(--ease), box-shadow 0.25s var(--ease);
+  box-shadow: 0 4px 20px rgba(22, 21, 15, 0.03);
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  border-color: var(--ink);
+  box-shadow: 0 16px 40px rgba(22, 21, 15, 0.08);
 }
 
 .cardHeader {
@@ -30,38 +40,40 @@
 }
 
 .iconBox {
-  width: 56px;
-  height: 56px;
-  border-radius: var(--radius-md);
-  background: rgba(34, 197, 94, 0.15);
-  border: 1px solid rgba(74, 222, 128, 0.3);
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-sm);
+  background: var(--ink);
+  border: 1px solid var(--ink);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--jungle-400);
+  color: var(--bg);
 }
 
 .badge {
+  font-family: var(--font-heading);
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--jungle-400);
-  background: rgba(34, 197, 94, 0.1);
+  color: var(--accent);
+  background: rgba(255, 77, 46, 0.08);
   padding: 4px 12px;
   border-radius: var(--radius-full);
-  border: 1px solid rgba(74, 222, 128, 0.2);
+  border: 1px solid rgba(255, 77, 46, 0.2);
 }
 
 .cardTitle {
   font-size: 1.6rem;
   font-weight: 700;
   margin-bottom: 12px;
-  color: var(--cream-100);
+  color: var(--ink);
+  letter-spacing: -0.03em;
 }
 
 .cardDesc {
-  color: var(--cream-200);
+  color: var(--ink-soft);
   font-size: 0.98rem;
   line-height: 1.6;
   margin-bottom: 24px;
@@ -79,17 +91,17 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 0.9rem;
-  color: var(--cream-300);
+  font-size: 0.92rem;
+  color: var(--ink-soft);
 }
 
 .featureIcon {
-  color: var(--jungle-400);
+  color: var(--accent);
   flex-shrink: 0;
 }
 
 .cardFooter {
-  border-top: 1px solid rgba(74, 222, 128, 0.12);
+  border-top: 1px solid var(--rule);
   padding-top: 20px;
   display: flex;
   align-items: center;
@@ -100,14 +112,18 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-weight: 600;
-  color: var(--jungle-400);
-  transition: gap 0.2s ease;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--ink);
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 2px;
+  transition: gap 0.2s ease, color 0.2s ease;
 }
 
 .card:hover .learnMore {
   gap: 12px;
-  color: var(--cream-100);
+  color: var(--accent);
 }
 
 @media (max-width: 900px) {

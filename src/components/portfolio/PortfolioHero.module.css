@@ -1,33 +1,8 @@
 .heroSection {
-  padding: 100px 0 60px;
-  text-align: center;
+  padding: clamp(90px, 12vw, 150px) 0 clamp(60px, 8vw, 100px);
   position: relative;
-  overflow: hidden;
-}
-
-.glowOrb1 {
-  position: absolute;
-  top: -100px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 600px;
-  height: 400px;
-  background: radial-gradient(circle, rgba(34, 197, 94, 0.15) 0%, rgba(10, 31, 20, 0) 70%);
-  filter: blur(60px);
-  pointer-events: none;
-  z-index: 0;
-}
-
-.glowOrb2 {
-  position: absolute;
-  top: 200px;
-  right: 5%;
-  width: 350px;
-  height: 350px;
-  background: radial-gradient(circle, rgba(74, 222, 128, 0.1) 0%, rgba(10, 31, 20, 0) 70%);
-  filter: blur(80px);
-  pointer-events: none;
-  z-index: 0;
+  text-align: center;
+  border-bottom: 1px solid var(--rule);
 }
 
 .badgeWrapper {
@@ -37,79 +12,56 @@
 }
 
 .title {
-  font-size: 3.5rem;
-  font-weight: 800;
-  letter-spacing: -0.03em;
-  line-height: 1.15;
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.05;
+  letter-spacing: -0.045em;
   margin-bottom: 24px;
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .subtitle {
-  font-size: 1.25rem;
-  color: var(--cream-200);
-  max-width: 720px;
+  font-size: clamp(1.1rem, 2vw, 1.3rem);
+  color: var(--ink-soft);
+  max-width: 780px;
   margin: 0 auto 40px;
   line-height: 1.6;
-  opacity: 0.9;
 }
 
 .statsHighlightBar {
   display: inline-flex;
   align-items: center;
-  gap: 32px;
-  padding: 14px 28px;
-  background: var(--glass-bg);
-  border: 1px solid var(--glass-border);
-  border-radius: var(--radius-full);
-  backdrop-filter: var(--glass-blur);
-  box-shadow: var(--shadow-card);
+  gap: 24px;
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-md);
+  padding: 16px 32px;
+  box-shadow: 0 4px 20px rgba(22, 21, 15, 0.03);
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .highlightItem {
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 0.95rem;
-  font-weight: 500;
-  color: var(--cream-100);
+  font-family: var(--font-heading);
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--ink);
 }
 
 .highlightIcon {
-  color: var(--jungle-400);
-  display: flex;
-  align-items: center;
+  color: var(--accent);
 }
 
 .highlightDivider {
   width: 1px;
-  height: 18px;
-  background: var(--glass-border);
+  height: 20px;
+  background: var(--rule);
 }
 
 @media (max-width: 768px) {
-  .heroSection {
-    padding: 70px 0 40px;
-  }
-
-  .title {
-    font-size: 2.25rem;
-  }
-
-  .subtitle {
-    font-size: 1.05rem;
-  }
-
-  .statsHighlightBar {
-    flex-direction: column;
-    gap: 12px;
-    border-radius: var(--radius-lg);
-    padding: 16px;
-    width: 100%;
-  }
-
   .highlightDivider {
     display: none;
   }

@@ -15,8 +15,8 @@ export default function PortfolioHero() {
       <Container size="lg">
         <ScrollReveal direction="up" delay={0.1}>
           <div className={styles.badgeWrapper}>
-            <span className="glow-badge">
-              <span className="pulse-dot" />
+            <span className="editorial-badge">
+              <span className="badge-num">•</span>
               Proven Digital Deliverables
             </span>
           </div>

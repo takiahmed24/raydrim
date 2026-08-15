@@ -1,12 +1,13 @@
 .section {
-  padding: 100px 0;
+  padding: clamp(80px, 10vw, 130px) 0;
   position: relative;
+  border-bottom: 1px solid var(--rule);
 }
 
 .timeline {
   position: relative;
   max-width: 900px;
-  margin: 50px auto 0;
+  margin: 40px auto 0;
 }
 
 .timeline::before {
@@ -16,13 +17,13 @@
   bottom: 0;
   left: 50%;
   width: 2px;
-  background: linear-gradient(to bottom, var(--jungle-600), var(--jungle-400), var(--jungle-600));
+  background: var(--rule);
   transform: translateX(-50%);
 }
 
 .timelineItem {
   position: relative;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   width: 50%;
 }
 
@@ -41,35 +42,35 @@
 .dot {
   position: absolute;
   top: 24px;
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px;
   border-radius: 50%;
-  background: var(--jungle-400);
-  border: 4px solid var(--jungle-950);
-  box-shadow: 0 0 12px var(--jungle-400);
+  background: var(--accent);
+  border: 3px solid var(--bg);
+  box-shadow: 0 0 0 2px var(--rule);
   z-index: 2;
 }
 
 .timelineItem:nth-child(odd) .dot {
-  right: -10px;
+  right: -8px;
 }
 
 .timelineItem:nth-child(even) .dot {
-  left: -10px;
+  left: -8px;
 }
 
 .card {
   padding: 28px;
-  border-radius: var(--radius-lg);
-  background: var(--glass-bg);
-  border: 1px solid var(--glass-border);
-  backdrop-filter: var(--glass-blur);
-  transition: all 0.3s ease;
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  transition: transform 0.25s var(--ease), border-color 0.25s var(--ease);
+  box-shadow: 0 4px 20px rgba(22, 21, 15, 0.03);
 }
 
 .timelineItem:hover .card {
-  border-color: rgba(74, 222, 128, 0.4);
-  box-shadow: var(--shadow-glow);
+  border-color: var(--ink);
+  transform: translateY(-2px);
 }
 
 .yearHeader {
@@ -86,18 +87,20 @@
 .year {
   font-family: var(--font-heading);
   font-size: 1.5rem;
-  font-weight: 800;
-  color: var(--jungle-400);
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: -0.03em;
 }
 
 .badge {
+  font-family: var(--font-heading);
   font-size: 0.72rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--cream-100);
-  background: rgba(34, 197, 94, 0.15);
-  border: 1px solid rgba(74, 222, 128, 0.25);
+  color: var(--accent);
+  background: rgba(255, 77, 46, 0.08);
+  border: 1px solid rgba(255, 77, 46, 0.2);
   padding: 3px 10px;
   border-radius: var(--radius-full);
 }
@@ -105,13 +108,14 @@
 .itemTitle {
   font-size: 1.2rem;
   font-weight: 700;
-  color: var(--cream-100);
+  color: var(--ink);
   margin-bottom: 10px;
+  letter-spacing: -0.02em;
 }
 
 .itemDesc {
-  font-size: 0.9rem;
-  color: var(--cream-200);
+  font-size: 0.92rem;
+  color: var(--ink-soft);
   line-height: 1.55;
 }
 
@@ -129,7 +133,7 @@
   }
   
   .dot {
-    left: 10px !important;
+    left: 12px !important;
   }
   
   .timelineItem:nth-child(odd) .yearHeader {

@@ -13,18 +13,16 @@ export default function CTABanner() {
       <Container size="lg">
         <ScrollReveal direction="up" delay={0.1}>
           <div className={styles.box}>
-            <div className={styles.glowPattern} />
-
             <div className={styles.content}>
               <div className={styles.badge}>
-                <span className="glow-badge">
-                  <span className="pulse-dot" />
+                <span className="editorial-badge">
+                  <span className="badge-num">•</span>
                   Now Accepting Q3/Q4 Enterprise Builds
                 </span>
               </div>
 
               <h2 className={styles.title}>
-                Ready to Build Your Next <span className="text-gradient">Digital Breakthrough?</span>
+                Ready to Build Your Next Digital Breakthrough?
               </h2>
 
               <p className={styles.subtitle}>

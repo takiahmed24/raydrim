@@ -1,13 +1,14 @@
 .pageWrapper {
-  padding-top: 120px;
+  padding-top: clamp(80px, 10vw, 120px);
   padding-bottom: 120px;
   min-height: 100vh;
 }
 
 .lastUpdated {
   text-align: center;
+  font-family: var(--font-heading);
   font-size: 0.9rem;
-  color: var(--jungle-400);
+  color: var(--accent);
   font-weight: 600;
   margin-top: 12px;
   margin-bottom: 48px;
@@ -23,22 +24,23 @@
 .sidebar {
   position: sticky;
   top: 100px;
-  background: var(--glass-bg);
-  border: 1px solid var(--glass-border);
-  border-radius: var(--radius-xl);
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-md);
   padding: 24px;
-  backdrop-filter: var(--glass-blur);
+  box-shadow: 0 4px 20px rgba(22, 21, 15, 0.03);
 }
 
 .sidebarTitle {
-  font-size: 0.95rem;
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
   font-weight: 700;
-  color: var(--text-primary);
+  color: var(--ink);
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.08em;
   margin-bottom: 16px;
   padding-bottom: 12px;
-  border-bottom: 1px solid rgba(74, 222, 128, 0.15);
+  border-bottom: 1px solid var(--rule);
 }
 
 .navList {
@@ -49,27 +51,25 @@
 }
 
 .navLink {
-  font-size: 0.85rem;
-  color: var(--text-muted);
+  font-size: 0.88rem;
+  color: var(--ink-soft);
   line-height: 1.4;
   display: flex;
   align-items: center;
   gap: 8px;
-  transition: color 0.2s ease, transform 0.2s ease;
+  transition: color 0.15s ease;
 }
 
 .navLink:hover {
-  color: var(--jungle-400);
-  transform: translateX(4px);
+  color: var(--ink);
 }
 
 .contentCard {
-  background: var(--glass-bg);
-  border: 1px solid var(--glass-border);
-  border-radius: var(--radius-xl);
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-md);
   padding: 48px;
-  backdrop-filter: var(--glass-blur);
-  box-shadow: var(--shadow-card);
+  box-shadow: 0 4px 20px rgba(22, 21, 15, 0.03);
 }
 
 .section {
@@ -83,24 +83,25 @@
 
 .sectionTitle {
   font-size: 1.6rem;
-  font-weight: 800;
-  color: var(--cream-100);
+  font-weight: 700;
+  color: var(--ink);
   margin-bottom: 20px;
   padding-bottom: 12px;
-  border-bottom: 1px solid rgba(74, 222, 128, 0.15);
+  border-bottom: 1px solid var(--rule);
   display: flex;
   align-items: center;
   gap: 12px;
+  letter-spacing: -0.03em;
 }
 
 .sectionTitleIcon {
-  color: var(--jungle-400);
+  color: var(--accent);
 }
 
 .text {
   font-size: 1rem;
-  line-height: 1.8;
-  color: var(--cream-200);
+  line-height: 1.7;
+  color: var(--ink-soft);
   margin-bottom: 16px;
 }
 
@@ -110,36 +111,36 @@
 }
 
 .listItem {
-  font-size: 0.975rem;
-  line-height: 1.7;
-  color: var(--cream-200);
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--ink-soft);
   margin-bottom: 10px;
 }
 
 .highlightBox {
   padding: 20px 24px;
-  background: rgba(34, 197, 94, 0.08);
-  border: 1px solid rgba(74, 222, 128, 0.2);
-  border-radius: var(--radius-md);
+  background: var(--bg);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-sm);
   margin: 24px 0;
 }
 
 .contactBox {
   padding: 24px;
-  background: rgba(10, 31, 20, 0.8);
-  border: 1px solid var(--glass-border);
-  border-radius: var(--radius-lg);
+  background: var(--bg);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-sm);
   margin-top: 24px;
 }
 
 .contactBox p {
   margin-bottom: 8px;
   font-size: 0.95rem;
-  color: var(--cream-200);
+  color: var(--ink-soft);
 }
 
 .contactLink {
-  color: var(--jungle-400);
+  color: var(--accent);
   font-weight: 600;
 }
 

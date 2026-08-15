@@ -1,29 +1,31 @@
 .section {
-  padding: 100px 0;
+  padding: clamp(80px, 10vw, 130px) 0;
   position: relative;
+  border-bottom: 1px solid var(--rule);
 }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
-  margin-top: 50px;
+  margin-top: 40px;
 }
 
 .card {
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-md);
   overflow: hidden;
-  background: var(--jungle-800);
-  border: 1px solid rgba(74, 222, 128, 0.15);
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  transition: transform 0.25s var(--ease), border-color 0.25s var(--ease), box-shadow 0.25s var(--ease);
   display: flex;
   flex-direction: column;
+  box-shadow: 0 4px 20px rgba(22, 21, 15, 0.03);
 }
 
 .card:hover {
-  transform: translateY(-6px);
-  border-color: rgba(74, 222, 128, 0.4);
-  box-shadow: var(--shadow-glow);
+  transform: translateY(-3px);
+  border-color: var(--ink);
+  box-shadow: 0 16px 40px rgba(22, 21, 15, 0.08);
 }
 
 .avatarWrapper {
@@ -31,23 +33,25 @@
   width: 100%;
   height: 280px;
   overflow: hidden;
+  background: #ece8df;
 }
 
 .avatar {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.5s ease;
+  transition: transform 0.8s var(--ease);
+  will-change: transform;
 }
 
 .card:hover .avatar {
-  transform: scale(1.05);
+  transform: scale(1.045);
 }
 
 .avatarOverlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(10, 31, 20, 0.95) 0%, transparent 60%);
+  background: linear-gradient(to top, rgba(22, 21, 15, 0.4) 0%, transparent 60%);
 }
 
 .body {
@@ -61,21 +65,23 @@
 .name {
   font-size: 1.35rem;
   font-weight: 700;
-  color: var(--cream-100);
+  color: var(--ink);
   margin-bottom: 4px;
+  letter-spacing: -0.03em;
 }
 
 .role {
+  font-family: var(--font-heading);
   font-size: 0.88rem;
-  color: var(--jungle-400);
+  color: var(--accent);
   font-weight: 600;
   margin-bottom: 14px;
 }
 
 .bio {
   font-size: 0.9rem;
-  color: var(--cream-200);
-  line-height: 1.5;
+  color: var(--ink-soft);
+  line-height: 1.55;
   margin-bottom: 20px;
 }
 
@@ -88,9 +94,9 @@
 
 .skillTag {
   font-size: 0.75rem;
-  color: var(--cream-300);
-  background: rgba(34, 197, 94, 0.1);
-  border: 1px solid rgba(74, 222, 128, 0.2);
+  color: var(--ink-soft);
+  background: var(--bg);
+  border: 1px solid var(--rule);
   padding: 3px 10px;
   border-radius: var(--radius-sm);
 }
@@ -100,26 +106,26 @@
   align-items: center;
   gap: 12px;
   padding-top: 16px;
-  border-top: 1px solid rgba(74, 222, 128, 0.12);
+  border-top: 1px solid var(--rule);
 }
 
 .socialLink {
   width: 34px;
   height: 34px;
   border-radius: 50%;
-  background: rgba(15, 46, 30, 0.8);
-  border: 1px solid rgba(74, 222, 128, 0.2);
+  background: var(--surface);
+  border: 1px solid var(--rule);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--cream-300);
-  transition: all 0.2s ease;
+  color: var(--ink);
+  transition: all 0.15s ease;
 }
 
 .socialLink:hover {
-  background: var(--jungle-600);
-  color: var(--cream-100);
-  border-color: var(--jungle-400);
+  background: var(--ink);
+  color: var(--bg);
+  border-color: var(--ink);
   transform: translateY(-2px);
 }
 

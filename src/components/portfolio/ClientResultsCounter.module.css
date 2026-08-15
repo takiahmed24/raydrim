@@ -1,118 +1,56 @@
-.bannerSection {
-  padding: 60px 0 100px;
+.section {
+  padding: clamp(60px, 8vw, 100px) 0;
+  position: relative;
+  border-bottom: 1px solid var(--rule);
 }
 
-.bannerCard {
-  padding: 48px !important;
-  background: var(--grad-surface) !important;
-  border: 1px solid var(--glass-border-hover) !important;
+.banner {
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-md);
+  padding: 48px 36px;
   position: relative;
   overflow: hidden;
+  box-shadow: 0 4px 20px rgba(22, 21, 15, 0.03);
 }
 
-.glowOrb {
-  position: absolute;
-  top: -50%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 500px;
-  height: 300px;
-  background: radial-gradient(circle, rgba(34, 197, 94, 0.2) 0%, rgba(0, 0, 0, 0) 70%);
-  filter: blur(50px);
-  pointer-events: none;
-}
-
-.statsGrid {
+.grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
-  position: relative;
-  z-index: 2;
+  gap: 30px;
 }
 
-.statCell {
-  text-align: center;
-  padding: 16px;
-  position: relative;
-}
-
-.statCell:not(:last-child)::after {
-  content: '';
-  position: absolute;
-  right: -12px;
-  top: 20%;
-  height: 60%;
-  width: 1px;
-  background: var(--glass-border);
-}
-
-.numberValue {
-  font-family: var(--font-heading);
-  font-size: 3.2rem;
-  font-weight: 800;
-  color: var(--jungle-400);
-  line-height: 1.1;
-  margin-bottom: 8px;
-  letter-spacing: -0.02em;
-}
-
-.labelTitle {
-  font-size: 1.05rem;
-  font-weight: 700;
-  color: var(--cream-100);
-  margin-bottom: 4px;
-}
-
-.labelDesc {
-  font-size: 0.85rem;
-  color: var(--cream-300);
-}
-
-.ctaBar {
-  margin-top: 40px;
-  padding-top: 32px;
-  border-top: 1px solid var(--glass-border);
+.item {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  position: relative;
-  z-index: 2;
+  text-align: center;
 }
 
-.ctaText {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: var(--cream-100);
+.val {
+  font-family: var(--font-heading);
+  font-size: clamp(2.2rem, 3.8vw, 3.5rem);
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+  margin-bottom: 8px;
 }
 
-@media (max-width: 1024px) {
-  .statsGrid {
+.label {
+  font-size: 0.88rem;
+  color: var(--ink-soft);
+  font-weight: 500;
+}
+
+@media (max-width: 900px) {
+  .grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 32px;
-  }
-
-  .statCell:not(:last-child)::after {
-    display: none;
   }
 }
 
-@media (max-width: 640px) {
-  .bannerCard {
-    padding: 24px !important;
-  }
-
-  .statsGrid {
+@media (max-width: 600px) {
+  .grid {
     grid-template-columns: 1fr;
-    gap: 24px;
-  }
-
-  .numberValue {
-    font-size: 2.4rem;
-  }
-
-  .ctaBar {
-    flex-direction: column;
-    gap: 20px;
-    text-align: center;
   }
 }

@@ -5,17 +5,18 @@
   right: 0;
   height: var(--header-height);
   z-index: 100;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
   display: flex;
   align-items: center;
+  border-bottom: 1px solid var(--rule);
+  background: rgba(244, 241, 236, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
 .scrolled {
-  background: var(--glass-bg);
-  backdrop-filter: var(--glass-blur);
-  -webkit-backdrop-filter: var(--glass-blur);
-  border-bottom: 1px solid var(--glass-border);
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+  border-bottom-color: var(--rule);
+  box-shadow: 0 4px 20px rgba(22, 21, 15, 0.04);
 }
 
 .navContainer {
@@ -30,40 +31,41 @@
   align-items: center;
   gap: 0.6rem;
   font-family: var(--font-heading);
-  font-size: 1.5rem;
-  font-weight: 800;
-  color: var(--text-primary);
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: var(--ink);
   text-decoration: none;
   letter-spacing: -0.03em;
 }
 
 .logoIcon {
-  width: 38px;
-  height: 38px;
-  border-radius: var(--radius-md);
-  background: var(--grad-jungle);
-  border: 1px solid rgba(74, 222, 128, 0.4);
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  background: var(--ink);
+  border: 1px solid var(--ink);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #ffffff;
-  box-shadow: var(--shadow-glow);
-  transition: transform 0.3s ease;
+  color: var(--bg);
+  transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
 .logo:hover .logoIcon {
-  transform: rotate(10deg) scale(1.05);
+  transform: translateY(-1px);
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #ffffff;
 }
 
 .logoDot {
-  color: var(--jungle-400);
+  color: var(--accent);
 }
 
 .logoCom {
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 600;
-  color: var(--gold-400);
-  opacity: 0.9;
+  color: var(--ink-soft);
 }
 
 .navLinks {
@@ -77,18 +79,18 @@
   font-family: var(--font-heading);
   font-size: 0.95rem;
   font-weight: 500;
-  color: var(--cream-200);
-  transition: all 0.2s ease;
+  color: var(--ink-soft);
+  transition: color 0.15s ease;
   position: relative;
   padding: 0.4rem 0;
 }
 
 .navLink:hover {
-  color: var(--jungle-300);
+  color: var(--ink);
 }
 
 .navLinkActive {
-  color: var(--jungle-400);
+  color: var(--ink);
   font-weight: 600;
 }
 
@@ -99,9 +101,8 @@
   left: 0;
   right: 0;
   height: 2px;
-  background: var(--grad-jungle);
+  background: var(--accent);
   border-radius: var(--radius-full);
-  box-shadow: 0 0 8px var(--jungle-400);
 }
 
 .navActions {
@@ -112,21 +113,21 @@
 
 .mobileToggle {
   display: none;
-  width: 42px;
-  height: 42px;
-  border-radius: var(--radius-md);
-  background: var(--glass-bg);
-  border: 1px solid var(--glass-border);
-  color: var(--text-primary);
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  color: var(--ink);
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.15s ease;
 }
 
 .mobileToggle:hover {
-  background: var(--glass-bg-hover);
-  border-color: var(--glass-border-hover);
+  border-color: var(--ink);
+  background: var(--bg);
 }
 
 @media (max-width: 992px) {

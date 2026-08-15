@@ -1,29 +1,11 @@
 .footer {
-  background: linear-gradient(
-    180deg,
-    rgba(10, 31, 20, 0.7) 0%,
-    rgba(5, 20, 13, 0.98) 100%
-  );
-  border-top: 1px solid var(--glass-border);
+  background: var(--bg);
+  border-top: 1px solid var(--rule);
   padding-top: 5rem;
-  padding-bottom: 2.5rem;
+  padding-bottom: 3rem;
   position: relative;
   overflow: hidden;
-}
-
-.footer::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 20%;
-  right: 20%;
-  height: 1px;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(74, 222, 128, 0.4),
-    transparent
-  );
+  color: var(--ink-soft);
 }
 
 .grid {
@@ -44,37 +26,37 @@
   align-items: center;
   gap: 0.6rem;
   font-family: var(--font-heading);
-  font-size: 1.6rem;
-  font-weight: 800;
-  color: var(--text-primary);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--ink);
   text-decoration: none;
+  letter-spacing: -0.03em;
 }
 
 .logoIcon {
-  width: 40px;
-  height: 40px;
-  border-radius: var(--radius-md);
-  background: var(--grad-jungle);
-  border: 1px solid rgba(74, 222, 128, 0.4);
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  background: var(--ink);
+  border: 1px solid var(--ink);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #ffffff;
-  box-shadow: var(--shadow-glow);
+  color: var(--bg);
 }
 
 .logoDot {
-  color: var(--jungle-400);
+  color: var(--accent);
 }
 
 .logoCom {
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 600;
-  color: var(--gold-400);
+  color: var(--ink-soft);
 }
 
 .tagline {
-  color: var(--text-muted);
+  color: var(--ink-soft);
   font-size: 0.95rem;
   line-height: 1.6;
   max-width: 340px;
@@ -87,45 +69,33 @@
 }
 
 .socialIcon {
-  width: 40px;
-  height: 40px;
-  border-radius: var(--radius-md);
-  background: var(--glass-bg);
-  border: 1px solid var(--glass-border);
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  border: 1px solid var(--rule);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--cream-200);
-  transition: all 0.25s ease;
+  color: var(--ink);
+  transition: all 0.15s ease;
 }
 
 .socialIcon:hover {
-  background: var(--glass-bg-hover);
-  color: var(--jungle-400);
-  border-color: var(--jungle-400);
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-glow);
+  background: var(--ink);
+  color: var(--bg);
+  border-color: var(--ink);
+  transform: translateY(-2px);
 }
 
 .colTitle {
   font-family: var(--font-heading);
-  font-size: 1.1rem;
+  font-size: 0.85rem;
   font-weight: 700;
-  color: var(--text-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink);
   margin-bottom: 1.5rem;
-  position: relative;
-  display: inline-block;
-}
-
-.colTitle::after {
-  content: '';
-  position: absolute;
-  bottom: -6px;
-  left: 0;
-  width: 24px;
-  height: 2px;
-  background: var(--jungle-400);
-  border-radius: var(--radius-full);
 }
 
 .linksList {
@@ -136,26 +106,26 @@
 }
 
 .link {
-  font-size: 0.95rem;
-  color: var(--cream-300);
-  transition: all 0.2s ease;
+  font-size: 0.92rem;
+  color: var(--ink-soft);
+  transition: all 0.15s ease;
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
 }
 
 .link:hover {
-  color: var(--jungle-400);
-  transform: translateX(4px);
+  color: var(--ink);
+  transform: translateX(3px);
 }
 
 .badge {
   font-size: 0.7rem;
   padding: 2px 8px;
   border-radius: var(--radius-full);
-  background: rgba(34, 197, 94, 0.15);
-  color: var(--jungle-300);
-  border: 1px solid rgba(74, 222, 128, 0.3);
+  background: rgba(255, 77, 46, 0.1);
+  color: var(--accent);
+  border: 1px solid rgba(255, 77, 46, 0.2);
 }
 
 .contactList {
@@ -170,12 +140,12 @@
   display: flex;
   align-items: flex-start;
   gap: 0.75rem;
-  font-size: 0.925rem;
-  color: var(--cream-300);
+  font-size: 0.92rem;
+  color: var(--ink-soft);
 }
 
 .contactIcon {
-  color: var(--jungle-400);
+  color: var(--ink);
   margin-top: 2px;
   flex-shrink: 0;
 }
@@ -187,7 +157,7 @@
 .newsletterTitle {
   font-size: 0.9rem;
   font-weight: 600;
-  color: var(--cream-100);
+  color: var(--ink);
   margin-bottom: 0.6rem;
 }
 
@@ -199,32 +169,31 @@
 .input {
   width: 100%;
   padding: 0.65rem 1rem;
-  border-radius: var(--radius-md);
-  background: var(--glass-bg);
-  border: 1px solid var(--glass-border);
-  color: var(--text-primary);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  color: var(--ink);
   font-size: 0.9rem;
   outline: none;
-  transition: all 0.2s ease;
+  transition: border-color 0.15s ease;
 }
 
 .input:focus {
-  border-color: var(--jungle-400);
-  box-shadow: 0 0 12px rgba(34, 197, 94, 0.2);
+  border-color: var(--ink);
 }
 
 .input::placeholder {
-  color: var(--cream-400);
+  color: var(--ink-soft);
 }
 
 .bottomBar {
   padding-top: 2rem;
-  border-top: 1px solid rgba(74, 222, 128, 0.1);
+  border-top: 1px solid var(--rule);
   display: flex;
   align-items: center;
   justify-content: space-between;
   font-size: 0.875rem;
-  color: var(--text-muted);
+  color: var(--ink-soft);
 }
 
 .bottomLinks {
@@ -233,12 +202,12 @@
 }
 
 .bottomLink {
-  color: var(--text-muted);
-  transition: color 0.2s ease;
+  color: var(--ink-soft);
+  transition: color 0.15s ease;
 }
 
 .bottomLink:hover {
-  color: var(--jungle-400);
+  color: var(--ink);
 }
 
 @media (max-width: 1024px) {

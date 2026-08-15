@@ -14,8 +14,8 @@ export default function ServicesHero() {
       <Container size="lg">
         <ScrollReveal direction="up" delay={0.1}>
           <div className={styles.badge}>
-            <span className="glow-badge">
-              <span className="pulse-dot" />
+            <span className="editorial-badge">
+              <span className="badge-num">•</span>
               OUR DIGITAL CAPABILITIES & ENGINEERING SERVICES
             </span>
           </div>

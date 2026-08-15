@@ -11,16 +11,12 @@ import styles from './Hero.module.css';
 export default function Hero() {
   return (
     <section className={styles.hero}>
-      <div className={styles.gridBackground} />
-      <div className={styles.glowOrb1} />
-      <div className={styles.glowOrb2} />
-
       <Container size="lg">
         <div className={styles.heroContent}>
           <ScrollReveal direction="up" delay={0.1}>
             <div className={styles.badgeWrapper}>
-              <span className="glow-badge">
-                <span className="pulse-dot" />
+              <span className="editorial-badge">
+                <span className="badge-num">•</span>
                 Next-Gen Digital Agency Framework
               </span>
             </div>
@@ -49,7 +45,7 @@ export default function Hero() {
             </div>
           </ScrollReveal>
 
-          {/* Floating Glass Accent Cards */}
+          {/* Editorial Floating Accent Cards */}
           <ScrollReveal direction="up" delay={0.5}>
             <div className={styles.floatingCardsGrid}>
               <GlassCard variant="accent" hoverEffect className={styles.accentCard}>

@@ -22,8 +22,8 @@ export default function SectionHeading({
     <div className={`${styles.wrapper} ${alignClass} ${className}`.trim()}>
       {badge && (
         <div className={styles.badgeWrapper}>
-          <span className="glow-badge">
-            <span className="pulse-dot" />
+          <span className="editorial-badge">
+            <span className="badge-num">•</span>
             {badge}
           </span>
         </div>

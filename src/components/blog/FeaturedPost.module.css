@@ -1,157 +1,96 @@
-.featuredBanner {
-  position: relative;
-  display: grid;
-  grid-template-columns: 1fr 1.1fr;
-  gap: 32px;
-  background: var(--glass-bg);
-  border: 1px solid var(--glass-border);
-  border-radius: var(--radius-xl);
+.card {
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-md);
   overflow: hidden;
-  backdrop-filter: var(--glass-blur);
-  margin-bottom: 48px;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 0;
+  margin-top: 30px;
+  box-shadow: 0 4px 20px rgba(22, 21, 15, 0.03);
+  transition: transform 0.25s var(--ease), border-color 0.25s var(--ease);
 }
 
-.featuredBanner:hover {
-  border-color: var(--glass-border-hover);
-  box-shadow: var(--shadow-glow-lg);
+.card:hover {
+  transform: translateY(-3px);
+  border-color: var(--ink);
 }
 
-.imageCol {
+.imageWrapper {
   position: relative;
   width: 100%;
-  min-height: 340px;
+  height: 100%;
+  min-height: 320px;
   overflow: hidden;
+  background: #ece8df;
 }
 
 .image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.6s ease;
+  transition: transform 0.8s var(--ease);
+  will-change: transform;
 }
 
-.featuredBanner:hover .image {
-  transform: scale(1.05);
+.card:hover .image {
+  transform: scale(1.045);
 }
 
-.featuredTag {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 6px 14px;
-  background: rgba(34, 197, 94, 0.9);
-  color: #05140d;
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  border-radius: var(--radius-full);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  z-index: 2;
-}
-
-.contentCol {
+.content {
+  padding: 44px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding: 40px 40px 40px 10px;
+  justify-content: space-between;
+}
+
+.categoryTag {
+  display: inline-block;
+  background: var(--ink);
+  color: var(--bg);
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.title {
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 16px;
+  line-height: 1.15;
+  letter-spacing: -0.035em;
+}
+
+.excerpt {
+  font-size: 1rem;
+  color: var(--ink-soft);
+  line-height: 1.6;
+  margin-bottom: 24px;
 }
 
 .metaRow {
   display: flex;
   align-items: center;
   gap: 16px;
-  font-size: 0.875rem;
-  color: var(--text-muted);
-  margin-bottom: 16px;
-}
-
-.category {
-  padding: 4px 12px;
-  background: rgba(74, 222, 128, 0.12);
-  border: 1px solid rgba(74, 222, 128, 0.25);
-  border-radius: var(--radius-full);
-  color: var(--jungle-400);
-  font-weight: 600;
-  font-size: 0.8rem;
-}
-
-.metaItem {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.title {
-  font-size: 2rem;
-  font-weight: 800;
-  color: var(--text-primary);
-  line-height: 1.25;
-  margin-bottom: 16px;
-  letter-spacing: -0.02em;
-}
-
-.excerpt {
-  font-size: 1.05rem;
-  color: var(--text-muted);
-  line-height: 1.6;
-  margin-bottom: 28px;
-}
-
-.authorRow {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  font-size: 0.88rem;
+  color: var(--ink-soft);
+  padding-top: 20px;
+  border-top: 1px solid var(--rule);
 }
 
 .author {
-  display: flex;
-  align-items: center;
-  gap: 12px;
+  font-weight: 600;
+  color: var(--ink);
 }
 
-.avatar {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid var(--jungle-400);
-}
-
-.authorInfo {
-  display: flex;
-  flex-direction: column;
-}
-
-.authorName {
-  font-size: 0.95rem;
-  font-weight: 700;
-  color: var(--text-primary);
-}
-
-.authorRole {
-  font-size: 0.8rem;
-  color: var(--text-muted);
-}
-
-@media (max-width: 992px) {
-  .featuredBanner {
+@media (max-width: 900px) {
+  .card {
     grid-template-columns: 1fr;
-  }
-
-  .imageCol {
-    min-height: 260px;
-  }
-
-  .contentCol {
-    padding: 30px;
-  }
-
-  .title {
-    font-size: 1.6rem;
   }
 }

@@ -14,8 +14,8 @@ export default function PricingHero() {
       <Container size="lg">
         <ScrollReveal direction="up" delay={0.1}>
           <div className={styles.badgeWrapper}>
-            <span className="glow-badge">
-              <span className="pulse-dot" />
+            <span className="editorial-badge">
+              <span className="badge-num">•</span>
               100% Value Guarantee
             </span>
           </div>
