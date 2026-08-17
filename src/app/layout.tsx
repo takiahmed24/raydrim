@@ -87,7 +87,7 @@ export default function RootLayout({
     legalName: 'Raydrim Digital Agency',
     founder: 'Muhammad Taki Ahmed',
     url: 'https://raydrim.com',
-    logo: 'https://raydrim.com/logo.png',
+    logo: 'https://raydrim.com/logo.svg',
     description:
       'Raydrim builds high-performance web applications, AI integrations, and luxury brand experiences for visionary global clients.',
     email: 'muhammadtakiahmed@icloud.com',

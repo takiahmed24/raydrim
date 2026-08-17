@@ -13,6 +13,13 @@ export interface ContactPayload {
   message: string;
 }
 
+export async function GET() {
+  return NextResponse.json({
+    success: true,
+    message: 'Raydrim Contact API endpoint. Please submit inquiries via POST.',
+  });
+}
+
 export async function POST(req: NextRequest) {
   try {
     const body = (await req.json()) as ContactPayload;
