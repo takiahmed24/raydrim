@@ -11,7 +11,7 @@ export const PRICING_TIERS: PricingTier[] = [
     idealFor: 'Small businesses, freelancers & quick MVP landing pages',
     popular: false,
     badge: 'Most Affordable',
-    ctaText: 'Get Started for $299',
+    ctaText: 'Get Started ($299)',
     features: [
       'Custom 1-Page High-Conversion Landing Page',
       'Mobile-Responsive UI Design',
@@ -31,7 +31,7 @@ export const PRICING_TIERS: PricingTier[] = [
     timeline: '1 – 2 Weeks Delivery',
     idealFor: 'Growing businesses, Shopify stores & hybrid web-to-app conversions',
     popular: false,
-    ctaText: 'Launch Web & E-Com ($999)',
+    ctaText: 'Launch Web & E-Com',
     features: [
       'Bespoke Next.js Web Architecture or Shopify Store',
       'Up to 5 Custom High-Conversion Pages',
@@ -53,7 +53,7 @@ export const PRICING_TIERS: PricingTier[] = [
     idealFor: 'Startups, developers & creators needing Android/iOS apps or games',
     popular: true,
     badge: 'Dedicated Mobile',
-    ctaText: 'Build App / Game ($999+)',
+    ctaText: 'Build Mobile App',
     features: [
       'Single Platform (Android or iOS): $999',
       'Dual Platform (Android + iOS): $1,999',

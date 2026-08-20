@@ -6,22 +6,30 @@
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 24px;
   align-items: stretch;
+}
+
+.cardWrapper {
+  display: flex;
+  height: 100%;
 }
 
 .card {
   background: var(--surface);
   border: 1px solid var(--rule);
   border-radius: var(--radius-md);
-  padding: 40px 32px;
+  padding: 36px 24px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   position: relative;
   transition: transform 0.25s var(--ease), border-color 0.25s var(--ease), box-shadow 0.25s var(--ease);
   box-shadow: 0 4px 20px rgba(22, 21, 15, 0.03);
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 .card:hover {
@@ -37,81 +45,134 @@
 .popularBadge {
   position: absolute;
   top: 16px;
-  right: 20px;
+  right: 16px;
   background: var(--accent);
   color: #ffffff;
   font-family: var(--font-heading);
-  font-size: 0.72rem;
+  font-size: 0.7rem;
   font-weight: 700;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
-  padding: 4px 12px;
+  padding: 4px 10px;
   border-radius: var(--radius-full);
 }
 
-.header {
-  margin-bottom: 24px;
+.tierHeader {
+  margin-bottom: 16px;
 }
 
-.name {
-  font-size: 1.5rem;
+.tierName {
+  font-size: 1.35rem;
   font-weight: 700;
   color: var(--ink);
-  margin-bottom: 6px;
-  letter-spacing: -0.03em;
+  margin-bottom: 8px;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
 }
 
-.desc {
-  font-size: 0.88rem;
-  color: var(--ink-soft);
-  line-height: 1.5;
+.priceWrapper {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  margin-bottom: 10px;
 }
 
-.priceBox {
-  margin-bottom: 28px;
-  padding-bottom: 24px;
-  border-bottom: 1px solid var(--rule);
-}
-
-.price {
+.priceAmount {
   font-family: var(--font-heading);
-  font-size: 3rem;
+  font-size: 2.4rem;
   font-weight: 700;
   color: var(--ink);
-  letter-spacing: -0.04em;
+  letter-spacing: -0.03em;
   line-height: 1;
 }
 
-.period {
-  font-size: 0.85rem;
+.pricePeriod {
+  font-size: 0.8rem;
   color: var(--ink-soft);
-  margin-top: 4px;
 }
 
-.featuresList {
+.timelineChip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--ink-soft);
+  background: var(--bg);
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--rule);
+}
+
+.tierDesc {
+  font-size: 0.88rem;
+  color: var(--ink-soft);
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.divider {
+  height: 1px;
+  background: var(--rule);
+  margin: 0 0 20px 0;
+}
+
+.featureListTitle {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--ink);
+  margin-bottom: 14px;
+}
+
+.featureList {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  margin-bottom: 36px;
+  gap: 10px;
+  margin-bottom: 28px;
+  padding: 0;
+  flex-grow: 1;
 }
 
 .featureItem {
   display: flex;
   align-items: flex-start;
-  gap: 10px;
-  font-size: 0.92rem;
+  gap: 8px;
+  font-size: 0.85rem;
   color: var(--ink-soft);
+  line-height: 1.4;
 }
 
 .checkIcon {
   color: var(--accent);
-  margin-top: 3px;
+  margin-top: 2px;
   flex-shrink: 0;
+}
+
+.ctaWrapper {
+  margin-top: auto;
+  width: 100%;
+}
+
+.ctaWrapper :global(a),
+.ctaWrapper :global(button) {
+  white-space: normal !important;
+  text-align: center;
+  padding: 12px 16px !important;
+  font-size: 0.9rem !important;
+  line-height: 1.3 !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
 }
 
 @media (max-width: 1024px) {
   .grid {
     grid-template-columns: 1fr;
+  }
+  
+  .card {
+    padding: 32px 20px;
   }
 }
