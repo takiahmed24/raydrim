@@ -10,14 +10,14 @@ import GlobalFootprint from '@/components/about/GlobalFootprint';
 export const metadata: Metadata = {
   title: 'About Us',
   description:
-    'Discover Raydrim’s mission, global engineering leadership, core values, and company timeline in delivering enterprise software.',
+    'Discover Raydrim’s mission, software engineering capabilities, core values, and journey in building high-performance web applications and digital products.',
   alternates: {
     canonical: 'https://raydrim.com/about',
   },
   openGraph: {
     title: 'About Us | Raydrim Digital Agency',
     description:
-      'Discover Raydrim’s mission, global engineering leadership, core values, and company timeline in delivering enterprise software.',
+      'Discover Raydrim’s mission, software engineering capabilities, core values, and journey in building high-performance web applications and digital products.',
     url: 'https://raydrim.com/about',
     type: 'website',
   },
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'About Us | Raydrim Digital Agency',
     description:
-      'Discover Raydrim’s mission, global engineering leadership, core values, and company timeline in delivering enterprise software.',
+      'Discover Raydrim’s mission, software engineering capabilities, core values, and journey in building high-performance web applications and digital products.',
   },
 };
 

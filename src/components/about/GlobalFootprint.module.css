@@ -5,18 +5,18 @@
 }
 
 .grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
+  display: flex;
+  justify-content: center;
   margin-top: 40px;
 }
 
 .officeCard {
+  max-width: 480px;
+  width: 100%;
   padding: 32px 24px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100%;
   position: relative;
   background: var(--surface);
   border: 1px solid var(--rule);
@@ -102,11 +102,12 @@
 
 .metricVal {
   font-family: var(--font-heading);
-  font-size: 2rem;
+  font-size: clamp(1.3rem, 2.2vw, 1.85rem);
   font-weight: 700;
   color: var(--ink);
   letter-spacing: -0.03em;
-  margin-bottom: 4px;
+  margin-bottom: 6px;
+  line-height: 1.15;
 }
 
 .metricSub {

@@ -20,17 +20,17 @@ export default function StoryVision() {
                   <div className={styles.iconBox}>
                     <Compass size={28} />
                   </div>
-                  <span className={styles.tag}>Our Genesis</span>
+                  <span className={styles.tag}>Founder Story</span>
                 </div>
 
-                <h2 className={styles.title}>From Technical Vision to Global Enterprise Partner</h2>
+                <h2 className={styles.title}>Built on Dedication, Craftsmanship & Accountability</h2>
 
                 <div className={styles.body}>
                   <p>
-                    Raydrim was born out of frustration with conventional software agencies that sacrificed code architecture for speed, or compromised design identity for utility.
+                    I&apos;m Muhammad Taki Ahmed, a software developer based in Dhaka, Bangladesh. I started Raydrim to build high-quality web applications, mobile apps, and e-commerce solutions for clients worldwide.
                   </p>
                   <p>
-                    Founded in 2020, we assembled a elite team of distributed systems engineers and luxury brand UI designers. We bridged the gap by crafting web software that renders in under 500 milliseconds while delivering captivating, interactive visual elegance.
+                    Every project I take on gets my full attention — from architecture planning to production deployment. I believe a solo developer who ships real products is more valuable than a large team that overpromises.
                   </p>
                 </div>
               </div>
@@ -38,11 +38,11 @@ export default function StoryVision() {
               <ul className={styles.highlightList}>
                 <li className={styles.highlightItem}>
                   <CheckCircle2 size={18} className={styles.checkIcon} />
-                  <span>Sub-second page rendering SLAs across all builds</span>
+                  <span>Direct communication with the developer building your product</span>
                 </li>
                 <li className={styles.highlightItem}>
                   <CheckCircle2 size={18} className={styles.checkIcon} />
-                  <span>100% in-house senior technical architecture leadership</span>
+                  <span>100% full source code and intellectual property ownership</span>
                 </li>
               </ul>
             </GlassCard>
@@ -56,17 +56,17 @@ export default function StoryVision() {
                   <div className={styles.iconBox}>
                     <Target size={28} />
                   </div>
-                  <span className={styles.tag}>Strategic Horizon</span>
+                  <span className={styles.tag}>Strategic Vision</span>
                 </div>
 
-                <h2 className={styles.title}>Architecting the Next Era of Web & AI Systems</h2>
+                <h2 className={styles.title}>Growing with Purpose, Expanding Real Impact</h2>
 
                 <div className={styles.body}>
                   <p>
-                    We believe the digital landscape is undergoing a paradigm shift. Enterprise applications must seamlessly combine autonomous AI agent intelligence, instant server streaming, and responsive micro-interactions.
+                    My vision for Raydrim is to grow sustainably by building solid, scalable digital foundations. Starting as an independent studio, I continuously refine my engineering stack across Next.js, Shopify, and mobile development to deliver exceptional value.
                   </p>
                   <p>
-                    Our mission is to arm high-growth brands with software foundations that outpace market shifts, guarantee data security, and scale effortlessly from 10,000 to 10,000,000 active users.
+                    As Raydrim expands, the goal is to build a focused studio known for engineering excellence, reliable timelines, and transparent collaboration — empowering clients to launch and scale their digital products with confidence.
                   </p>
                 </div>
               </div>
@@ -74,11 +74,11 @@ export default function StoryVision() {
               <ul className={styles.highlightList}>
                 <li className={styles.highlightItem}>
                   <CheckCircle2 size={18} className={styles.checkIcon} />
-                  <span>Pioneering Next.js 14 + LLM orchestration frameworks</span>
+                  <span>Production-grade web, e-commerce & mobile solutions</span>
                 </li>
                 <li className={styles.highlightItem}>
                   <CheckCircle2 size={18} className={styles.checkIcon} />
-                  <span>Zero-trust cloud infrastructure and continuous monitoring</span>
+                  <span>Long-term technical partnership & honest consultation</span>
                 </li>
               </ul>
             </GlassCard>

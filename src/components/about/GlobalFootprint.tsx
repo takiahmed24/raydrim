@@ -14,13 +14,13 @@ export default function GlobalFootprint() {
     <section className={styles.section}>
       <Container size="lg">
         <SectionHeading
-          badge="Global Presence"
+          badge="Location & Reach"
           title={
             <>
-              Operating Across <span className="text-gradient">4 Key Hubs</span>
+              Based in Dhaka, <span className="text-gradient">Serving Worldwide</span>
             </>
           }
-          subtitle="Our distributed studios enable 24/7 continuous engineering, rapid response, and local market understanding."
+          subtitle="Operating remotely with flexible communication, agile workflows, and full commitment to international clients."
         />
 
         <div className={styles.grid}>
@@ -32,7 +32,7 @@ export default function GlobalFootprint() {
                     <div className={styles.iconBox}>
                       <MapPin size={22} />
                     </div>
-                    {loc.isHQ && <span className={styles.hqBadge}>Global HQ</span>}
+                    {loc.isHQ && <span className={styles.hqBadge}>Base HQ</span>}
                   </div>
 
                   <h3 className={styles.city}>{loc.city}</h3>
@@ -52,16 +52,16 @@ export default function GlobalFootprint() {
         <ScrollReveal direction="up" delay={0.4}>
           <div className={styles.metricsBanner}>
             <div>
-              <div className={styles.metricVal}>18+ Countries</div>
-              <div className={styles.metricSub}>Active Client Footprint</div>
+              <div className={styles.metricVal}>Remote-First</div>
+              <div className={styles.metricSub}>Seamless Global Collaboration</div>
             </div>
             <div>
-              <div className={styles.metricVal}>24/7 Coverage</div>
-              <div className={styles.metricSub}>Follow-the-Sun Engineering</div>
+              <div className={styles.metricVal}>Worldwide Clients</div>
+              <div className={styles.metricSub}>Cross-Border Project Delivery</div>
             </div>
             <div>
-              <div className={styles.metricVal}>99.9% SLA</div>
-              <div className={styles.metricSub}>Guaranteed System Availability</div>
+              <div className={styles.metricVal}>Full Code Ownership</div>
+              <div className={styles.metricSub}>100% Repository & Asset Transfer</div>
             </div>
           </div>
         </ScrollReveal>

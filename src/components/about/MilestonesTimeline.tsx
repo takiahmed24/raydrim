@@ -18,7 +18,7 @@ export default function MilestonesTimeline() {
               Key Milestones in <span className="text-gradient">Our Journey</span>
             </>
           }
-          subtitle="From a boutique technical consultancy to an internationally recognized digital agency."
+          subtitle="The journey from building foundational projects to launching production platforms and expanding client services."
         />
 
         <div className={styles.timeline}>

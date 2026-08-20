@@ -47,14 +47,14 @@ export default function PortfolioHero() {
               <span className={styles.highlightIcon}>
                 <Award size={18} />
               </span>
-              <span>$120M+ Client Value Unlocked</span>
+              <span>Real Projects, Real Code</span>
             </div>
             <div className={styles.highlightDivider} />
             <div className={styles.highlightItem}>
               <span className={styles.highlightIcon}>
                 <ShieldCheck size={18} />
               </span>
-              <span>Zero Post-Launch Failures</span>
+              <span>Full Source Code Ownership</span>
             </div>
           </div>
         </ScrollReveal>

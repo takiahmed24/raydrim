@@ -5,13 +5,14 @@
 }
 
 .grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+  display: flex;
+  justify-content: center;
   margin-top: 40px;
 }
 
 .card {
+  max-width: 480px;
+  width: 100%;
   border-radius: var(--radius-md);
   overflow: hidden;
   background: var(--surface);
@@ -34,12 +35,16 @@
   height: 280px;
   overflow: hidden;
   background: #ece8df;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .avatar {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  padding: 32px;
   transition: transform 0.8s var(--ease);
   will-change: transform;
 }

@@ -26,7 +26,7 @@ export default function ClientResultsCounter() {
                       value={stat.value}
                       prefix={stat.prefix}
                       suffix={stat.suffix}
-                      decimals={stat.decimals || 0}
+                      decimals={(stat as { decimals?: number }).decimals ?? 0}
                     />
                   </div>
                   <div className={styles.labelTitle}>{stat.label}</div>

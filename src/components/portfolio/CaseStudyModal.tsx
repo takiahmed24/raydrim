@@ -157,17 +157,26 @@ export default function CaseStudyModal({ project, onClose }: CaseStudyModalProps
                   )}
                 </div>
 
-                <div style={{ display: 'flex', gap: '12px' }}>
-                  <Button variant="secondary" size="sm" onClick={onClose}>
-                    Close Drawer
-                  </Button>
+                <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', alignItems: 'center' }}>
+                  {project.liveUrl && (
+                    <Button
+                      href={project.liveUrl}
+                      variant="primary"
+                      size="sm"
+                      icon={<ExternalLink size={16} />}
+                    >
+                      View Live Site
+                    </Button>
+                  )}
                   <Button
                     href="/contact"
-                    variant="primary"
+                    variant="secondary"
                     size="sm"
-                    icon={<ExternalLink size={16} />}
                   >
                     Request Similar Build
+                  </Button>
+                  <Button variant="ghost" size="sm" onClick={onClose}>
+                    Close
                   </Button>
                 </div>
               </div>

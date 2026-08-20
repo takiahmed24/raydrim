@@ -70,374 +70,234 @@ export interface FAQItem {
   category?: string;
 }
 
-// Client Marquee Logos
-export const CLIENT_LOGOS: ClientLogo[] = [
-  { name: 'NexaCorp', category: 'Enterprise Tech', symbol: '⚡' },
-  { name: 'VeloceAI', category: 'Artificial Intelligence', symbol: '🧠' },
-  { name: 'QuantumPay', category: 'FinTech', symbol: '💎' },
-  { name: 'Aetheria', category: 'Luxury E-Commerce', symbol: '✦' },
-  { name: 'Lumina Labs', category: 'BioTech & Health', symbol: '🔬' },
-  { name: 'CyberPulse', category: 'Cybersecurity', symbol: '🛡️' },
-  { name: 'Zenith Tech', category: 'SaaS Platform', symbol: '🚀' },
-  { name: 'Apex Cloud', category: 'Infrastructure', symbol: '☁️' },
-];
+// ─── Founder Profile (replaces fake TEAM_MEMBERS) ───
+export const FOUNDER_PROFILE: TeamMember = {
+  id: 'muhammad-taki-ahmed',
+  name: 'Muhammad Taki Ahmed',
+  role: 'Founder & Software Developer',
+  bio: 'Full-stack software developer based in Dhaka, Bangladesh. I build fast, production-grade web applications with Next.js, React, and TypeScript — and ship real products to real users.',
+  avatar: '/logo.svg',
+  socials: {
+    github: 'https://github.com/takiahmed24',
+    linkedin: 'https://linkedin.com/in/takiahmed24',
+  },
+  skills: ['Next.js', 'React', 'TypeScript', 'Shopify', 'AWS', 'Mobile Apps'],
+};
 
-// Home Stats
+// ─── Honest Home Stats ───
 export const HOME_STATS: StatItem[] = [
   {
-    value: 150,
+    value: 2,
     suffix: '+',
-    label: 'Projects Delivered',
-    description: 'Enterprise web apps & AI systems deployed globally.',
+    label: 'Projects Shipped',
+    description: 'Live, production web applications deployed and running.',
   },
   {
-    value: 99.4,
+    value: 100,
     suffix: '%',
-    prefix: '',
-    label: 'Client Satisfaction',
-    description: 'Based on post-launch performance & NPS surveys.',
+    label: 'Code Ownership',
+    description: 'Every client gets full source code and repository access.',
   },
   {
-    value: 12,
-    suffix: '+',
-    label: 'Global Awards',
-    description: 'Recognized for UX excellence and technical innovation.',
+    value: 6,
+    suffix: '',
+    label: 'Service Areas',
+    description: 'Web apps, e-commerce, mobile, cloud, design & e-books.',
   },
   {
-    value: 24,
-    suffix: '/7',
-    label: 'Dedicated Support',
-    description: 'Around-the-clock infrastructure monitoring & SLA.',
+    value: 48,
+    suffix: 'hr',
+    prefix: '<',
+    label: 'Response Time',
+    description: 'All inquiries responded to within two business days.',
   },
 ];
 
-// Featured Projects
+// ─── Real Featured Projects ───
 export const FEATURED_PROJECTS: PortfolioProject[] = [
   {
-    id: 'aura-fintech',
-    title: 'Aura Financial Engine',
-    slug: 'aura-fintech',
-    client: 'QuantumPay Global',
-    category: 'FinTech Architecture',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop',
+    id: 'campus-dude',
+    title: 'Campus Dude — Browser Games Platform',
+    slug: 'campus-dude',
+    client: 'Personal Project',
+    category: 'Web Application',
+    image: 'https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=1200&auto=format&fit=crop',
     description:
-      'Ultra-low-latency financial dashboard handling $4.2B in annual transactions with real-time WebSocket streaming.',
-    summary: 'High-frequency trading and wealth management web suite built on Next.js 14 & Rust microservices.',
-    tags: ['Next.js 14', 'TypeScript', 'WebSockets', 'FinTech'],
+      'A free browser games platform built for students — 22 handcrafted games with zero logins, zero installs, and instant loading between classes.',
+    summary: 'Full-stack web application featuring real-time gameplay, responsive design, SEO optimization, and Google AdSense integration.',
+    tags: ['HTML5', 'CSS3', 'JavaScript', 'Canvas API', 'Game Development'],
     metrics: [
-      { label: 'Latency', value: '< 45ms' },
-      { label: 'Volume Processed', value: '$4.2B+' },
+      { label: 'Games Built', value: '22' },
+      { label: 'Login Required', value: 'Zero' },
     ],
     featured: true,
   },
   {
-    id: 'kroma-luxury',
-    title: 'Kroma Haute Couture',
-    slug: 'kroma-luxury',
-    client: 'Aetheria Luxury Group',
-    category: 'E-Commerce & WebGL',
-    image: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=1200&auto=format&fit=crop',
+    id: 'raydrim-agency',
+    title: 'Raydrim — Digital Agency Website',
+    slug: 'raydrim-agency',
+    client: 'Raydrim (Own Brand)',
+    category: 'Web Application',
+    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop',
     description:
-      'Immersive luxury shopping experience with interactive 3D product viewports, custom checkout, and global localization.',
-    summary: 'Headless Shopify solution delivering 3.4x increase in conversion rate for high-end fashion.',
-    tags: ['Shopify Plus', 'Three.js', 'React', 'Tailwind'],
+      'A high-performance agency website built with Next.js 16, TypeScript, CSS Modules, and Framer Motion — featuring editorial design, full SEO, and structured data.',
+    summary: 'Production Next.js application with 28 static pages, JSON-LD schemas, and sub-second load times.',
+    tags: ['Next.js 16', 'TypeScript', 'CSS Modules', 'Framer Motion', 'SEO'],
     metrics: [
-      { label: 'Conversion Lift', value: '+340%' },
-      { label: 'Page Load Speed', value: '0.8s' },
-    ],
-    featured: true,
-  },
-  {
-    id: 'nexus-ai',
-    title: 'Nexus Intelligence Platform',
-    slug: 'nexus-ai',
-    client: 'VeloceAI Inc.',
-    category: 'AI & Automation',
-    image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1200&auto=format&fit=crop',
-    description:
-      'Enterprise LLM orchestration hub empowering multi-agent autonomous workflows and automated document intelligence.',
-    summary: 'Custom AI agent interface integrated with vector databases and automated CI/CD pipelines.',
-    tags: ['AI Agents', 'Python', 'React', 'FastAPI'],
-    metrics: [
-      { label: 'Time Saved', value: '65%' },
-      { label: 'Accuracy Rate', value: '99.8%' },
+      { label: 'Static Pages', value: '28' },
+      { label: 'Build Time', value: '<4s' },
     ],
     featured: true,
   },
 ];
 
-// Testimonials
-export const TESTIMONIALS: Testimonial[] = [
-  {
-    id: 'test-1',
-    quote:
-      'Raydrim transformed our outdated legacy system into a sleek, lightning-fast digital asset. Their engineering precision and aesthetic standards are unmatched.',
-    author: 'Victoria Sterling',
-    role: 'Chief Technology Officer',
-    company: 'QuantumPay Global',
-    avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=300&auto=format&fit=crop',
-    rating: 5,
-  },
-  {
-    id: 'test-2',
-    quote:
-      'Working with Raydrim felt like extending our in-house team with world-class architects. They delivered our AI platform 3 weeks ahead of schedule.',
-    author: 'Marcus Vance',
-    role: 'VP of Product Engineering',
-    company: 'VeloceAI',
-    avatar: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=300&auto=format&fit=crop',
-    rating: 5,
-  },
-  {
-    id: 'test-3',
-    quote:
-      'The Jungle Luxe design identity Raydrim crafted for our e-commerce platform elevated our brand perception instantly. Conversions soared by 340%.',
-    author: 'Elena Rostova',
-    role: 'Head of Brand Experience',
-    company: 'Aetheria Luxury Group',
-    avatar: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=300&auto=format&fit=crop',
-    rating: 5,
-  },
-];
-
-// Team Members
-export const TEAM_MEMBERS: TeamMember[] = [
-  {
-    id: 'alexander-vance',
-    name: 'Alexander Vance',
-    role: 'CEO & Founder',
-    bio: '15+ years architecting venture-backed software startups and global digital agencies. Passionate about high-speed engineering and luxury UI.',
-    avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=600&auto=format&fit=crop',
-    socials: { linkedin: '#', twitter: '#', github: '#' },
-    skills: ['Strategy', 'Enterprise Tech', 'Venture Growth'],
-  },
-  {
-    id: 'elena-rostova',
-    name: 'Dr. Elena Rostova',
-    role: 'Chief Technology Officer',
-    bio: 'Former AI Research Lead with a Ph.D. from MIT. Expert in LLM orchestration, high-concurrency microservices, and system resilience.',
-    avatar: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=600&auto=format&fit=crop',
-    socials: { linkedin: '#', twitter: '#', github: '#' },
-    skills: ['AI Architecture', 'Distributed Systems', 'Rust/Node'],
-  },
-  {
-    id: 'marcus-thorne',
-    name: 'Marcus Thorne',
-    role: 'Lead UI/UX Designer',
-    bio: 'Award-winning design architect specializing in dark luxury design systems, WebGL micro-interactions, and high-converting product interfaces.',
-    avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=600&auto=format&fit=crop',
-    socials: { linkedin: '#', twitter: '#', github: '#' },
-    skills: ['Design Systems', 'Framer Motion', '3D UI'],
-  },
-  {
-    id: 'sophia-chen',
-    name: 'Sophia Chen',
-    role: 'Head of Engineering',
-    bio: 'Specialist in Next.js Server Components, GraphQL APIs, and frontend performance tuning with a track record of scaling to 10M+ active users.',
-    avatar: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=600&auto=format&fit=crop',
-    socials: { linkedin: '#', twitter: '#', github: '#' },
-    skills: ['Next.js 14', 'TypeScript', 'Performance Tuning'],
-  },
-  {
-    id: 'liam-oconnor',
-    name: 'Liam O\'Connor',
-    role: 'Product Strategist',
-    bio: 'Expert in bridging technical complexity with commercial product roadmaps. Over 50 successful enterprise product launches.',
-    avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=600&auto=format&fit=crop',
-    socials: { linkedin: '#', twitter: '#', github: '#' },
-    skills: ['Product Strategy', 'Agile Leadership', 'CRO'],
-  },
-  {
-    id: 'david-miller',
-    name: 'David Miller',
-    role: 'DevOps & Security Director',
-    bio: 'Certified Cloud Architect & Cybersecurity Lead overseeing automated Kubernetes deployment pipelines, zero-trust security, and SOC2 compliance.',
-    avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=600&auto=format&fit=crop',
-    socials: { linkedin: '#', twitter: '#', github: '#' },
-    skills: ['AWS / GCP', 'Kubernetes', 'Security Audits'],
-  },
-];
-
-// Milestones Timeline
+// ─── Honest Milestones ───
 export const MILESTONES: Milestone[] = [
   {
-    year: '2020',
-    title: 'Agency Inception',
-    description: 'Raydrim was founded in San Francisco with a vision to merge enterprise software precision with luxury digital aesthetics.',
+    year: '2025',
+    title: 'Started Building',
+    description: 'Began learning full-stack web development with JavaScript, React, and Node.js. Built early projects to sharpen skills.',
     badge: 'Foundation',
   },
   {
-    year: '2021',
-    title: 'AI & Cloud Division',
-    description: 'Expanded core services into cloud native architectures and early LLM automation integrations for global tech clients.',
-    badge: 'Expansion',
+    year: '2026',
+    title: 'Launched Campus Dude',
+    description: 'Shipped campusdude.site — a free browser games platform for students with 22 handcrafted games, responsive design, and AdSense integration.',
+    badge: 'First Product',
   },
   {
-    year: '2022',
-    title: 'Global Design Recognition',
-    description: 'Awarded International Web Excellence Award and reached 50+ successful client deployments across Europe & US.',
-    badge: 'Awards',
+    year: '2026',
+    title: 'Launched Raydrim',
+    description: 'Built and deployed raydrim.com as a professional digital studio — offering web development, e-commerce, mobile apps, and software consulting services.',
+    badge: 'Agency Launch',
   },
   {
-    year: '2023',
-    title: 'London & Tokyo Studios',
-    description: 'Opened regional hubs in London and Tokyo, scaling total team to 40+ senior developers and design leaders.',
-    badge: 'Global Growth',
-  },
-  {
-    year: '2024',
-    title: '150+ Enterprise Deployments',
-    description: 'Crossed 150+ completed client applications with 99.4% satisfaction rating and $50M+ client funding backed by Raydrim tech.',
-    badge: 'Scale',
-  },
-  {
-    year: '2025',
-    title: 'Next-Gen Agency Standard',
-    description: 'Pioneering autonomous AI agent interfaces, headless luxury e-commerce, and sub-second React 19 web frameworks.',
-    badge: 'Innovation',
+    year: '2026',
+    title: 'Expanding Services',
+    description: 'Growing into Shopify development, Google Play Books publishing, and cross-platform mobile app engineering with React Native.',
+    badge: 'Growth',
   },
 ];
 
-// Office Locations
+// ─── Single Office Location (Real) ───
 export const OFFICE_LOCATIONS: OfficeLocation[] = [
   {
-    city: 'San Francisco',
-    country: 'United States',
-    address: '500 Howard Street, Suite 400',
-    timezone: 'PST (UTC-8)',
-    coordinates: { x: 25, y: 35 },
+    city: 'Dhaka',
+    country: 'Bangladesh',
+    address: 'Dhaka-1230',
+    timezone: 'BST (UTC+6)',
+    coordinates: { x: 72, y: 48 },
     isHQ: true,
-  },
-  {
-    city: 'London',
-    country: 'United Kingdom',
-    address: '25 City Road, Shoreditch',
-    timezone: 'GMT (UTC+0)',
-    coordinates: { x: 48, y: 28 },
-  },
-  {
-    city: 'Tokyo',
-    country: 'Japan',
-    address: 'Roppongi Hills Mori Tower, 18F',
-    timezone: 'JST (UTC+9)',
-    coordinates: { x: 82, y: 38 },
-  },
-  {
-    city: 'Singapore',
-    country: 'Singapore',
-    address: 'Marina Bay Financial Centre, T3',
-    timezone: 'SGT (UTC+8)',
-    coordinates: { x: 75, y: 55 },
   },
 ];
 
-// Detailed Service Verticals
+// ─── Service Verticals (Real capabilities, honest metrics) ───
 export const SERVICE_VERTICALS: ServiceVerticalDetail[] = [
   {
     id: 'web-development',
     slug: 'web-development',
     title: 'Web Development & Architecture',
-    subtitle: 'Next.js, React 19, Server Components & Micro-Frontends',
+    subtitle: 'Next.js, React, TypeScript & Modern Web Standards',
     description:
-      'We craft bespoke, ultra-fast web applications built on Next.js 14 and modern TypeScript standards. Designed for maximum speed, SEO dominance, and fluid user interactions.',
+      'I build fast, production-grade web applications using Next.js and TypeScript. Every project is optimized for performance, SEO, and clean code architecture.',
     iconName: 'Code',
     capabilities: [
-      'Next.js 14 & React 19 App Router Architecture',
-      'Progressive Web Apps (PWA) & Offline Capabilities',
-      'Core Web Vitals Optimization (100 Speed Scores)',
-      'Headless CMS Integrations (Sanity, Strapi, Contentful)',
-      'Custom Design Systems & Tailwind Frameworks',
+      'Next.js App Router & React Server Components',
+      'Progressive Web Apps (PWA) & Offline Support',
+      'Core Web Vitals & Lighthouse Optimization',
+      'Headless CMS Integration (Sanity, Strapi, Contentful)',
+      'Custom Design Systems & CSS Modules',
     ],
-    techStack: ['Next.js', 'React', 'TypeScript', 'TailwindCSS', 'Framer Motion', 'GraphQL'],
+    techStack: ['Next.js', 'React', 'TypeScript', 'CSS Modules', 'Framer Motion', 'GraphQL'],
     metrics: [
-      { label: 'Avg Page Load', value: '< 0.6s' },
-      { label: 'Lighthouse Score', value: '98-100' },
+      { label: 'Target Page Load', value: '< 1s' },
+      { label: 'Lighthouse Target', value: '90+' },
     ],
     deliverables: [
       'Full Source Code Repository',
-      'Automated CI/CD Pipeline',
-      'Design System Storybook',
-      'Comprehensive Technical Docs',
+      'Deployment to Vercel / AWS',
+      'SEO & Performance Audit',
+      'Technical Documentation',
     ],
   },
   {
     id: 'software-consulting',
     slug: 'software-consulting',
     title: 'Software Consulting & Cloud',
-    subtitle: 'Cloud Architecture, DevOps Pipelines & System Security',
+    subtitle: 'Cloud Architecture, DevOps & Technical Strategy',
     description:
-      'Strategic technology guidance and hands-on cloud engineering. We modernize legacy codebases, architect fault-tolerant cloud platforms, and implement SOC2 security practices.',
+      'I help businesses plan and build cloud-native architectures, set up CI/CD pipelines, and make smart infrastructure decisions that scale without wasting money.',
     iconName: 'Cpu',
     capabilities: [
-      'AWS / GCP Multi-Cloud Architecture & Infrastructure as Code',
-      'DevOps CI/CD Pipelines & Kubernetes Orchestration',
-      'Cybersecurity Audits, Penetration Testing & Compliance',
-      'Monolith to Microservices Refactoring',
-      '24/7 SRE Monitoring & SLA Infrastructure Management',
+      'AWS Cloud Architecture & Infrastructure Planning',
+      'CI/CD Pipeline Setup with GitHub Actions',
+      'Docker Containerization & Deployment',
+      'Database Design (PostgreSQL, MongoDB)',
+      'Code Review & Technical Audit',
     ],
-    techStack: ['AWS', 'Docker', 'Kubernetes', 'Terraform', 'Python', 'Go'],
+    techStack: ['AWS', 'Docker', 'GitHub Actions', 'Terraform', 'Python', 'Node.js'],
     metrics: [
-      { label: 'System Uptime', value: '99.99%' },
-      { label: 'Infra Cost Cut', value: '-35%' },
+      { label: 'Deployment', value: 'Automated' },
+      { label: 'Infrastructure', value: 'AWS / Vercel' },
     ],
     deliverables: [
       'Architecture Blueprint',
-      'Security Compliance Audit',
-      'Terraform Scripts',
-      '24/7 SLA Monitoring Setup',
+      'CI/CD Pipeline Configuration',
+      'Infrastructure Setup',
+      'Technical Recommendations Report',
     ],
   },
   {
     id: 'ecommerce-solutions',
     slug: 'ecommerce-solutions',
     title: 'E-Commerce Solutions',
-    subtitle: 'Shopify Plus, Headless Commerce & Custom Checkout',
+    subtitle: 'Shopify, Headless Commerce & Payment Integration',
     description:
-      'High-converting digital storefronts engineered for scale. We combine headless commerce backends with bespoke React interfaces and instant checkout flows.',
+      'I build high-converting online stores using Shopify and headless commerce architectures. From product pages to checkout flows, every element is optimized for sales.',
     iconName: 'ShoppingBag',
     capabilities: [
-      'Shopify Plus & Liquid / Hydrogen Headless Frameworks',
-      'Stripe, Adyen & Multi-Currency Payment Integrations',
-      'Custom Subscriptions & Loyalty Program Portals',
-      'Real-Time Inventory & ERP Synchronization',
-      'Conversion Rate Optimization (CRO) & A/B Testing',
+      'Shopify Store Setup & Theme Customization',
+      'Headless Shopify with Next.js Storefronts',
+      'Stripe, bKash & Multi-Currency Payment Integration',
+      'Product Catalog & Inventory Management',
+      'Conversion Rate Optimization & A/B Testing',
     ],
-    techStack: ['Shopify Plus', 'Hydrogen', 'Stripe API', 'Klaviyo', 'Algolia', 'Tailwind'],
+    techStack: ['Shopify', 'Hydrogen', 'Stripe API', 'Next.js', 'Tailwind', 'GraphQL'],
     metrics: [
-      { label: 'Avg CR Lift', value: '+42%' },
-      { label: 'Checkout Speed', value: '1.2s' },
+      { label: 'Checkout', value: 'Optimized' },
+      { label: 'Payments', value: 'Multi-Currency' },
     ],
     deliverables: [
-      'Headless Storefront',
-      'Custom Payment Gateway',
-      'ERP Integration Suite',
-      'Conversion Analytics Dashboard',
+      'Complete Shopify Store',
+      'Custom Theme or Headless Storefront',
+      'Payment Gateway Integration',
+      'Product Upload & Configuration',
     ],
   },
   {
     id: 'creative-studio',
     slug: 'creative-studio',
     title: 'Creative Studio & UI/UX',
-    subtitle: 'Brand Identity, Luxury UI/UX & WebGL Motion Graphics',
+    subtitle: 'Brand Identity, UI Design & Motion Graphics',
     description:
-      'Transformative visual design and luxury brand positioning. We craft interactive 3D WebGL experiences, dark glassmorphic design systems, and memorable digital brand identities.',
+      'I craft clean, modern visual designs and brand identities. From design tokens and component libraries to smooth Framer Motion animations, every detail is intentional.',
     iconName: 'Palette',
     capabilities: [
-      'Luxury Brand Identity & Visual Guideline Creation',
-      'End-to-End Product UI/UX Design & Interactive Prototypes',
-      'WebGL / Three.js 3D Interactive Web Experiences',
-      'Motion Graphics & Custom Micro-Animations',
-      'Design Token Architecture for Cross-Platform Sync',
+      'Brand Identity & Visual Design Guidelines',
+      'Product UI/UX Design & Interactive Prototypes',
+      'Responsive Design Systems & Component Libraries',
+      'Framer Motion & CSS Animations',
+      'Design Token Architecture',
     ],
-    techStack: ['Figma', 'Three.js', 'Spline', 'Framer Motion', 'Blender', 'After Effects'],
+    techStack: ['Figma', 'Framer Motion', 'CSS Modules', 'Tailwind', 'Adobe Suite'],
     metrics: [
-      { label: 'Engagement Increase', value: '+180%' },
-      { label: 'Design Awards', value: '12 Wins' },
+      { label: 'Design Approach', value: 'Mobile-First' },
+      { label: 'Prototyping', value: 'Interactive' },
     ],
     deliverables: [
-      'Figma Master File',
-      'Brand Style Guide PDF',
-      'Interactive WebGL Assets',
+      'Figma Design Files',
+      'Brand Style Guide',
+      'Component Library',
       'Design Token Package',
     ],
   },
@@ -445,159 +305,151 @@ export const SERVICE_VERTICALS: ServiceVerticalDetail[] = [
     id: 'mobile-app-development',
     slug: 'mobile-app-development',
     title: 'Mobile & App Store Engineering',
-    subtitle: 'Native iOS (Swift), Android (Kotlin), React Native & App Store Publishing',
+    subtitle: 'React Native, Expo & Google Play Store Publishing',
     description:
-      'High-performance mobile applications built for Apple App Store and Google Play Store. We engineer cross-platform React Native apps, in-app purchase systems, and native mobile UI.',
+      'I build cross-platform mobile applications for iOS and Android using React Native. From development to App Store submission, I handle the full lifecycle.',
     iconName: 'Smartphone',
     capabilities: [
-      'iOS & Android Cross-Platform Mobile Engineering',
-      'App Store Optimization (ASO) & Submission Management',
-      'In-App Purchases (IAP) & Subscription Monetization',
-      'Push Notifications, Offline Telemetry & Biometrics',
-      'React Native, Expo & Flutter Core Applications',
+      'iOS & Android Cross-Platform Development',
+      'App Store & Google Play Store Submission',
+      'In-App Purchases & Subscription Setup',
+      'Push Notifications & Offline Storage',
+      'React Native, Expo & Flutter Development',
     ],
-    techStack: ['React Native', 'Swift', 'Kotlin', 'Expo', 'RevenueCat', 'Firebase'],
+    techStack: ['React Native', 'Expo', 'Swift', 'Kotlin', 'Firebase', 'RevenueCat'],
     metrics: [
-      { label: 'App Store Approval', value: '100% Rate' },
-      { label: 'Avg App Store Rating', value: '4.9 ⭐' },
+      { label: 'Platforms', value: 'iOS + Android' },
+      { label: 'Framework', value: 'React Native' },
     ],
     deliverables: [
-      'App Store & Play Store Binary Submissions',
-      'Full Native Source Code Repository',
+      'App Store & Play Store Submissions',
+      'Full Native Source Code',
       'In-App Purchase Integration',
-      'Push Notification Architecture',
+      'Push Notification Setup',
     ],
   },
   {
     id: 'digital-ebooks-products',
     slug: 'digital-ebooks-products',
-    title: 'Digital E-Books & Google Play Store Publishing',
-    subtitle: 'Technical E-Books, Google Play Books Publishing & Whop Storefront Passes',
+    title: 'Digital E-Books & Publishing',
+    subtitle: 'Technical E-Books, Google Play Books & Digital Products',
     description:
-      'Comprehensive software engineering e-books, technical guides, and app store publications. We write, format, and publish digital e-books to Google Play Books, Apple Books, Whop, and direct marketplaces.',
+      'I write, format, and publish technical e-books and digital guides to Google Play Books, Apple Books, and direct marketplaces like Whop and Gumroad.',
     iconName: 'BookOpen',
     capabilities: [
-      'Production Next.js, AI & Cloud Architecture E-Books',
-      'Google Play Books & Apple Books E-Book Publishing',
-      'System Design Blueprints & Developer Checklists',
-      'Instant Pass & Whop Storefront Digital Downloads',
-      'Exclusive Technical Masterclasses & Guides',
+      'Technical E-Book Writing & Editing',
+      'Google Play Books & Apple Books Publishing',
+      'PDF, ePub & Kindle Formatting',
+      'Digital Product Storefront Setup',
+      'Code Companion Repositories',
     ],
-    techStack: ['Google Play Books API', 'Whop API', 'Markdown / PDF / ePub', 'Stripe Digital', 'Next.js'],
+    techStack: ['Google Play Books', 'Markdown', 'PDF / ePub', 'Stripe', 'Next.js'],
     metrics: [
-      { label: 'Digital Downloads', value: '10,000+' },
-      { label: 'Reader Rating', value: '4.95 / 5 ⭐' },
+      { label: 'Formats', value: 'PDF + ePub' },
+      { label: 'Distribution', value: 'Global' },
     ],
     deliverables: [
-      'Google Play Books & Apple Books Listing',
-      'PDF, ePub & Kindle E-Book Master Files',
-      'Source Code Companion Repositories',
-      'Instant Whop Membership Access',
+      'Google Play Books Listing',
+      'PDF & ePub Master Files',
+      'Source Code Companion',
+      'Marketing Landing Page',
     ],
   },
 ];
 
-// 5-Step Delivery Process
+// ─── 4-Step Delivery Process (Solo Developer) ───
 export const DELIVERY_PROCESS: ProcessStep[] = [
   {
     number: '01',
-    title: 'Discovery & Architecture Planning',
-    subtitle: 'Uncovering opportunities & setting foundations',
+    title: 'Discovery & Planning',
+    subtitle: 'Understanding your goals & setting the roadmap',
     description:
-      'We conduct deep-dive technical workshops to map out your business objectives, target audience requirements, data schemas, and system architecture.',
-    deliverables: ['Technical Spec Document', 'System Architecture Diagram', 'Project Scope & Roadmap'],
+      'I start with a detailed conversation to understand your business objectives, target audience, and technical requirements. We define the project scope, timeline, and deliverables together.',
+    deliverables: ['Project Scope Document', 'Technical Requirements', 'Timeline & Milestones'],
   },
   {
     number: '02',
-    title: 'Strategic UX & Product Wireframing',
-    subtitle: 'Blueprint for user journeys & conversion paths',
+    title: 'Design & Wireframing',
+    subtitle: 'Visualizing the solution before building',
     description:
-      'Our product strategists and UI architects design high-fidelity interactive wireframes that optimize user flows, engagement metrics, and conversion funnels.',
-    deliverables: ['Interactive Wireframe Prototypes', 'User Journey Maps', 'Information Architecture'],
+      'I create wireframes and interactive prototypes so you can see exactly what your product will look like before a single line of code is written. We iterate until you are fully satisfied.',
+    deliverables: ['Wireframe Prototypes', 'Design Mockups', 'User Flow Diagrams'],
   },
   {
     number: '03',
-    title: 'Jungle Luxe UI Design & Tokens',
-    subtitle: 'Crafting stunning visual identity & components',
+    title: 'Development & Testing',
+    subtitle: 'Building production-grade code',
     description:
-      'We translate approved wireframes into dark glassmorphic visual designs with custom glowing accents, typography rules, and responsive component libraries.',
-    deliverables: ['Figma Design System', 'Component Library', 'Design Tokens in CSS/JSON'],
+      'I build the solution using clean, well-documented code with regular progress updates. You get access to a staging environment to review and test as the project takes shape.',
+    deliverables: ['Clean Source Code', 'Staging Preview', 'Progress Updates'],
   },
   {
     number: '04',
-    title: 'Agile Engineering & QA Testing',
-    subtitle: 'Production-grade code & rigorous quality checks',
+    title: 'Launch & Handoff',
+    subtitle: 'Deploying and transferring full ownership',
     description:
-      'Our senior engineers build the solution in 2-week agile sprints with automated CI/CD pipelines, unit testing, security vulnerability scans, and performance tuning.',
-    deliverables: ['Clean Next.js / TypeScript Code', 'Test Suite Coverage', 'Staging Preview Environment'],
-  },
-  {
-    number: '05',
-    title: 'Launch, Scaling & 24/7 SLA Support',
-    subtitle: 'Zero-downtime deployment & continuous monitoring',
-    description:
-      'We execute zero-downtime production deployment, configure real-time cloud telemetry, and provide continuous SLA maintenance, performance optimization, and updates.',
-    deliverables: ['Production Cloud Deployment', '24/7 Telemetry Dashboard', 'Dedicated Support Team'],
+      'I deploy your project to production, transfer the complete source code and credentials, and provide post-launch support to ensure everything runs smoothly.',
+    deliverables: ['Production Deployment', 'Full Source Code Transfer', 'Post-Launch Support'],
   },
 ];
 
-// Tech Stack Categories
+// ─── Tech Stack (Real skills — keeping as-is) ───
 export const TECH_STACK: TechItem[] = [
   // Frontend
-  { name: 'Next.js 14', category: 'frontend', icon: '⚡', level: 'Core Framework' },
-  { name: 'React 19', category: 'frontend', icon: '⚛️', level: 'UI Engine' },
+  { name: 'Next.js', category: 'frontend', icon: '⚡', level: 'Core Framework' },
+  { name: 'React', category: 'frontend', icon: '⚛️', level: 'UI Library' },
   { name: 'TypeScript', category: 'frontend', icon: '📘', level: 'Type Safety' },
   { name: 'Tailwind CSS', category: 'frontend', icon: '🎨', level: 'Styling' },
   { name: 'Framer Motion', category: 'frontend', icon: '✨', level: 'Animations' },
-  { name: 'Three.js / WebGL', category: 'frontend', icon: '🌐', level: '3D Graphics' },
+  { name: 'HTML5 Canvas', category: 'frontend', icon: '🎮', level: 'Game Dev' },
 
   // Backend
-  { name: 'Node.js / Express', category: 'backend', icon: '🟩', level: 'Runtime' },
-  { name: 'Python / FastAPI', category: 'backend', icon: '🐍', level: 'AI & Data Services' },
-  { name: 'PostgreSQL / Prisma', category: 'backend', icon: '🐘', level: 'Relational DB' },
-  { name: 'Redis', category: 'backend', icon: '🔴', level: 'Caching & Queues' },
-  { name: 'GraphQL / REST', category: 'backend', icon: '📡', level: 'API Gateway' },
-  { name: 'LangChain & Vector DB', category: 'backend', icon: '🤖', level: 'LLM Orchestration' },
+  { name: 'Node.js', category: 'backend', icon: '🟩', level: 'Runtime' },
+  { name: 'Python', category: 'backend', icon: '🐍', level: 'Scripting & AI' },
+  { name: 'PostgreSQL', category: 'backend', icon: '🐘', level: 'Database' },
+  { name: 'MongoDB', category: 'backend', icon: '🍃', level: 'NoSQL' },
+  { name: 'REST APIs', category: 'backend', icon: '📡', level: 'API Design' },
+  { name: 'GraphQL', category: 'backend', icon: '🔗', level: 'Query Language' },
 
   // Cloud & DevOps
-  { name: 'AWS Cloud', category: 'cloud', icon: '☁️', level: 'Infrastructure' },
-  { name: 'Docker & K8s', category: 'cloud', icon: '🐳', level: 'Containerization' },
-  { name: 'Terraform', category: 'cloud', icon: '🏗️', level: 'IaC' },
-  { name: 'Vercel Enterprise', category: 'cloud', icon: '▲', level: 'Edge Hosting' },
-  { name: 'GitHub Actions', category: 'cloud', icon: '⚙️', level: 'CI/CD Pipelines' },
-  { name: 'Datadog & Sentry', category: 'cloud', icon: '📊', level: 'SRE & Telemetry' },
+  { name: 'AWS', category: 'cloud', icon: '☁️', level: 'Cloud Provider' },
+  { name: 'Docker', category: 'cloud', icon: '🐳', level: 'Containers' },
+  { name: 'Vercel', category: 'cloud', icon: '▲', level: 'Edge Hosting' },
+  { name: 'GitHub Actions', category: 'cloud', icon: '⚙️', level: 'CI/CD' },
+  { name: 'AWS Amplify', category: 'cloud', icon: '📦', level: 'Deployment' },
+  { name: 'Shopify', category: 'cloud', icon: '🛍️', level: 'E-Commerce' },
 ];
 
-// Service FAQs
+// ─── Service FAQs (Honest, solo-dev perspective) ───
 export const SERVICE_FAQS: FAQItem[] = [
   {
-    question: 'How fast can Raydrim kick off a new enterprise project?',
+    question: 'How quickly can you start a new project?',
     answer:
-      'We can assemble a dedicated project sprint team within 5 to 7 business days following our initial discovery session and contract approval.',
+      'I can typically start within 3 to 5 business days of finalizing the project scope and receiving the initial deposit.',
     category: 'Timeline',
   },
   {
-    question: 'What engagement & pricing models do you offer?',
+    question: 'What are your pricing and payment options?',
     answer:
-      'We offer Fixed-Scope Sprint Pricing for well-defined builds, as well as Monthly Dedicated Team Retainers for continuous product development and scaling.',
+      'I offer fixed-price project quotes based on scope and complexity. Payment is split into milestones — typically 50% upfront and 50% on delivery. I accept bank transfer, bKash, Payoneer, and international wire.',
     category: 'Pricing',
   },
   {
-    question: 'Who retains the intellectual property and source code?',
+    question: 'Do I own the source code after the project?',
     answer:
-      'You do. Upon project completion and payment, 100% of all intellectual property, source repositories, design assets, and credentials are fully transferred to your company.',
+      'Yes, 100%. Upon project completion and final payment, you receive the complete source code, design files, credentials, and deployment access. I retain no ownership.',
     category: 'Ownership',
   },
   {
-    question: 'How do you ensure enterprise-grade security and compliance?',
+    question: 'What happens if I need changes after launch?',
     answer:
-      'Our codebases follow OWASP security guidelines, SOC2 standards, and zero-trust cloud architecture. We execute automated static code scans and dependency security audits prior to release.',
-    category: 'Security',
+      'Every project includes a post-launch support window for bug fixes and minor adjustments. For ongoing work, I offer monthly retainer packages at discounted rates.',
+    category: 'Support',
   },
   {
-    question: 'What ongoing maintenance & support options are available after launch?',
+    question: 'Can you work with non-technical clients?',
     answer:
-      'We provide tailored SLA packages including 24/7 automated cloud monitoring, continuous Next.js/React security upgrades, feature enhancements, and emergency hotfix guarantees.',
-    category: 'Support',
+      'Absolutely. I specialize in translating business ideas into clear technical plans. You describe what you need, and I handle the architecture, design, and engineering.',
+    category: 'Process',
   },
 ];

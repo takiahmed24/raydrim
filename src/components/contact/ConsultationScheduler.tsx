@@ -24,30 +24,32 @@ export default function ConsultationScheduler() {
                 Schedule a 30-Min Strategy Call
               </h3>
               <p className={styles.cardDesc}>
-                Prefer an immediate conversation? Reserve a 1-on-1 technical discovery call with our Chief Architect.
+                Prefer an immediate conversation? Reserve a 1-on-1 technical discovery call with me directly.
               </p>
 
-              <div className={styles.slotsList}>
-                {CONSULTATION_SLOTS.map((slot, idx) => {
-                  const isSelected = selectedSlot === slot.time;
-                  return (
-                    <div
-                      key={idx}
-                      className={styles.slotItem}
-                      onClick={() => setSelectedSlot(slot.time)}
-                      style={{ cursor: 'pointer' }}
-                    >
-                      <div>
-                        <div className={styles.slotTime}>{slot.time}</div>
-                        <div className={styles.slotLabel}>{slot.label}</div>
+              {CONSULTATION_SLOTS.length > 0 && (
+                <div className={styles.slotsList}>
+                  {CONSULTATION_SLOTS.map((slot, idx) => {
+                    const isSelected = selectedSlot === slot.time;
+                    return (
+                      <div
+                        key={idx}
+                        className={styles.slotItem}
+                        onClick={() => setSelectedSlot(slot.time)}
+                        style={{ cursor: 'pointer' }}
+                      >
+                        <div>
+                          <div className={styles.slotTime}>{slot.time}</div>
+                          <div className={styles.slotLabel}>{slot.label}</div>
+                        </div>
+                        <span className={styles.bookBadge}>
+                          {isSelected ? 'Selected' : 'Available'}
+                        </span>
                       </div>
-                      <span className={styles.bookBadge}>
-                        {isSelected ? 'Selected' : 'Available'}
-                      </span>
-                    </div>
-                  );
-                })}
-              </div>
+                    );
+                  })}
+                </div>
+              )}
 
               <Button
                 href="https://cal.com"

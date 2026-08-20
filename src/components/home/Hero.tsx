@@ -5,7 +5,7 @@ import Container from '@/components/ui/Container';
 import Button from '@/components/ui/Button';
 import GlassCard from '@/components/ui/GlassCard';
 import ScrollReveal from '@/components/ui/ScrollReveal';
-import { ArrowRight, Zap, ShieldCheck, Award } from 'lucide-react';
+import { ArrowRight, Zap, ShieldCheck, Code } from 'lucide-react';
 import styles from './Hero.module.css';
 
 export default function Hero() {
@@ -54,7 +54,7 @@ export default function Hero() {
                 </div>
                 <div className={styles.cardMeta}>
                   <span className={styles.cardVal}>Sub-Second Velocity</span>
-                  <span className={styles.cardLabel}>Next.js 14 Server Components</span>
+                  <span className={styles.cardLabel}>Next.js 16 Server Components</span>
                 </div>
               </GlassCard>
 
@@ -70,11 +70,11 @@ export default function Hero() {
 
               <GlassCard variant="subtle" hoverEffect className={styles.accentCard}>
                 <div className={styles.cardIconBox}>
-                  <Award size={22} />
+                  <Code size={22} />
                 </div>
                 <div className={styles.cardMeta}>
-                  <span className={styles.cardVal}>12+ Global Awards</span>
-                  <span className={styles.cardLabel}>UX & Engineering Mastery</span>
+                  <span className={styles.cardVal}>Modern Tech Stack</span>
+                  <span className={styles.cardLabel}>Next.js 16 · TypeScript · React</span>
                 </div>
               </GlassCard>
             </div>

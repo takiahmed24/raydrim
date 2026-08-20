@@ -29,7 +29,7 @@ export default function AboutHero() {
 
         <ScrollReveal direction="up" delay={0.3}>
           <p className={styles.subtitle}>
-            Raydrim is a boutique software house and digital design studio. We partner with visionary founders and global enterprises to build web platforms, AI architectures, and brand systems that redefine market standards.
+            Raydrim is an independent software studio founded by Muhammad Taki Ahmed. I build fast, production-ready web platforms, mobile apps, and e-commerce solutions with clean architecture and dedicated craftsmanship.
           </p>
         </ScrollReveal>
 
@@ -37,27 +37,25 @@ export default function AboutHero() {
           <div className={styles.statsBar}>
             <div className={styles.statItem}>
               <span className={styles.statVal}>
-                <AnimatedCounter value={2020} suffix="" decimals={0} />
+                <AnimatedCounter value={2026} suffix="" decimals={0} />
               </span>
               <span className={styles.statLabel}>Founded</span>
             </div>
             <div className={styles.statItem}>
               <span className={styles.statVal}>
-                <AnimatedCounter value={40} suffix="+" />
+                <AnimatedCounter value={1} suffix="" />
               </span>
-              <span className={styles.statLabel}>Engineers & Designers</span>
+              <span className={styles.statLabel}>Solo Developer</span>
             </div>
             <div className={styles.statItem}>
               <span className={styles.statVal}>
-                <AnimatedCounter value={150} suffix="+" />
+                <AnimatedCounter value={2} suffix="+" />
               </span>
-              <span className={styles.statLabel}>Client Deployments</span>
+              <span className={styles.statLabel}>Projects Shipped</span>
             </div>
             <div className={styles.statItem}>
-              <span className={styles.statVal}>
-                <AnimatedCounter value={4} suffix="" />
-              </span>
-              <span className={styles.statLabel}>Global Studios</span>
+              <span className={styles.statVal}>Dhaka</span>
+              <span className={styles.statLabel}>Bangladesh</span>
             </div>
           </div>
         </ScrollReveal>
