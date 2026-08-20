@@ -21,11 +21,11 @@ export default function ContactInfoCards() {
       {/* Card 1: Direct Email */}
       <ScrollReveal direction="up" delay={0.1}>
         <GlassCard className={styles.card} hoverEffect={true}>
-          <div className={styles.iconWrapper}>
-            <Mail size={24} />
+          <div className={styles.iconBox}>
+            <Mail size={22} />
           </div>
           <h3 className={styles.title}>Direct Email</h3>
-          <p className={styles.subtitle}>Inquiries, RFPs & Partnership Proposals</p>
+          <p className={styles.subtitle}>Inquiries, RFPs & Project Details</p>
           <div className={styles.mainValue}>{CONTACT_INFO.email}</div>
 
           <div className={styles.actionRow}>
@@ -33,8 +33,8 @@ export default function ContactInfoCards() {
               className={styles.copyButton}
               onClick={() => copyToClipboard(CONTACT_INFO.email, 'email')}
             >
-              {copiedField === 'email' ? <Check size={14} className="text-jungle-400" /> : <Copy size={14} />}
-              <span>{copiedField === 'email' ? 'Copied' : 'Copy'}</span>
+              {copiedField === 'email' ? <Check size={14} /> : <Copy size={14} />}
+              <span>{copiedField === 'email' ? 'Copied' : 'Copy Email'}</span>
             </button>
             <a href={`mailto:${CONTACT_INFO.email}`} className={styles.directLink}>
               <span>Send Mail</span>
@@ -47,11 +47,11 @@ export default function ContactInfoCards() {
       {/* Card 2: Phone */}
       <ScrollReveal direction="up" delay={0.2}>
         <GlassCard className={styles.card} hoverEffect={true}>
-          <div className={styles.iconWrapper}>
-            <Phone size={24} />
+          <div className={styles.iconBox}>
+            <Phone size={22} />
           </div>
-          <h3 className={styles.title}>Telephone Line</h3>
-          <p className={styles.subtitle}>Direct Senior Client Concierge</p>
+          <h3 className={styles.title}>Telephone & WhatsApp</h3>
+          <p className={styles.subtitle}>Direct Mobile Line</p>
           <div className={styles.mainValue}>{CONTACT_INFO.phone}</div>
 
           <div className={styles.actionRow}>
@@ -59,10 +59,10 @@ export default function ContactInfoCards() {
               className={styles.copyButton}
               onClick={() => copyToClipboard(CONTACT_INFO.phone, 'phone')}
             >
-              {copiedField === 'phone' ? <Check size={14} className="text-jungle-400" /> : <Copy size={14} />}
-              <span>{copiedField === 'phone' ? 'Copied' : 'Copy'}</span>
+              {copiedField === 'phone' ? <Check size={14} /> : <Copy size={14} />}
+              <span>{copiedField === 'phone' ? 'Copied' : 'Copy Number'}</span>
             </button>
-            <a href="tel:+8801873691022" className={styles.directLink}>
+            <a href={`tel:${CONTACT_INFO.phone.replace(/[\s-]/g, '')}`} className={styles.directLink}>
               <span>Call Now</span>
               <ExternalLink size={12} />
             </a>
@@ -70,24 +70,27 @@ export default function ContactInfoCards() {
         </GlassCard>
       </ScrollReveal>
 
-      {/* Card 3: Office Address & US Banking */}
+      {/* Card 3: Address & Banking */}
       <ScrollReveal direction="up" delay={0.3}>
         <GlassCard className={styles.card} hoverEffect={true}>
-          <div className={styles.iconWrapper}>
-            <MapPin size={24} />
+          <div className={styles.iconBox}>
+            <MapPin size={22} />
           </div>
-          <h3 className={styles.title}>HQ & US Banking Partner</h3>
+          <h3 className={styles.title}>HQ & Banking Partner</h3>
           <p className={styles.subtitle}>Owner: {CONTACT_INFO.owner}</p>
-          <div className={styles.mainValue} style={{ fontSize: '0.85rem', lineHeight: '1.4' }}>
-            <strong>Recipient Address:</strong> {CONTACT_INFO.address}
-            <br /><br />
-            <strong>US Bank Partner:</strong> {CONTACT_INFO.usBankAddress}
+          <div className={styles.mainValue}>
+            <div className={styles.addressBlock}>
+              <strong>Recipient Address:</strong> {CONTACT_INFO.address}
+            </div>
+            <div className={styles.addressBlock}>
+              <strong>US Bank Partner:</strong> {CONTACT_INFO.usBankAddress}
+            </div>
           </div>
 
           <div className={styles.actionRow}>
-            <span className="text-xs text-cream-300">Dhaka & New York</span>
+            <span className={styles.locationTag}>Dhaka & New York</span>
             <a
-              href="https://maps.google.com"
+              href="https://maps.google.com/?q=Dhaka-1230,Bangladesh"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.directLink}
@@ -102,16 +105,18 @@ export default function ContactInfoCards() {
       {/* Card 4: Hours & SLA */}
       <ScrollReveal direction="up" delay={0.4}>
         <GlassCard className={styles.card} hoverEffect={true}>
-          <div className={styles.iconWrapper}>
-            <Clock size={24} />
+          <div className={styles.iconBox}>
+            <Clock size={22} />
           </div>
           <h3 className={styles.title}>Business Hours & SLA</h3>
           <p className={styles.subtitle}>Active Operating Windows</p>
           <div className={styles.mainValue}>{CONTACT_INFO.hours}</div>
 
           <div className={styles.actionRow}>
-            <span className="text-xs text-jungle-400 font-semibold">{CONTACT_INFO.responseTime}</span>
-            <ShieldCheck size={16} className="text-jungle-400" />
+            <div className={styles.slaBadge}>
+              <ShieldCheck size={16} />
+              <span>Response Guarantee: {CONTACT_INFO.responseTime}</span>
+            </div>
           </div>
         </GlassCard>
       </ScrollReveal>
