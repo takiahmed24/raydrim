@@ -213,7 +213,7 @@ export default function PrivacyPolicyPage() {
                 7. Security Standards & Retention
               </h2>
               <p className={styles.text}>
-                We implement industry-standard technical and organizational security measures, including AES-256 encryption at rest, TLS 1.3 encryption in transit, strict role-based access control (RBAC), multi-factor authentication (MFA), and routine vulnerability audits.
+                This site is served entirely over HTTPS (TLS 1.3). We do not operate a database and do not store enquiry data on our own servers — contact form submissions are delivered directly to email via Resend and are not retained by this website. Accounts used to operate the site are protected with multi-factor authentication.
               </p>
             </section>
 

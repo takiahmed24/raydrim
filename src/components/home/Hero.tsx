@@ -63,8 +63,8 @@ export default function Hero() {
                   <ShieldCheck size={22} />
                 </div>
                 <div className={styles.cardMeta}>
-                  <span className={styles.cardVal}>Enterprise Security</span>
-                  <span className={styles.cardLabel}>TLS 1.3 & AES-256 Encryption</span>
+                  <span className={styles.cardVal}>Secure by Default</span>
+                  <span className={styles.cardLabel}>HTTPS/TLS 1.3 · No Data Retention</span>
                 </div>
               </GlassCard>
 

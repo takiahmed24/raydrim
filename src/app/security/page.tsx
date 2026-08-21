@@ -18,7 +18,7 @@ import styles from './security.module.css';
 export const metadata: Metadata = {
   title: 'Security & Best Practices',
   description:
-    'Learn about Raydrim’s security practices, TLS 1.3, AES-256 encryption, zero-trust cloud architecture, and data protection standards.',
+    'How Raydrim handles your code, credentials and project data — HTTPS everywhere, no data retention, and secure handover standards.',
   alternates: {
     canonical: 'https://raydrim.com/security',
   },
@@ -53,7 +53,7 @@ export default function SecurityPage() {
                 Security & <span className="text-gradient">Practices</span>
               </>
             }
-            subtitle="Security is engineered into every project shipped. Explore Raydrim's zero-trust architecture, encryption protocols, and data protection practices."
+            subtitle="How I handle your code, credentials and project data. Practical measures, honestly described — no certifications protocols, and data protection practices."
             align="center"
           />
           <p className={styles.lastUpdated}>Last Updated: August 2026 • Security Best Practices Standard</p>
@@ -87,7 +87,7 @@ export default function SecurityPage() {
                 1. Security Architecture Overview
               </h2>
               <p className={styles.text}>
-                At <strong>Raydrim</strong>, security is never an afterthought. We enforce a zero-trust engineering paradigm across our entire software development lifecycle (SDLC), ensuring client data, source repositories, and cloud workloads are protected against emerging cyber threats.
+                At <strong>Raydrim</strong>, security is handled with practical, verifiable measures rather than marketing claims. Below is exactly what I do across our entire software development lifecycle (SDLC), ensuring client data, source repositories, and cloud workloads are protected against emerging cyber threats.
               </p>
             </section>
 
@@ -105,7 +105,7 @@ export default function SecurityPage() {
                   <strong>Data in Transit:</strong> Mandatory TLS 1.3 encryption with strict HTTP Strict Transport Security (HSTS) and perfect forward secrecy (PFS).
                 </li>
                 <li className={styles.listItem}>
-                  <strong>Data at Rest:</strong> AES-256 bit hardware-level encryption across all cloud storage buckets, relational databases, and server volumes.
+                  <strong>Data at Rest:</strong> I do not operate a database or store client data. Project files live in your own repository and cloud accounts, encrypted at rest by your provider’s defaults. Historically relational databases, and server volumes.
                 </li>
                 <li className={styles.listItem}>
                   <strong>Key Management:</strong> Automated KMS key rotation with hardware security modules (HSM).
