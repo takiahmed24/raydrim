@@ -4,6 +4,7 @@ import { Resend } from 'resend';
 const resend = new Resend(process.env.RESEND_API_KEY);
 const CONTACT_EMAIL = process.env.CONTACT_EMAIL || 'muhammadtakiahmed@icloud.com';
 const CONTACT_EMAIL_ALT = process.env.CONTACT_EMAIL_ALT || 'ahmedmuhammadtaki@gmail.com';
+const SENDER_EMAIL = process.env.RESEND_FROM_EMAIL || 'Raydrim <contact@raydrim.com>';
 
 export interface ContactPayload {
   name: string;
@@ -108,7 +109,7 @@ export async function POST(req: NextRequest) {
     // Send notification email to owner via Resend (guarded against API/domain restrictions)
     try {
       await resend.emails.send({
-        from: 'Raydrim Contact Form <onboarding@resend.dev>',
+        from: SENDER_EMAIL,
         to: [CONTACT_EMAIL, CONTACT_EMAIL_ALT],
         replyTo: clientEmail,
         subject: `🟢 New Project Inquiry from ${clientName} — ${service}`,
@@ -151,13 +152,25 @@ export async function POST(req: NextRequest) {
         `,
       });
     } catch (ownerEmailErr) {
-      console.error('[API/Contact] Failed to send owner email notification:', ownerEmailErr);
+      console.error('[API/Contact] Primary sender failed, falling back to onboarding@resend.dev:', ownerEmailErr);
+      // Fallback try with default testing domain if domain verification is pending
+      try {
+        await resend.emails.send({
+          from: 'Raydrim Contact Form <onboarding@resend.dev>',
+          to: CONTACT_EMAIL,
+          replyTo: clientEmail,
+          subject: `🟢 New Project Inquiry from ${clientName} — ${service}`,
+          html: `<p>New inquiry from ${clientName} (${clientEmail}): ${projectMessage}</p>`,
+        });
+      } catch (fbErr) {
+        console.error('[API/Contact] Fallback notification failed:', fbErr);
+      }
     }
 
     // Try sending auto-reply (guarded so testing domain restrictions never fail client response)
     try {
       await resend.emails.send({
-        from: 'Raydrim <onboarding@resend.dev>',
+        from: SENDER_EMAIL,
         to: clientEmail,
         subject: `Thank you for reaching out, ${clientName}! — Raydrim`,
         html: `
