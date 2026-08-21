@@ -21,7 +21,7 @@ export default function TechStackGrid() {
           badge="Technology Arsenal"
           title={
             <>
-              Enterprise-Grade <span className="text-gradient">Tech Stack</span>
+              The <span className="text-gradient">Tech Stack</span> I Build With
             </>
           }
           subtitle="We leverage proven, modern open-source frameworks and cloud platforms built for durability and extreme performance."

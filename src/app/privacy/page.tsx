@@ -191,7 +191,7 @@ export default function PrivacyPolicyPage() {
                 6. Third-Party Infrastructure Providers
               </h2>
               <p className={styles.text}>
-                To deliver enterprise-grade performance, we utilize vetted global infrastructure partners operating under strict Data Processing Agreements (DPAs):
+                To deliver reliable performance, we utilize established global infrastructure partners operating under strict Data Processing Agreements (DPAs):
               </p>
               <ul className={styles.list}>
                 <li className={styles.listItem}>

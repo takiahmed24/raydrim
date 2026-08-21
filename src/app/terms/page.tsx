@@ -9,7 +9,7 @@ import {
   Scale,
   AlertTriangle,
   Mail,
-  ChevronRight,
+  RefreshCw,
 } from 'lucide-react';
 import Container from '@/components/ui/Container';
 import SectionHeading from '@/components/ui/SectionHeading';
@@ -19,29 +19,30 @@ import styles from './terms.module.css';
 export const metadata: Metadata = {
   title: 'Terms of Service',
   description:
-    'Read the official Terms of Service governing services provided by Raydrim Digital Agency, including IP ownership, retainer agreements, and service contracts.',
+    'Read the official Terms of Service governing services provided by Raydrim, including IP ownership, refund policies, and service contracts.',
   alternates: {
     canonical: 'https://raydrim.com/terms',
   },
   openGraph: {
-    title: 'Terms of Service | Raydrim Digital Agency',
+    title: 'Terms of Service | Raydrim',
     description:
-      'Official Terms of Service governing web application development, AI integrations, and digital agency services provided by Raydrim.',
+      'Official Terms of Service governing web application development, Shopify stores, mobile apps, and refund policies provided by Raydrim.',
     url: 'https://raydrim.com/terms',
   },
 };
 
 const SECTIONS = [
   { id: 'introduction', title: '1. Introduction & Acceptance', icon: FileText },
-  { id: 'services-scope', title: '2. Agency Services & SOW', icon: Briefcase },
+  { id: 'services-scope', title: '2. Services & Statements of Work', icon: Briefcase },
   { id: 'client-obligations', title: '3. Client Responsibilities', icon: Shield },
   { id: 'intellectual-property', title: '4. IP & Code Ownership', icon: Lock },
-  { id: 'payment-terms', title: '5. Payment & Retainers', icon: CreditCard },
-  { id: 'warranties-liability', title: '6. Limitation of Liability', icon: AlertTriangle },
-  { id: 'confidentiality', title: '7. Confidentiality & NDA', icon: Lock },
-  { id: 'termination', title: '8. Contract Termination', icon: Scale },
-  { id: 'governing-law', title: '9. Governing Law', icon: Scale },
-  { id: 'contact', title: '10. Contact Legal Team', icon: Mail },
+  { id: 'payment-terms', title: '5. Payment & Invoicing', icon: CreditCard },
+  { id: 'refunds-cancellations', title: '6. Refunds & Cancellations', icon: RefreshCw },
+  { id: 'warranties-liability', title: '7. Limitation of Liability', icon: AlertTriangle },
+  { id: 'confidentiality', title: '8. Confidentiality & NDA', icon: Lock },
+  { id: 'termination', title: '9. Contract Termination', icon: Scale },
+  { id: 'governing-law', title: '10. Governing Law', icon: Scale },
+  { id: 'contact', title: '11. Contact & Inquiries', icon: Mail },
 ];
 
 export default function TermsOfServicePage() {
@@ -56,10 +57,10 @@ export default function TermsOfServicePage() {
                 Terms of <span className="text-gradient">Service</span>
               </>
             }
-            subtitle="Please review the legal terms governing our digital development services, software consulting, and retainers."
+            subtitle="Please review the legal terms governing our software development services, website builds, and refund policies."
             align="center"
           />
-          <p className={styles.lastUpdated}>Effective Date: July 30, 2024 • Version 2.4</p>
+          <p className={styles.lastUpdated}>Effective Date: August 20, 2026 • Version 3.0</p>
         </ScrollReveal>
 
         <div className={styles.legalLayout}>
@@ -90,10 +91,10 @@ export default function TermsOfServicePage() {
                 1. Introduction & Agreement to Terms
               </h2>
               <p className={styles.text}>
-                Welcome to <strong>Raydrim</strong> (“Raydrim”, “Company”, “we”, “us”, or “our”). These Terms of Service (“Terms”) constitute a legally binding agreement between Raydrim Digital Agency and you (“Client”, “User”, or “you”), governing your access to and use of the website located at <code>Raydrim.com</code> and all associated custom software development, web engineering, artificial intelligence integration, branding, and strategic consulting services (collectively, the “Services”).
+                Welcome to <strong>Raydrim</strong> (“Raydrim”, “Company”, “we”, “us”, or “our”). These Terms of Service (“Terms”) constitute a legally binding agreement between Raydrim (operated by Muhammad Taki Ahmed) and you (“Client”, “User”, or “you”), governing your access to and use of <code>raydrim.com</code> and all associated custom web development, Shopify stores, mobile applications, and software engineering services.
               </p>
               <p className={styles.text}>
-                By executing a Statement of Work (“SOW”), paying an initial deposit or invoice, or accessing our platform services, you acknowledge that you have read, understood, and agree to be bound by these Terms in full.
+                By placing an order, executing a Statement of Work (“SOW”), paying an invoice, or purchasing via Whop, you acknowledge that you agree to be bound by these Terms in full.
               </p>
             </section>
 
@@ -101,20 +102,17 @@ export default function TermsOfServicePage() {
             <section id="services-scope" className={styles.section}>
               <h2 className={styles.sectionTitle}>
                 <Briefcase className={styles.sectionTitleIcon} size={22} />
-                2. Agency Services & Statement of Work (SOW)
+                2. Services & Statements of Work
               </h2>
               <p className={styles.text}>
-                Raydrim delivers digital agency services under specific Statements of Work, Proposal documents, or Monthly Retainer Contracts agreed upon between Raydrim and the Client.
+                Raydrim delivers development services under fixed-price package definitions or custom Statements of Work agreed upon between Raydrim and the Client.
               </p>
               <ul className={styles.list}>
                 <li className={styles.listItem}>
-                  <strong>Scope of Work:</strong> Detailed technical requirements, deliverables, milestones, timelines, and budgets will be defined in individual SOWs.
+                  <strong>Scope of Work:</strong> Technical deliverables, features, revision counts, and delivery timelines are defined at project kickoff.
                 </li>
                 <li className={styles.listItem}>
-                  <strong>Change Requests:</strong> Any requested modifications, additional features, or out-of-scope iterations following SOW sign-off will require a written Change Request and may adjust delivery dates and billing amounts.
-                </li>
-                <li className={styles.listItem}>
-                  <strong>Third-Party Dependencies:</strong> Milestones depending on third-party APIs (e.g., OpenAI, AWS, Stripe, Shopify) are subject to external API availability and policy constraints.
+                  <strong>Change Requests:</strong> Out-of-scope iterations or feature additions requested following sign-off will adjust timelines and quotes accordingly.
                 </li>
               </ul>
             </section>
@@ -130,13 +128,10 @@ export default function TermsOfServicePage() {
               </p>
               <ul className={styles.list}>
                 <li className={styles.listItem}>
-                  Provide requested text copy, brand assets, credentials, and API tokens within five (5) business days of request.
+                  Provide text copy, brand assets, credentials, or API tokens promptly upon request.
                 </li>
                 <li className={styles.listItem}>
-                  Designate a qualified internal Project Lead empowered to grant approvals on project deliverables.
-                </li>
-                <li className={styles.listItem}>
-                  Review design mockups and staging deployments promptly. Deliverables un-objected to after seven (7) business days will be deemed accepted.
+                  Review staging deployments and provide feedback within five (5) business days.
                 </li>
               </ul>
             </section>
@@ -149,99 +144,124 @@ export default function TermsOfServicePage() {
               </h2>
               <div className={styles.highlightBox}>
                 <p className={styles.text} style={{ margin: 0 }}>
-                  <strong>Ownership Transfer Guarantee:</strong> Upon full and final settlement of all invoices associated with an SOW, Raydrim grants the Client exclusive, perpetual, worldwide ownership of all custom source code, graphics, and final deliverables created specifically for the Client.
+                  <strong>Full Source Code Ownership:</strong> Upon settlement of final invoices, Raydrim grants the Client 100% exclusive, perpetual, worldwide ownership of all custom source code, graphics, and deliverables created for the project.
                 </p>
               </div>
-              <p className={styles.text}>
-                Raydrim retains ownership of pre-existing proprietary frameworks, open-source libraries, utility tools, and reusable core boilerplate routines (“Pre-Existing IP”) incorporated into deliverables. Raydrim grants Client a non-exclusive, royalty-free, perpetual license to use Pre-Existing IP as integrated into the final software product.
-              </p>
             </section>
 
             {/* Section 5 */}
             <section id="payment-terms" className={styles.section}>
               <h2 className={styles.sectionTitle}>
                 <CreditCard className={styles.sectionTitleIcon} size={22} />
-                5. Payment Terms, Invoicing & Retainers
+                5. Payment Terms & Invoicing
               </h2>
               <p className={styles.text}>
                 Financial arrangements are governed by the following standard billing policies:
               </p>
               <ul className={styles.list}>
                 <li className={styles.listItem}>
-                  <strong>Fixed-Price Milestones:</strong> Standard contracts require a 50% initial deposit prior to kickoff, 25% upon staging delivery, and 25% prior to final production deployment and repository transfer.
+                  <strong>Fixed Packages:</strong> 50% deposit upfront and 50% upon final delivery, or 100% upfront via Whop checkout.
                 </li>
                 <li className={styles.listItem}>
-                  <strong>Monthly Retainers:</strong> Retainer hours are billed in advance on the 1st of each calendar month. Unused hours do not roll over unless explicitly noted in an active SOW.
-                </li>
-                <li className={styles.listItem}>
-                  <strong>Late Payments:</strong> Invoices outstanding past 15 calendar days incur interest at 1.5% per month or the maximum rate permissible under law. Raydrim reserves the right to suspend development or staging environments for accounts overdue beyond 30 days.
+                  <strong>Accepted Payment Methods:</strong> Payoneer, Wise, Cards (Visa/Mastercard), US ACH, bKash, Nagad, and Rocket.
                 </li>
               </ul>
             </section>
 
             {/* Section 6 */}
-            <section id="warranties-liability" className={styles.section}>
+            <section id="refunds-cancellations" className={styles.section}>
               <h2 className={styles.sectionTitle}>
-                <AlertTriangle className={styles.sectionTitleIcon} size={22} />
-                6. Limitation of Liability & Warranties
+                <RefreshCw className={styles.sectionTitleIcon} size={22} />
+                6. Refunds & Cancellations Policy
               </h2>
               <p className={styles.text}>
-                Raydrim warrants that all code produced will conform substantially to specifications outlined in the SOW for a period of thirty (30) days following production deployment (“Bug-Fix Warranty”).
+                We prioritize transparency and fairness in all billing. Our refund and cancellation policy covers all fixed-price tiers, custom quotes, and digital storefront purchases:
               </p>
-              <p className={styles.text}>
-                TO THE MAXIMUM EXTENT PERMITTED BY LAW, RAYDRIM SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, CONSEQUENTIAL, SPECIAL, OR PUNITIVE DAMAGES (INCLUDING LOSS OF PROFITS, DATA LOSS, OR BUSINESS INTERRUPTION) ARISING OUT OF OR IN CONNECTION WITH OUR SERVICES. RAYDRIM’S TOTAL AGGREGATE LIABILITY UNDER ANY CONTRACT SHALL NOT EXCEED THE TOTAL FEES ACTUALLY PAID BY CLIENT TO RAYDRIM IN THE THREE (3) MONTHS PRECEDING THE CLAIM.
-              </p>
+              <ul className={styles.list}>
+                <li className={styles.listItem}>
+                  <strong>Fixed-Price Packages:</strong> Full 100% refund if cancelled before project work begins.
+                </li>
+                <li className={styles.listItem}>
+                  <strong>Work in Progress:</strong> Once development has commenced, refunds are prorated based on unstarted milestone scope.
+                </li>
+                <li className={styles.listItem}>
+                  <strong>Final Handover:</strong> After final delivery and handover of source code / repository access, no refunds can be issued as digital software assets cannot be un-delivered.
+                </li>
+                <li className={styles.listItem}>
+                  <strong>Included Revisions:</strong> Package revisions must be requested within fourteen (14) days of deliverable notification.
+                </li>
+                <li className={styles.listItem}>
+                  <strong>Monthly Care Plans:</strong> Subscriptions can be cancelled anytime; current billing months are non-prorated.
+                </li>
+                <li className={styles.listItem}>
+                  <strong>Whop Purchases:</strong> Purchases completed via Whop storefronts are also backed by Whop buyer guarantees.
+                </li>
+                <li className={styles.listItem}>
+                  <strong>Refund Requests:</strong> Submit requests to <code>muhammadtakiahmed@icloud.com</code>. All inquiries receive a response within 24 hours.
+                </li>
+              </ul>
             </section>
 
             {/* Section 7 */}
-            <section id="confidentiality" className={styles.section}>
+            <section id="warranties-liability" className={styles.section}>
               <h2 className={styles.sectionTitle}>
-                <Lock className={styles.sectionTitleIcon} size={22} />
-                7. Confidentiality & Non-Disclosure
+                <AlertTriangle className={styles.sectionTitleIcon} size={22} />
+                7. Limitation of Liability & Warranties
               </h2>
               <p className={styles.text}>
-                Both parties agree to hold all non-public information, trade secrets, business strategies, and technical architectures disclosed during the engagement in strict confidence. Confidential information shall not be disclosed to any third party without express prior written consent.
+                Raydrim warrants that all code produced will conform to specifications for a period of fourteen (14) days following deployment (“Bug-Fix Warranty”).
               </p>
             </section>
 
             {/* Section 8 */}
-            <section id="termination" className={styles.section}>
+            <section id="confidentiality" className={styles.section}>
               <h2 className={styles.sectionTitle}>
-                <Scale className={styles.sectionTitleIcon} size={22} />
-                8. Contract Termination & Cancellation
+                <Lock className={styles.sectionTitleIcon} size={22} />
+                8. Confidentiality & Non-Disclosure
               </h2>
               <p className={styles.text}>
-                Either party may terminate an active SOW for convenience upon providing fourteen (14) days written notice. In the event of termination, Client shall pay Raydrim for all work completed, hours logged, and non-cancelable expenses incurred up to the effective termination date.
+                Both parties agree to hold all non-public code, credentials, and business strategies in strict confidence.
               </p>
             </section>
 
             {/* Section 9 */}
-            <section id="governing-law" className={styles.section}>
+            <section id="termination" className={styles.section}>
               <h2 className={styles.sectionTitle}>
                 <Scale className={styles.sectionTitleIcon} size={22} />
-                9. Governing Law & Dispute Resolution
+                9. Contract Termination
               </h2>
               <p className={styles.text}>
-                These Terms and any dispute arising hereunder shall be governed by and construed in accordance with the laws of the State of California, United States, without regard to its conflict of law principles. Any legal suit, action, or proceeding shall be instituted exclusively in the federal or state courts located in San Francisco County, California.
+                Either party may terminate an active project for convenience upon providing written notice. Completed work up to the termination date remains payable.
               </p>
             </section>
 
             {/* Section 10 */}
+            <section id="governing-law" className={styles.section}>
+              <h2 className={styles.sectionTitle}>
+                <Scale className={styles.sectionTitleIcon} size={22} />
+                10. Governing Law
+              </h2>
+              <p className={styles.text}>
+                These Terms are governed by the applicable laws of Bangladesh, without regard to conflict of law rules.
+              </p>
+            </section>
+
+            {/* Section 11 */}
             <section id="contact" className={styles.section}>
               <h2 className={styles.sectionTitle}>
                 <Mail className={styles.sectionTitleIcon} size={22} />
-                10. Contact & Legal Inquiries
+                11. Contact & Legal Inquiries
               </h2>
               <p className={styles.text}>
-                If you have questions regarding these Terms of Service or require formal correspondence, please contact us directly at:
+                For legal inquiries or refund requests, contact us directly at:
               </p>
               <div className={styles.contactBox}>
-                <p><strong>Raydrim Digital Agency</strong></p>
-                <p><strong>Business Owner:</strong> Muhammad Taki Ahmed</p>
+                <p><strong>Raydrim</strong></p>
+                <p><strong>Founder & Developer:</strong> Muhammad Taki Ahmed</p>
                 <p><strong>Email:</strong> <a href="mailto:muhammadtakiahmed@icloud.com" className={styles.contactLink}>muhammadtakiahmed@icloud.com</a></p>
-                <p><strong>Phone / Mobile:</strong> +880 1873-691022</p>
-                <p><strong>Registered Address:</strong> Dhaka-1230, Bangladesh</p>
-                <p><strong>Domain:</strong> <a href="https://raydrim.com" className={styles.contactLink}>https://raydrim.com</a></p>
+                <p><strong>Phone:</strong> +880 1873-691022</p>
+                <p><strong>Location:</strong> Dhaka-1230, Bangladesh</p>
+                <p><strong>Website:</strong> <a href="https://raydrim.com" className={styles.contactLink}>https://raydrim.com</a></p>
               </div>
             </section>
           </div>

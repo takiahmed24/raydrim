@@ -17,7 +17,7 @@ export default function Hero() {
             <div className={styles.badgeWrapper}>
               <span className="editorial-badge">
                 <span className="badge-num">•</span>
-                Next-Gen Digital Agency Framework
+                Independent Software Studio · Dhaka, Bangladesh
               </span>
             </div>
           </ScrollReveal>
@@ -30,7 +30,7 @@ export default function Hero() {
 
           <ScrollReveal direction="up" delay={0.3}>
             <p className={styles.subtitle}>
-              Raydrim crafts bespoke enterprise web applications, AI orchestration platforms, and high-converting luxury visual identities designed to dominate your market.
+              I'm Muhammad Taki Ahmed, a full-stack developer in Dhaka. I build fast, production-ready websites, Shopify stores and mobile apps in Next.js and React — and you get the full source code, every time.
             </p>
           </ScrollReveal>
 

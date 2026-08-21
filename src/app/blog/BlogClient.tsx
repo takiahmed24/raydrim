@@ -51,7 +51,7 @@ export default function BlogClient({ posts, categories }: BlogClientProps) {
                 <span className="text-gradient-gold">Design</span>
               </>
             }
-            subtitle="Deep dives into enterprise architecture, e-commerce optimization, AWS infrastructure, and luxury branding."
+            subtitle="Notes from building and shipping real projects — the bugs, the trade-offs, and what I would do differently."
             align="center"
           />
         </ScrollReveal>

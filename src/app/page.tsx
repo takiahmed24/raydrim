@@ -6,9 +6,9 @@ import FeaturedWork from '@/components/home/FeaturedWork';
 import CTABanner from '@/components/home/CTABanner';
 
 export const metadata = {
-  title: 'Raydrim — We Build Digital Futures | Next-Gen Agency',
+  title: 'Raydrim — Websites, Shopify Stores & Mobile Apps Built to Order',
   description:
-    'Raydrim builds high-performance Next.js web applications, AI platforms, and luxury visual identities for visionary global clients.',
+    'Raydrim is the independent studio of Muhammad Taki Ahmed, building fast Next.js websites, Shopify stores and mobile apps. Fixed prices, clear timelines, full source code ownership.',
 };
 
 export default function HomePage() {

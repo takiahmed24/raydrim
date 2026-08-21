@@ -65,7 +65,7 @@ export const metadata: Metadata = {
       'High-performance Next.js web applications, Shopify e-commerce, and mobile app development by Muhammad Taki Ahmed.',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop',
+        url: '/images/portfolio/raydrim.jpg',
         width: 1200,
         height: 630,
         alt: 'Raydrim Digital Studio',
@@ -79,7 +79,7 @@ export const metadata: Metadata = {
       'Production Next.js web apps, Shopify e-commerce, and mobile app engineering.',
     creator: '@takiahmed24',
     images: [
-      'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop',
+      '/images/portfolio/raydrim.jpg',
     ],
   },
 };

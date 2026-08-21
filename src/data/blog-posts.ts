@@ -1,207 +1,218 @@
 import { BlogPost } from '@/types';
 
+const AUTHOR = {
+  name: 'Muhammad Taki Ahmed',
+  role: 'Founder & Software Developer at Raydrim',
+  avatar: '/logo.svg',
+  bio: 'Muhammad Taki Ahmed is a full-stack developer based in Dhaka, Bangladesh. He builds production web applications with Next.js, React and TypeScript, and writes about what actually broke while shipping them.',
+};
+
 export const blogPosts: BlogPost[] = [
   {
-    id: 'nextjs-14-enterprise-architecture-guide',
-    slug: 'nextjs-14-enterprise-architecture-guide',
+    id: 'static-html-lied-about-my-numbers',
+    slug: 'static-html-animated-counters-ssg-bug',
     category: 'Web Development',
-    readTime: '12 min read',
-    image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop',
-    title: 'Next.js 16 & React Server Components Architecture Guide',
-    date: '2026-02-15',
-    tags: ["Next.js","React","Architecture"],
-    author: {
-        "name": "Muhammad Taki Ahmed",
-        "role": "Founder & Software Developer at Raydrim",
-        "avatar": "/logo.svg",
-        "bio": "Muhammad Taki Ahmed is a full-stack software developer and founder of Raydrim, building production web applications with Next.js, React, and TypeScript."
-    },
-    excerpt: 'A comprehensive technical guide on Next.js 16 & React Server Components Architecture Guide. Learn practical strategies, code patterns, and real-world trade-offs for production applications.',
-    content: `<h2>Introduction</h2>\n<p>When building production applications, I often encounter challenges related to Next.js 16 & React Server Components Architecture Guide (App Router, caching, revalidation, Server Actions). In this comprehensive guide, I will share the strategies, code patterns, and practical trade-offs I use to build robust and scalable systems. Understanding these concepts is crucial for any developer aiming to deliver high-quality software.</p>\n<p>To dive deeper into Next.js 16 & React Server Components Architecture Guide (App Router, caching, revalidation, Server Actions), we must first consider the fundamental architecture. When I approach this, I always prioritize maintainability and performance. In modern web development, these two pillars support everything we do. Without a solid foundation, applications become brittle and difficult to scale. Therefore, investing time in understanding the underlying mechanisms pays dividends in the long run. Let's break down the core components and see how they interact. By analyzing these interactions, we can identify potential bottlenecks and optimize our code accordingly. Furthermore, applying best practices ensures our solutions are robust against edge cases and unexpected behaviors.</p>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<h2>Core Principles and Architecture</h2>\n<p>Let's look at a practical example of how to implement the core logic:</p>\n<pre><code class="language-typescript">\n// Example Implementation\nexport async function processLogic(data: any) {\n  console.log('Processing:', data);\n  // Implement core logic here\n  return { success: true, timestamp: Date.now() };\n}\n</code></pre>\n<p>Another critical aspect of Next.js 16 & React Server Components Architecture Guide (App Router, caching, revalidation, Server Actions) is understanding the data flow. Data is the lifeblood of our applications, and managing it efficiently is paramount. I often use patterns that minimize redundant operations and maximize throughput. For instance, caching frequently accessed data can significantly reduce load times and server strain. However, caching introduces its own set of challenges, such as cache invalidation and stale data. Therefore, a nuanced approach is necessary. We must carefully weigh the trade-offs between performance and data freshness. In my experience, a hybrid approach often yields the best results.</p>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<h2>Advanced Techniques</h2>\n<p>Here are some advanced considerations to keep in mind:</p>\n<ul>\n  <li><strong>Performance Profiling:</strong> Always measure before you optimize.</li>\n  <li><strong>Scalability:</strong> Design with future growth in mind.</li>\n  <li><strong>Security:</strong> Implement zero-trust principles by default.</li>\n  <li><strong>Testing:</strong> Write comprehensive test suites for critical paths.</li>\n</ul>\n<p>When deploying systems that handle Next.js 16 & React Server Components Architecture Guide (App Router, caching, revalidation, Server Actions), I also pay close attention to monitoring and observability. You cannot fix what you cannot see. Implementing robust logging and alerting mechanisms allows us to detect and resolve issues proactively. I prefer structured logging, as it facilitates querying and analysis. Furthermore, setting up meaningful alerts prevents alert fatigue and ensures we focus on genuinely critical events. A well-configured observability stack is an invaluable asset for any engineering team.</p>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<h2>Real-world Trade-offs</h2>\n<p>In the real world, we rarely have the luxury of perfect solutions. Building around Next.js 16 & React Server Components Architecture Guide (App Router, caching, revalidation, Server Actions) requires making pragmatic choices. Sometimes, shipping a slightly less optimal solution quickly is more valuable than spending weeks on a perfect one. I call this pragmatism. It's about finding the right balance between engineering excellence and business needs. By communicating these trade-offs transparently, we can build trust with stakeholders and ensure everyone is aligned on the project goals.</p>\n<p>Consider the implications of this approach. It impacts not only the technical implementation but also the team's workflow. I always encourage a culture of continuous learning and experimentation. By creating a safe environment to try new things and fail, we foster innovation and drive the project forward. In the context of Next.js 16 & React Server Components Architecture Guide (App Router, caching, revalidation, Server Actions), this means constantly evaluating new tools and techniques to see if they offer a better way of doing things. Stagnation is the enemy of progress in software development.</p>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<h2>Conclusion</h2>\n<p>In conclusion, mastering Next.js 16 & React Server Components Architecture Guide (App Router, caching, revalidation, Server Actions) is a continuous journey. I hope this guide has provided you with valuable insights and practical strategies you can apply to your own projects. Remember that the best approach depends on your specific context and constraints. Keep exploring, keep learning, and keep building great things.</p>\n`
+    readTime: '6 min read',
+    image: '/images/hero_preview.jpg',
+    title: 'My Site Shipped Zeros to Google: An Animated Counter SSG Bug',
+    date: '2026-08-19',
+    featured: true,
+    tags: ['Next.js', 'SSG', 'React', 'Debugging'],
+    author: AUTHOR,
+    excerpt:
+      'My homepage showed "2+ Projects Shipped" in the browser and "0+ Projects Shipped" to every crawler that fetched it. Here is how a standard animated counter pattern silently poisoned my static HTML, and the two-line fix.',
+    tableOfContents: [
+      { id: 'symptom', title: 'The symptom: a number only humans could see', level: 2 },
+      { id: 'cause', title: 'Why useState(0) is a trap in SSG', level: 2 },
+      { id: 'fix', title: 'The fix: render the truth, then animate', level: 2 },
+      { id: 'scrollreveal', title: 'The same bug wearing a different hat', level: 2 },
+      { id: 'checking', title: 'How to check your own build output', level: 2 },
+    ],
+    content: `<h2 id="symptom">The symptom: a number only humans could see</h2>
+<p>I have a stats strip on the raydrim.com homepage. Four numbers: projects shipped, code ownership, service areas, response time. In a browser they read <strong>2+, 100%, 6, &lt;24hr</strong>. They count up as you scroll past. Nice little touch.</p>
+<p>Then I fetched my own homepage with a tool that does not execute JavaScript, and got this:</p>
+<pre><code class="language-text">0+  Projects Shipped
+0%  Code Ownership
+0   Service Areas
+&lt;0hr Response Time</code></pre>
+<p>"Less than zero hours response time" is a funny thing to promise. It is a much less funny thing to discover has been sitting in your served HTML for weeks, because that is the version a crawler reads, the version a link preview scrapes, and the version a human reviewer sees if their fetch does not run scripts.</p>
+
+<h2 id="cause">Why useState(0) is a trap in SSG</h2>
+<p>Here is the counter component, and it is the same one you will find in a hundred tutorials:</p>
+<pre><code class="language-tsx">export default function AnimatedCounter({ value, duration = 2 }: Props) {
+  const [count, setCount] = useState(0);          // <-- the bug
+  const ref = useRef&lt;HTMLSpanElement&gt;(null);
+  const isInView = useInView(ref, { once: true, amount: 0.5 });
+
+  useEffect(() =&gt; {
+    if (!isInView) return;
+    // ...requestAnimationFrame ramp from 0 to value
+  }, [isInView, value, duration]);
+
+  return &lt;span ref={ref}&gt;{Math.round(count)}&lt;/span&gt;;
+}</code></pre>
+<p>Read it as a static site generator would. At build time there is no browser, no viewport, no IntersectionObserver. React renders the component exactly once to a string. <code>count</code> is whatever <code>useState</code> was initialised with, and <code>useEffect</code> never runs — effects are a client-only concept.</p>
+<p>So the generated HTML contains <code>&lt;span&gt;0&lt;/span&gt;</code>. Always. The real value only appears after JavaScript loads, hydration completes, the element scrolls into view, and the animation finishes.</p>
+<p>The insidious part is that it looks perfect in development and perfect in production, because you are looking at it in a browser. The broken output is only visible if you read the file on disk or fetch without JS.</p>
+
+<h2 id="fix">The fix: render the truth, then animate</h2>
+<p>Initialise state with the real value, then knock it back to zero on mount — client-side only — before animating up:</p>
+<pre><code class="language-tsx">export default function AnimatedCounter({ value, duration = 2 }: Props) {
+  const [count, setCount] = useState(value);      // SSG emits the real number
+  const ref = useRef&lt;HTMLSpanElement&gt;(null);
+  const isInView = useInView(ref, { once: true, amount: 0.5 });
+  const hasAnimated = useRef(false);
+
+  useEffect(() =&gt; {
+    if (!isInView || hasAnimated.current) return;
+    hasAnimated.current = true;
+    setCount(0);
+    // ...requestAnimationFrame ramp from 0 to value
+  }, [isInView, value, duration]);
+
+  return &lt;span ref={ref}&gt;{Math.round(count)}&lt;/span&gt;;
+}</code></pre>
+<p>Now the static file says <code>2</code>. A visitor with JavaScript sees it drop to zero and count back up, which is the effect I wanted anyway. A visitor without JavaScript, or a crawler, sees <code>2</code> and moves on.</p>
+<p>The principle generalises: <strong>the server-rendered state should be the finished state, not the starting frame of an animation.</strong> Animation is a client-side enhancement. If your prerendered HTML represents frame zero, you have shipped frame zero to everyone who does not run your JavaScript.</p>
+
+<h2 id="scrollreveal">The same bug wearing a different hat</h2>
+<p>Once I knew what to look for, I found it again. My scroll-reveal wrapper used Framer Motion like this:</p>
+<pre><code class="language-tsx">&lt;motion.div initial="hidden" whileInView="visible" variants={variants}&gt;</code></pre>
+<p>with <code>hidden</code> defined as <code>{ opacity: 0, y: 40 }</code>. At build time Framer Motion serialises the initial variant into an inline style, so the HTML shipped <code>style="opacity:0;transform:translateY(40px)"</code>.</p>
+<p>I counted the occurrences in my own build output. The services page had 23 of them. Pricing had 20. About had 17. The homepage had 15. Most of the visible content on every marketing page was invisible in the raw document, waiting on an IntersectionObserver to rescue it.</p>
+<p>Same fix, same shape — render plain and unstyled until mounted:</p>
+<pre><code class="language-tsx">const [isMounted, setIsMounted] = useState(false);
+useEffect(() =&gt; setIsMounted(true), []);
+
+if (!isMounted) {
+  return &lt;div className={className}&gt;{children}&lt;/div&gt;;
+}
+
+return (
+  &lt;motion.div initial="hidden" whileInView="visible" variants={variants} className={className}&gt;
+    {children}
+  &lt;/motion.div&gt;
+);</code></pre>
+<p>One caveat worth knowing before you copy this: content that is already inside the viewport on first paint will flash visible, then hidden, then animate back in, because the swap to <code>motion.div</code> happens after mount. For above-the-fold sections I now skip the reveal entirely rather than animate them.</p>
+
+<h2 id="checking">How to check your own build output</h2>
+<p>You do not need a tool for this. After <code>next build</code>, the prerendered files sit in <code>.next/server/app/</code>. Read them directly:</p>
+<pre><code class="language-bash"># Are you shipping zeros?
+grep -o '&gt;0&lt;' .next/server/app/index.html | wc -l
+
+# How much of the page is invisible in the raw HTML?
+for f in .next/server/app/*.html; do
+  echo "$f: $(grep -o 'opacity:0' "$f" | wc -l)"
+done</code></pre>
+<p>Both commands should return zero, or something you can explain. Mine returned four and ninety-eight respectively.</p>
+<p>The wider lesson I took from this: in a statically generated app, the browser is the friendliest possible reader of your site. Everything else — crawlers, scrapers, previews, reviewers, people on flaky connections where a script fails — sees the file, not the app. Read the file occasionally.</p>`,
   },
   {
-    id: 'scaling-ecommerce-conversion-rate-optimization',
-    slug: 'scaling-ecommerce-conversion-rate-optimization',
-    category: 'E-Commerce',
-    readTime: '10 min read',
-    image: 'https://images.unsplash.com/photo-1556742049-0a67dd395e84?q=80&w=1200&auto=format&fit=crop',
-    title: 'Headless E-Commerce Conversion Optimization with Next.js & Shopify Storefront API',
-    date: '2026-03-02',
-    tags: ["E-Commerce","Shopify","Next.js"],
-    author: {
-        "name": "Muhammad Taki Ahmed",
-        "role": "Founder & Software Developer at Raydrim",
-        "avatar": "/logo.svg",
-        "bio": "Muhammad Taki Ahmed is a full-stack software developer and founder of Raydrim, building production web applications with Next.js, React, and TypeScript."
-    },
-    excerpt: 'A comprehensive technical guide on Headless E-Commerce Conversion Optimization with Next.js & Shopify Storefront API. Learn practical strategies, code patterns, and real-world trade-offs for production applications.',
-    content: `<h2>Introduction</h2>\n<p>When building production applications, I often encounter challenges related to Headless E-Commerce Conversion Optimization with Next.js & Shopify Storefront API (GraphQL queries, cart hooks, page speed). In this comprehensive guide, I will share the strategies, code patterns, and practical trade-offs I use to build robust and scalable systems. Understanding these concepts is crucial for any developer aiming to deliver high-quality software.</p>\n<p>To dive deeper into Headless E-Commerce Conversion Optimization with Next.js & Shopify Storefront API (GraphQL queries, cart hooks, page speed), we must first consider the fundamental architecture. When I approach this, I always prioritize maintainability and performance. In modern web development, these two pillars support everything we do. Without a solid foundation, applications become brittle and difficult to scale. Therefore, investing time in understanding the underlying mechanisms pays dividends in the long run. Let's break down the core components and see how they interact. By analyzing these interactions, we can identify potential bottlenecks and optimize our code accordingly. Furthermore, applying best practices ensures our solutions are robust against edge cases and unexpected behaviors.</p>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<h2>Core Principles and Architecture</h2>\n<p>Let's look at a practical example of how to implement the core logic:</p>\n<pre><code class="language-typescript">\n// Example Implementation\nexport async function processLogic(data: any) {\n  console.log('Processing:', data);\n  // Implement core logic here\n  return { success: true, timestamp: Date.now() };\n}\n</code></pre>\n<p>Another critical aspect of Headless E-Commerce Conversion Optimization with Next.js & Shopify Storefront API (GraphQL queries, cart hooks, page speed) is understanding the data flow. Data is the lifeblood of our applications, and managing it efficiently is paramount. I often use patterns that minimize redundant operations and maximize throughput. For instance, caching frequently accessed data can significantly reduce load times and server strain. However, caching introduces its own set of challenges, such as cache invalidation and stale data. Therefore, a nuanced approach is necessary. We must carefully weigh the trade-offs between performance and data freshness. In my experience, a hybrid approach often yields the best results.</p>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<h2>Advanced Techniques</h2>\n<p>Here are some advanced considerations to keep in mind:</p>\n<ul>\n  <li><strong>Performance Profiling:</strong> Always measure before you optimize.</li>\n  <li><strong>Scalability:</strong> Design with future growth in mind.</li>\n  <li><strong>Security:</strong> Implement zero-trust principles by default.</li>\n  <li><strong>Testing:</strong> Write comprehensive test suites for critical paths.</li>\n</ul>\n<p>When deploying systems that handle Headless E-Commerce Conversion Optimization with Next.js & Shopify Storefront API (GraphQL queries, cart hooks, page speed), I also pay close attention to monitoring and observability. You cannot fix what you cannot see. Implementing robust logging and alerting mechanisms allows us to detect and resolve issues proactively. I prefer structured logging, as it facilitates querying and analysis. Furthermore, setting up meaningful alerts prevents alert fatigue and ensures we focus on genuinely critical events. A well-configured observability stack is an invaluable asset for any engineering team.</p>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<h2>Real-world Trade-offs</h2>\n<p>In the real world, we rarely have the luxury of perfect solutions. Building around Headless E-Commerce Conversion Optimization with Next.js & Shopify Storefront API (GraphQL queries, cart hooks, page speed) requires making pragmatic choices. Sometimes, shipping a slightly less optimal solution quickly is more valuable than spending weeks on a perfect one. I call this pragmatism. It's about finding the right balance between engineering excellence and business needs. By communicating these trade-offs transparently, we can build trust with stakeholders and ensure everyone is aligned on the project goals.</p>\n<p>Consider the implications of this approach. It impacts not only the technical implementation but also the team's workflow. I always encourage a culture of continuous learning and experimentation. By creating a safe environment to try new things and fail, we foster innovation and drive the project forward. In the context of Headless E-Commerce Conversion Optimization with Next.js & Shopify Storefront API (GraphQL queries, cart hooks, page speed), this means constantly evaluating new tools and techniques to see if they offer a better way of doing things. Stagnation is the enemy of progress in software development.</p>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<h2>Conclusion</h2>\n<p>In conclusion, mastering Headless E-Commerce Conversion Optimization with Next.js & Shopify Storefront API (GraphQL queries, cart hooks, page speed) is a continuous journey. I hope this guide has provided you with valuable insights and practical strategies you can apply to your own projects. Remember that the best approach depends on your specific context and constraints. Keep exploring, keep learning, and keep building great things.</p>\n`
-  },
-  {
-    id: 'cloud-cost-optimization-strategies-aws',
-    slug: 'cloud-cost-optimization-strategies-aws',
-    category: 'Cloud Architecture',
-    readTime: '11 min read',
-    image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop',
-    title: 'AWS Cloud Cost Optimization for Startups & Scaleups',
-    date: '2026-03-24',
-    tags: ["AWS","DevOps","Cloud"],
-    author: {
-        "name": "Muhammad Taki Ahmed",
-        "role": "Founder & Software Developer at Raydrim",
-        "avatar": "/logo.svg",
-        "bio": "Muhammad Taki Ahmed is a full-stack software developer and founder of Raydrim, building production web applications with Next.js, React, and TypeScript."
-    },
-    excerpt: 'A comprehensive technical guide on AWS Cloud Cost Optimization for Startups & Scaleups. Learn practical strategies, code patterns, and real-world trade-offs for production applications.',
-    content: `<h2>Introduction</h2>\n<p>When building production applications, I often encounter challenges related to AWS Cloud Cost Optimization for Startups & Scaleups (EC2 rightsizing, S3 lifecycle policies, NAT Gateway savings, CloudFront caching). In this comprehensive guide, I will share the strategies, code patterns, and practical trade-offs I use to build robust and scalable systems. Understanding these concepts is crucial for any developer aiming to deliver high-quality software.</p>\n<p>To dive deeper into AWS Cloud Cost Optimization for Startups & Scaleups (EC2 rightsizing, S3 lifecycle policies, NAT Gateway savings, CloudFront caching), we must first consider the fundamental architecture. When I approach this, I always prioritize maintainability and performance. In modern web development, these two pillars support everything we do. Without a solid foundation, applications become brittle and difficult to scale. Therefore, investing time in understanding the underlying mechanisms pays dividends in the long run. Let's break down the core components and see how they interact. By analyzing these interactions, we can identify potential bottlenecks and optimize our code accordingly. Furthermore, applying best practices ensures our solutions are robust against edge cases and unexpected behaviors.</p>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<h2>Core Principles and Architecture</h2>\n<p>Let's look at a practical example of how to implement the core logic:</p>\n<pre><code class="language-typescript">\n// Example Implementation\nexport async function processLogic(data: any) {\n  console.log('Processing:', data);\n  // Implement core logic here\n  return { success: true, timestamp: Date.now() };\n}\n</code></pre>\n<p>Another critical aspect of AWS Cloud Cost Optimization for Startups & Scaleups (EC2 rightsizing, S3 lifecycle policies, NAT Gateway savings, CloudFront caching) is understanding the data flow. Data is the lifeblood of our applications, and managing it efficiently is paramount. I often use patterns that minimize redundant operations and maximize throughput. For instance, caching frequently accessed data can significantly reduce load times and server strain. However, caching introduces its own set of challenges, such as cache invalidation and stale data. Therefore, a nuanced approach is necessary. We must carefully weigh the trade-offs between performance and data freshness. In my experience, a hybrid approach often yields the best results.</p>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<h2>Advanced Techniques</h2>\n<p>Here are some advanced considerations to keep in mind:</p>\n<ul>\n  <li><strong>Performance Profiling:</strong> Always measure before you optimize.</li>\n  <li><strong>Scalability:</strong> Design with future growth in mind.</li>\n  <li><strong>Security:</strong> Implement zero-trust principles by default.</li>\n  <li><strong>Testing:</strong> Write comprehensive test suites for critical paths.</li>\n</ul>\n<p>When deploying systems that handle AWS Cloud Cost Optimization for Startups & Scaleups (EC2 rightsizing, S3 lifecycle policies, NAT Gateway savings, CloudFront caching), I also pay close attention to monitoring and observability. You cannot fix what you cannot see. Implementing robust logging and alerting mechanisms allows us to detect and resolve issues proactively. I prefer structured logging, as it facilitates querying and analysis. Furthermore, setting up meaningful alerts prevents alert fatigue and ensures we focus on genuinely critical events. A well-configured observability stack is an invaluable asset for any engineering team.</p>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<h2>Real-world Trade-offs</h2>\n<p>In the real world, we rarely have the luxury of perfect solutions. Building around AWS Cloud Cost Optimization for Startups & Scaleups (EC2 rightsizing, S3 lifecycle policies, NAT Gateway savings, CloudFront caching) requires making pragmatic choices. Sometimes, shipping a slightly less optimal solution quickly is more valuable than spending weeks on a perfect one. I call this pragmatism. It's about finding the right balance between engineering excellence and business needs. By communicating these trade-offs transparently, we can build trust with stakeholders and ensure everyone is aligned on the project goals.</p>\n<p>Consider the implications of this approach. It impacts not only the technical implementation but also the team's workflow. I always encourage a culture of continuous learning and experimentation. By creating a safe environment to try new things and fail, we foster innovation and drive the project forward. In the context of AWS Cloud Cost Optimization for Startups & Scaleups (EC2 rightsizing, S3 lifecycle policies, NAT Gateway savings, CloudFront caching), this means constantly evaluating new tools and techniques to see if they offer a better way of doing things. Stagnation is the enemy of progress in software development.</p>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<h2>Conclusion</h2>\n<p>In conclusion, mastering AWS Cloud Cost Optimization for Startups & Scaleups (EC2 rightsizing, S3 lifecycle policies, NAT Gateway savings, CloudFront caching) is a continuous journey. I hope this guide has provided you with valuable insights and practical strategies you can apply to your own projects. Remember that the best approach depends on your specific context and constraints. Keep exploring, keep learning, and keep building great things.</p>\n`
-  },
-  {
-    id: 'building-memorable-brand-identity-digital-age',
-    slug: 'building-memorable-brand-identity-digital-age',
-    category: 'UI/UX Design',
-    readTime: '9 min read',
-    image: 'https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=1200&auto=format&fit=crop',
-    title: 'Modern Web Design Systems: CSS Custom Properties, Framer Motion & Responsive Layouts',
-    date: '2026-04-10',
-    tags: ["CSS","Design Systems","Framer Motion"],
-    author: {
-        "name": "Muhammad Taki Ahmed",
-        "role": "Founder & Software Developer at Raydrim",
-        "avatar": "/logo.svg",
-        "bio": "Muhammad Taki Ahmed is a full-stack software developer and founder of Raydrim, building production web applications with Next.js, React, and TypeScript."
-    },
-    excerpt: 'A comprehensive technical guide on Modern Web Design Systems: CSS Custom Properties, Framer Motion & Responsive Layouts. Learn practical strategies, code patterns, and real-world trade-offs for production applications.',
-    content: `<h2>Introduction</h2>\n<p>When building production applications, I often encounter challenges related to Modern Web Design Systems: CSS Custom Properties, Framer Motion & Responsive Layouts. In this comprehensive guide, I will share the strategies, code patterns, and practical trade-offs I use to build robust and scalable systems. Understanding these concepts is crucial for any developer aiming to deliver high-quality software.</p>\n<p>To dive deeper into Modern Web Design Systems: CSS Custom Properties, Framer Motion & Responsive Layouts, we must first consider the fundamental architecture. When I approach this, I always prioritize maintainability and performance. In modern web development, these two pillars support everything we do. Without a solid foundation, applications become brittle and difficult to scale. Therefore, investing time in understanding the underlying mechanisms pays dividends in the long run. Let's break down the core components and see how they interact. By analyzing these interactions, we can identify potential bottlenecks and optimize our code accordingly. Furthermore, applying best practices ensures our solutions are robust against edge cases and unexpected behaviors.</p>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<h2>Core Principles and Architecture</h2>\n<p>Let's look at a practical example of how to implement the core logic:</p>\n<pre><code class="language-typescript">\n// Example Implementation\nexport async function processLogic(data: any) {\n  console.log('Processing:', data);\n  // Implement core logic here\n  return { success: true, timestamp: Date.now() };\n}\n</code></pre>\n<p>Another critical aspect of Modern Web Design Systems: CSS Custom Properties, Framer Motion & Responsive Layouts is understanding the data flow. Data is the lifeblood of our applications, and managing it efficiently is paramount. I often use patterns that minimize redundant operations and maximize throughput. For instance, caching frequently accessed data can significantly reduce load times and server strain. However, caching introduces its own set of challenges, such as cache invalidation and stale data. Therefore, a nuanced approach is necessary. We must carefully weigh the trade-offs between performance and data freshness. In my experience, a hybrid approach often yields the best results.</p>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<h2>Advanced Techniques</h2>\n<p>Here are some advanced considerations to keep in mind:</p>\n<ul>\n  <li><strong>Performance Profiling:</strong> Always measure before you optimize.</li>\n  <li><strong>Scalability:</strong> Design with future growth in mind.</li>\n  <li><strong>Security:</strong> Implement zero-trust principles by default.</li>\n  <li><strong>Testing:</strong> Write comprehensive test suites for critical paths.</li>\n</ul>\n<p>When deploying systems that handle Modern Web Design Systems: CSS Custom Properties, Framer Motion & Responsive Layouts, I also pay close attention to monitoring and observability. You cannot fix what you cannot see. Implementing robust logging and alerting mechanisms allows us to detect and resolve issues proactively. I prefer structured logging, as it facilitates querying and analysis. Furthermore, setting up meaningful alerts prevents alert fatigue and ensures we focus on genuinely critical events. A well-configured observability stack is an invaluable asset for any engineering team.</p>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<h2>Real-world Trade-offs</h2>\n<p>In the real world, we rarely have the luxury of perfect solutions. Building around Modern Web Design Systems: CSS Custom Properties, Framer Motion & Responsive Layouts requires making pragmatic choices. Sometimes, shipping a slightly less optimal solution quickly is more valuable than spending weeks on a perfect one. I call this pragmatism. It's about finding the right balance between engineering excellence and business needs. By communicating these trade-offs transparently, we can build trust with stakeholders and ensure everyone is aligned on the project goals.</p>\n<p>Consider the implications of this approach. It impacts not only the technical implementation but also the team's workflow. I always encourage a culture of continuous learning and experimentation. By creating a safe environment to try new things and fail, we foster innovation and drive the project forward. In the context of Modern Web Design Systems: CSS Custom Properties, Framer Motion & Responsive Layouts, this means constantly evaluating new tools and techniques to see if they offer a better way of doing things. Stagnation is the enemy of progress in software development.</p>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<h2>Conclusion</h2>\n<p>In conclusion, mastering Modern Web Design Systems: CSS Custom Properties, Framer Motion & Responsive Layouts is a continuous journey. I hope this guide has provided you with valuable insights and practical strategies you can apply to your own projects. Remember that the best approach depends on your specific context and constraints. Keep exploring, keep learning, and keep building great things.</p>\n`
-  },
-  {
-    id: 'cross-platform-react-native-expo',
-    slug: 'cross-platform-react-native-expo',
+    id: 'campus-dude-no-build-step',
+    slug: 'building-22-browser-games-without-a-framework',
     category: 'Web Development',
-    readTime: '10 min read',
-    image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop',
-    title: 'Cross-Platform Mobile App Engineering with React Native & Expo',
-    date: '2026-05-04',
-    tags: ["React Native","Expo","Mobile"],
-    author: {
-        "name": "Muhammad Taki Ahmed",
-        "role": "Founder & Software Developer at Raydrim",
-        "avatar": "/logo.svg",
-        "bio": "Muhammad Taki Ahmed is a full-stack software developer and founder of Raydrim, building production web applications with Next.js, React, and TypeScript."
-    },
-    excerpt: 'A comprehensive technical guide on Cross-Platform Mobile App Engineering with React Native & Expo. Learn practical strategies, code patterns, and real-world trade-offs for production applications.',
-    content: `<h2>Introduction</h2>\n<p>When building production applications, I often encounter challenges related to Cross-Platform Mobile App Engineering with React Native & Expo (Navigation, offline storage, performance, store publishing). In this comprehensive guide, I will share the strategies, code patterns, and practical trade-offs I use to build robust and scalable systems. Understanding these concepts is crucial for any developer aiming to deliver high-quality software.</p>\n<p>To dive deeper into Cross-Platform Mobile App Engineering with React Native & Expo (Navigation, offline storage, performance, store publishing), we must first consider the fundamental architecture. When I approach this, I always prioritize maintainability and performance. In modern web development, these two pillars support everything we do. Without a solid foundation, applications become brittle and difficult to scale. Therefore, investing time in understanding the underlying mechanisms pays dividends in the long run. Let's break down the core components and see how they interact. By analyzing these interactions, we can identify potential bottlenecks and optimize our code accordingly. Furthermore, applying best practices ensures our solutions are robust against edge cases and unexpected behaviors.</p>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<h2>Core Principles and Architecture</h2>\n<p>Let's look at a practical example of how to implement the core logic:</p>\n<pre><code class="language-typescript">\n// Example Implementation\nexport async function processLogic(data: any) {\n  console.log('Processing:', data);\n  // Implement core logic here\n  return { success: true, timestamp: Date.now() };\n}\n</code></pre>\n<p>Another critical aspect of Cross-Platform Mobile App Engineering with React Native & Expo (Navigation, offline storage, performance, store publishing) is understanding the data flow. Data is the lifeblood of our applications, and managing it efficiently is paramount. I often use patterns that minimize redundant operations and maximize throughput. For instance, caching frequently accessed data can significantly reduce load times and server strain. However, caching introduces its own set of challenges, such as cache invalidation and stale data. Therefore, a nuanced approach is necessary. We must carefully weigh the trade-offs between performance and data freshness. In my experience, a hybrid approach often yields the best results.</p>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<h2>Advanced Techniques</h2>\n<p>Here are some advanced considerations to keep in mind:</p>\n<ul>\n  <li><strong>Performance Profiling:</strong> Always measure before you optimize.</li>\n  <li><strong>Scalability:</strong> Design with future growth in mind.</li>\n  <li><strong>Security:</strong> Implement zero-trust principles by default.</li>\n  <li><strong>Testing:</strong> Write comprehensive test suites for critical paths.</li>\n</ul>\n<p>When deploying systems that handle Cross-Platform Mobile App Engineering with React Native & Expo (Navigation, offline storage, performance, store publishing), I also pay close attention to monitoring and observability. You cannot fix what you cannot see. Implementing robust logging and alerting mechanisms allows us to detect and resolve issues proactively. I prefer structured logging, as it facilitates querying and analysis. Furthermore, setting up meaningful alerts prevents alert fatigue and ensures we focus on genuinely critical events. A well-configured observability stack is an invaluable asset for any engineering team.</p>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<h2>Real-world Trade-offs</h2>\n<p>In the real world, we rarely have the luxury of perfect solutions. Building around Cross-Platform Mobile App Engineering with React Native & Expo (Navigation, offline storage, performance, store publishing) requires making pragmatic choices. Sometimes, shipping a slightly less optimal solution quickly is more valuable than spending weeks on a perfect one. I call this pragmatism. It's about finding the right balance between engineering excellence and business needs. By communicating these trade-offs transparently, we can build trust with stakeholders and ensure everyone is aligned on the project goals.</p>\n<p>Consider the implications of this approach. It impacts not only the technical implementation but also the team's workflow. I always encourage a culture of continuous learning and experimentation. By creating a safe environment to try new things and fail, we foster innovation and drive the project forward. In the context of Cross-Platform Mobile App Engineering with React Native & Expo (Navigation, offline storage, performance, store publishing), this means constantly evaluating new tools and techniques to see if they offer a better way of doing things. Stagnation is the enemy of progress in software development.</p>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<h2>Conclusion</h2>\n<p>In conclusion, mastering Cross-Platform Mobile App Engineering with React Native & Expo (Navigation, offline storage, performance, store publishing) is a continuous journey. I hope this guide has provided you with valuable insights and practical strategies you can apply to your own projects. Remember that the best approach depends on your specific context and constraints. Keep exploring, keep learning, and keep building great things.</p>\n`
-  },
-  {
-    id: 'publishing-technical-ebooks-google-play-books-whop',
-    slug: 'publishing-technical-ebooks-google-play-books-whop',
-    category: 'Digital Products',
-    readTime: '10 min read',
-    image: 'https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?q=80&w=1200&auto=format&fit=crop',
-    title: 'Publishing Technical E-Books & Digital Products: From Markdown to Google Play Books',
-    date: '2026-05-22',
-    tags: ["Publishing","Markdown","Digital Products"],
-    author: {
-        "name": "Muhammad Taki Ahmed",
-        "role": "Founder & Software Developer at Raydrim",
-        "avatar": "/logo.svg",
-        "bio": "Muhammad Taki Ahmed is a full-stack software developer and founder of Raydrim, building production web applications with Next.js, React, and TypeScript."
-    },
-    excerpt: 'A comprehensive technical guide on Publishing Technical E-Books & Digital Products: From Markdown to Google Play Books. Learn practical strategies, code patterns, and real-world trade-offs for production applications.',
-    content: `<h2>Introduction</h2>\n<p>When building production applications, I often encounter challenges related to Publishing Technical E-Books & Digital Products: From Markdown to Google Play Books. In this comprehensive guide, I will share the strategies, code patterns, and practical trade-offs I use to build robust and scalable systems. Understanding these concepts is crucial for any developer aiming to deliver high-quality software.</p>\n<p>To dive deeper into Publishing Technical E-Books & Digital Products: From Markdown to Google Play Books, we must first consider the fundamental architecture. When I approach this, I always prioritize maintainability and performance. In modern web development, these two pillars support everything we do. Without a solid foundation, applications become brittle and difficult to scale. Therefore, investing time in understanding the underlying mechanisms pays dividends in the long run. Let's break down the core components and see how they interact. By analyzing these interactions, we can identify potential bottlenecks and optimize our code accordingly. Furthermore, applying best practices ensures our solutions are robust against edge cases and unexpected behaviors.</p>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<h2>Core Principles and Architecture</h2>\n<p>Let's look at a practical example of how to implement the core logic:</p>\n<pre><code class="language-typescript">\n// Example Implementation\nexport async function processLogic(data: any) {\n  console.log('Processing:', data);\n  // Implement core logic here\n  return { success: true, timestamp: Date.now() };\n}\n</code></pre>\n<p>Another critical aspect of Publishing Technical E-Books & Digital Products: From Markdown to Google Play Books is understanding the data flow. Data is the lifeblood of our applications, and managing it efficiently is paramount. I often use patterns that minimize redundant operations and maximize throughput. For instance, caching frequently accessed data can significantly reduce load times and server strain. However, caching introduces its own set of challenges, such as cache invalidation and stale data. Therefore, a nuanced approach is necessary. We must carefully weigh the trade-offs between performance and data freshness. In my experience, a hybrid approach often yields the best results.</p>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<h2>Advanced Techniques</h2>\n<p>Here are some advanced considerations to keep in mind:</p>\n<ul>\n  <li><strong>Performance Profiling:</strong> Always measure before you optimize.</li>\n  <li><strong>Scalability:</strong> Design with future growth in mind.</li>\n  <li><strong>Security:</strong> Implement zero-trust principles by default.</li>\n  <li><strong>Testing:</strong> Write comprehensive test suites for critical paths.</li>\n</ul>\n<p>When deploying systems that handle Publishing Technical E-Books & Digital Products: From Markdown to Google Play Books, I also pay close attention to monitoring and observability. You cannot fix what you cannot see. Implementing robust logging and alerting mechanisms allows us to detect and resolve issues proactively. I prefer structured logging, as it facilitates querying and analysis. Furthermore, setting up meaningful alerts prevents alert fatigue and ensures we focus on genuinely critical events. A well-configured observability stack is an invaluable asset for any engineering team.</p>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<h2>Real-world Trade-offs</h2>\n<p>In the real world, we rarely have the luxury of perfect solutions. Building around Publishing Technical E-Books & Digital Products: From Markdown to Google Play Books requires making pragmatic choices. Sometimes, shipping a slightly less optimal solution quickly is more valuable than spending weeks on a perfect one. I call this pragmatism. It's about finding the right balance between engineering excellence and business needs. By communicating these trade-offs transparently, we can build trust with stakeholders and ensure everyone is aligned on the project goals.</p>\n<p>Consider the implications of this approach. It impacts not only the technical implementation but also the team's workflow. I always encourage a culture of continuous learning and experimentation. By creating a safe environment to try new things and fail, we foster innovation and drive the project forward. In the context of Publishing Technical E-Books & Digital Products: From Markdown to Google Play Books, this means constantly evaluating new tools and techniques to see if they offer a better way of doing things. Stagnation is the enemy of progress in software development.</p>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<h2>Conclusion</h2>\n<p>In conclusion, mastering Publishing Technical E-Books & Digital Products: From Markdown to Google Play Books is a continuous journey. I hope this guide has provided you with valuable insights and practical strategies you can apply to your own projects. Remember that the best approach depends on your specific context and constraints. Keep exploring, keep learning, and keep building great things.</p>\n`
-  },
-  {
-    id: 'pragmatic-ai-integrations',
-    slug: 'ai-agent-orchestration-llm-enterprise-guide',
-    category: 'AI & Automation',
-    readTime: '12 min read',
-    image: 'https://images.unsplash.com/photo-1677442136019-21780efad99a?q=80&w=1200&auto=format&fit=crop',
-    title: 'Building Pragmatic AI Integrations with LangChain, Vector Databases & Next.js',
-    date: '2026-06-18',
-    tags: ["AI","LangChain","Next.js"],
-    author: {
-        "name": "Muhammad Taki Ahmed",
-        "role": "Founder & Software Developer at Raydrim",
-        "avatar": "/logo.svg",
-        "bio": "Muhammad Taki Ahmed is a full-stack software developer and founder of Raydrim, building production web applications with Next.js, React, and TypeScript."
-    },
-    excerpt: 'A comprehensive technical guide on Building Pragmatic AI Integrations with LangChain, Vector Databases & Next.js. Learn practical strategies, code patterns, and real-world trade-offs for production applications.',
-    content: `<h2>Introduction</h2>\n<p>When building production applications, I often encounter challenges related to Building Pragmatic AI Integrations with LangChain, Vector Databases & Next.js. In this comprehensive guide, I will share the strategies, code patterns, and practical trade-offs I use to build robust and scalable systems. Understanding these concepts is crucial for any developer aiming to deliver high-quality software.</p>\n<p>To dive deeper into Building Pragmatic AI Integrations with LangChain, Vector Databases & Next.js, we must first consider the fundamental architecture. When I approach this, I always prioritize maintainability and performance. In modern web development, these two pillars support everything we do. Without a solid foundation, applications become brittle and difficult to scale. Therefore, investing time in understanding the underlying mechanisms pays dividends in the long run. Let's break down the core components and see how they interact. By analyzing these interactions, we can identify potential bottlenecks and optimize our code accordingly. Furthermore, applying best practices ensures our solutions are robust against edge cases and unexpected behaviors.</p>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<h2>Core Principles and Architecture</h2>\n<p>Let's look at a practical example of how to implement the core logic:</p>\n<pre><code class="language-typescript">\n// Example Implementation\nexport async function processLogic(data: any) {\n  console.log('Processing:', data);\n  // Implement core logic here\n  return { success: true, timestamp: Date.now() };\n}\n</code></pre>\n<p>Another critical aspect of Building Pragmatic AI Integrations with LangChain, Vector Databases & Next.js is understanding the data flow. Data is the lifeblood of our applications, and managing it efficiently is paramount. I often use patterns that minimize redundant operations and maximize throughput. For instance, caching frequently accessed data can significantly reduce load times and server strain. However, caching introduces its own set of challenges, such as cache invalidation and stale data. Therefore, a nuanced approach is necessary. We must carefully weigh the trade-offs between performance and data freshness. In my experience, a hybrid approach often yields the best results.</p>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<h2>Advanced Techniques</h2>\n<p>Here are some advanced considerations to keep in mind:</p>\n<ul>\n  <li><strong>Performance Profiling:</strong> Always measure before you optimize.</li>\n  <li><strong>Scalability:</strong> Design with future growth in mind.</li>\n  <li><strong>Security:</strong> Implement zero-trust principles by default.</li>\n  <li><strong>Testing:</strong> Write comprehensive test suites for critical paths.</li>\n</ul>\n<p>When deploying systems that handle Building Pragmatic AI Integrations with LangChain, Vector Databases & Next.js, I also pay close attention to monitoring and observability. You cannot fix what you cannot see. Implementing robust logging and alerting mechanisms allows us to detect and resolve issues proactively. I prefer structured logging, as it facilitates querying and analysis. Furthermore, setting up meaningful alerts prevents alert fatigue and ensures we focus on genuinely critical events. A well-configured observability stack is an invaluable asset for any engineering team.</p>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<h2>Real-world Trade-offs</h2>\n<p>In the real world, we rarely have the luxury of perfect solutions. Building around Building Pragmatic AI Integrations with LangChain, Vector Databases & Next.js requires making pragmatic choices. Sometimes, shipping a slightly less optimal solution quickly is more valuable than spending weeks on a perfect one. I call this pragmatism. It's about finding the right balance between engineering excellence and business needs. By communicating these trade-offs transparently, we can build trust with stakeholders and ensure everyone is aligned on the project goals.</p>\n<p>Consider the implications of this approach. It impacts not only the technical implementation but also the team's workflow. I always encourage a culture of continuous learning and experimentation. By creating a safe environment to try new things and fail, we foster innovation and drive the project forward. In the context of Building Pragmatic AI Integrations with LangChain, Vector Databases & Next.js, this means constantly evaluating new tools and techniques to see if they offer a better way of doing things. Stagnation is the enemy of progress in software development.</p>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<h2>Conclusion</h2>\n<p>In conclusion, mastering Building Pragmatic AI Integrations with LangChain, Vector Databases & Next.js is a continuous journey. I hope this guide has provided you with valuable insights and practical strategies you can apply to your own projects. Remember that the best approach depends on your specific context and constraints. Keep exploring, keep learning, and keep building great things.</p>\n`
-  },
-  {
-    id: 'cybersecurity-zero-trust-web-application-hardening',
-    slug: 'cybersecurity-zero-trust-web-application-hardening',
-    category: 'Software Engineering',
-    readTime: '10 min read',
-    image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop',
-    title: 'Web Application Hardening & Zero-Trust Security Practices Guide',
-    date: '2026-07-05',
-    tags: ["Security","Zero-Trust","OWASP"],
-    author: {
-        "name": "Muhammad Taki Ahmed",
-        "role": "Founder & Software Developer at Raydrim",
-        "avatar": "/logo.svg",
-        "bio": "Muhammad Taki Ahmed is a full-stack software developer and founder of Raydrim, building production web applications with Next.js, React, and TypeScript."
-    },
-    excerpt: 'A comprehensive technical guide on Web Application Hardening & Zero-Trust Security Practices Guide. Learn practical strategies, code patterns, and real-world trade-offs for production applications.',
-    content: `<h2>Introduction</h2>\n<p>When building production applications, I often encounter challenges related to Web Application Hardening & Zero-Trust Security Practices Guide (OWASP Top 10, CSP headers, rate limiting, Dependabot). In this comprehensive guide, I will share the strategies, code patterns, and practical trade-offs I use to build robust and scalable systems. Understanding these concepts is crucial for any developer aiming to deliver high-quality software.</p>\n<p>To dive deeper into Web Application Hardening & Zero-Trust Security Practices Guide (OWASP Top 10, CSP headers, rate limiting, Dependabot), we must first consider the fundamental architecture. When I approach this, I always prioritize maintainability and performance. In modern web development, these two pillars support everything we do. Without a solid foundation, applications become brittle and difficult to scale. Therefore, investing time in understanding the underlying mechanisms pays dividends in the long run. Let's break down the core components and see how they interact. By analyzing these interactions, we can identify potential bottlenecks and optimize our code accordingly. Furthermore, applying best practices ensures our solutions are robust against edge cases and unexpected behaviors.</p>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<h2>Core Principles and Architecture</h2>\n<p>Let's look at a practical example of how to implement the core logic:</p>\n<pre><code class="language-typescript">\n// Example Implementation\nexport async function processLogic(data: any) {\n  console.log('Processing:', data);\n  // Implement core logic here\n  return { success: true, timestamp: Date.now() };\n}\n</code></pre>\n<p>Another critical aspect of Web Application Hardening & Zero-Trust Security Practices Guide (OWASP Top 10, CSP headers, rate limiting, Dependabot) is understanding the data flow. Data is the lifeblood of our applications, and managing it efficiently is paramount. I often use patterns that minimize redundant operations and maximize throughput. For instance, caching frequently accessed data can significantly reduce load times and server strain. However, caching introduces its own set of challenges, such as cache invalidation and stale data. Therefore, a nuanced approach is necessary. We must carefully weigh the trade-offs between performance and data freshness. In my experience, a hybrid approach often yields the best results.</p>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<h2>Advanced Techniques</h2>\n<p>Here are some advanced considerations to keep in mind:</p>\n<ul>\n  <li><strong>Performance Profiling:</strong> Always measure before you optimize.</li>\n  <li><strong>Scalability:</strong> Design with future growth in mind.</li>\n  <li><strong>Security:</strong> Implement zero-trust principles by default.</li>\n  <li><strong>Testing:</strong> Write comprehensive test suites for critical paths.</li>\n</ul>\n<p>When deploying systems that handle Web Application Hardening & Zero-Trust Security Practices Guide (OWASP Top 10, CSP headers, rate limiting, Dependabot), I also pay close attention to monitoring and observability. You cannot fix what you cannot see. Implementing robust logging and alerting mechanisms allows us to detect and resolve issues proactively. I prefer structured logging, as it facilitates querying and analysis. Furthermore, setting up meaningful alerts prevents alert fatigue and ensures we focus on genuinely critical events. A well-configured observability stack is an invaluable asset for any engineering team.</p>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<h2>Real-world Trade-offs</h2>\n<p>In the real world, we rarely have the luxury of perfect solutions. Building around Web Application Hardening & Zero-Trust Security Practices Guide (OWASP Top 10, CSP headers, rate limiting, Dependabot) requires making pragmatic choices. Sometimes, shipping a slightly less optimal solution quickly is more valuable than spending weeks on a perfect one. I call this pragmatism. It's about finding the right balance between engineering excellence and business needs. By communicating these trade-offs transparently, we can build trust with stakeholders and ensure everyone is aligned on the project goals.</p>\n<p>Consider the implications of this approach. It impacts not only the technical implementation but also the team's workflow. I always encourage a culture of continuous learning and experimentation. By creating a safe environment to try new things and fail, we foster innovation and drive the project forward. In the context of Web Application Hardening & Zero-Trust Security Practices Guide (OWASP Top 10, CSP headers, rate limiting, Dependabot), this means constantly evaluating new tools and techniques to see if they offer a better way of doing things. Stagnation is the enemy of progress in software development.</p>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<h2>Conclusion</h2>\n<p>In conclusion, mastering Web Application Hardening & Zero-Trust Security Practices Guide (OWASP Top 10, CSP headers, rate limiting, Dependabot) is a continuous journey. I hope this guide has provided you with valuable insights and practical strategies you can apply to your own projects. Remember that the best approach depends on your specific context and constraints. Keep exploring, keep learning, and keep building great things.</p>\n`
-  },
-  {
-    id: 'postgresql-prisma-performance',
-    slug: 'postgresql-prisma-performance',
-    category: 'Web Development',
-    readTime: '10 min read',
-    image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop',
-    title: 'PostgreSQL & Prisma Performance Tuning for Web Applications',
-    date: '2026-07-28',
-    tags: ["PostgreSQL","Prisma","Database"],
-    author: {
-        "name": "Muhammad Taki Ahmed",
-        "role": "Founder & Software Developer at Raydrim",
-        "avatar": "/logo.svg",
-        "bio": "Muhammad Taki Ahmed is a full-stack software developer and founder of Raydrim, building production web applications with Next.js, React, and TypeScript."
-    },
-    excerpt: 'A comprehensive technical guide on PostgreSQL & Prisma Performance Tuning for Web Applications. Learn practical strategies, code patterns, and real-world trade-offs for production applications.',
-    content: `<h2>Introduction</h2>\n<p>When building production applications, I often encounter challenges related to PostgreSQL & Prisma Performance Tuning for Web Applications (Connection pooling, indexing strategies, N+1 query prevention). In this comprehensive guide, I will share the strategies, code patterns, and practical trade-offs I use to build robust and scalable systems. Understanding these concepts is crucial for any developer aiming to deliver high-quality software.</p>\n<p>To dive deeper into PostgreSQL & Prisma Performance Tuning for Web Applications (Connection pooling, indexing strategies, N+1 query prevention), we must first consider the fundamental architecture. When I approach this, I always prioritize maintainability and performance. In modern web development, these two pillars support everything we do. Without a solid foundation, applications become brittle and difficult to scale. Therefore, investing time in understanding the underlying mechanisms pays dividends in the long run. Let's break down the core components and see how they interact. By analyzing these interactions, we can identify potential bottlenecks and optimize our code accordingly. Furthermore, applying best practices ensures our solutions are robust against edge cases and unexpected behaviors.</p>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<h2>Core Principles and Architecture</h2>\n<p>Let's look at a practical example of how to implement the core logic:</p>\n<pre><code class="language-typescript">\n// Example Implementation\nexport async function processLogic(data: any) {\n  console.log('Processing:', data);\n  // Implement core logic here\n  return { success: true, timestamp: Date.now() };\n}\n</code></pre>\n<p>Another critical aspect of PostgreSQL & Prisma Performance Tuning for Web Applications (Connection pooling, indexing strategies, N+1 query prevention) is understanding the data flow. Data is the lifeblood of our applications, and managing it efficiently is paramount. I often use patterns that minimize redundant operations and maximize throughput. For instance, caching frequently accessed data can significantly reduce load times and server strain. However, caching introduces its own set of challenges, such as cache invalidation and stale data. Therefore, a nuanced approach is necessary. We must carefully weigh the trade-offs between performance and data freshness. In my experience, a hybrid approach often yields the best results.</p>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<h2>Advanced Techniques</h2>\n<p>Here are some advanced considerations to keep in mind:</p>\n<ul>\n  <li><strong>Performance Profiling:</strong> Always measure before you optimize.</li>\n  <li><strong>Scalability:</strong> Design with future growth in mind.</li>\n  <li><strong>Security:</strong> Implement zero-trust principles by default.</li>\n  <li><strong>Testing:</strong> Write comprehensive test suites for critical paths.</li>\n</ul>\n<p>When deploying systems that handle PostgreSQL & Prisma Performance Tuning for Web Applications (Connection pooling, indexing strategies, N+1 query prevention), I also pay close attention to monitoring and observability. You cannot fix what you cannot see. Implementing robust logging and alerting mechanisms allows us to detect and resolve issues proactively. I prefer structured logging, as it facilitates querying and analysis. Furthermore, setting up meaningful alerts prevents alert fatigue and ensures we focus on genuinely critical events. A well-configured observability stack is an invaluable asset for any engineering team.</p>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<h2>Real-world Trade-offs</h2>\n<p>In the real world, we rarely have the luxury of perfect solutions. Building around PostgreSQL & Prisma Performance Tuning for Web Applications (Connection pooling, indexing strategies, N+1 query prevention) requires making pragmatic choices. Sometimes, shipping a slightly less optimal solution quickly is more valuable than spending weeks on a perfect one. I call this pragmatism. It's about finding the right balance between engineering excellence and business needs. By communicating these trade-offs transparently, we can build trust with stakeholders and ensure everyone is aligned on the project goals.</p>\n<p>Consider the implications of this approach. It impacts not only the technical implementation but also the team's workflow. I always encourage a culture of continuous learning and experimentation. By creating a safe environment to try new things and fail, we foster innovation and drive the project forward. In the context of PostgreSQL & Prisma Performance Tuning for Web Applications (Connection pooling, indexing strategies, N+1 query prevention), this means constantly evaluating new tools and techniques to see if they offer a better way of doing things. Stagnation is the enemy of progress in software development.</p>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<h2>Conclusion</h2>\n<p>In conclusion, mastering PostgreSQL & Prisma Performance Tuning for Web Applications (Connection pooling, indexing strategies, N+1 query prevention) is a continuous journey. I hope this guide has provided you with valuable insights and practical strategies you can apply to your own projects. Remember that the best approach depends on your specific context and constraints. Keep exploring, keep learning, and keep building great things.</p>\n`
-  },
-  {
-    id: 'core-web-vitals-lighthouse-100-optimization-playbook',
-    slug: 'core-web-vitals-lighthouse-100-optimization-playbook',
-    category: 'Software Engineering',
-    readTime: '10 min read',
-    image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop',
-    title: 'Achieving 100/100 Core Web Vitals in Next.js: LCP, CLS & INP Optimization Playbook',
-    date: '2026-08-14',
-    tags: ["Performance","Core Web Vitals","Next.js"],
-    author: {
-        "name": "Muhammad Taki Ahmed",
-        "role": "Founder & Software Developer at Raydrim",
-        "avatar": "/logo.svg",
-        "bio": "Muhammad Taki Ahmed is a full-stack software developer and founder of Raydrim, building production web applications with Next.js, React, and TypeScript."
-    },
-    excerpt: 'A comprehensive technical guide on Achieving 100/100 Core Web Vitals in Next.js: LCP, CLS & INP Optimization Playbook. Learn practical strategies, code patterns, and real-world trade-offs for production applications.',
-    content: `<h2>Introduction</h2>\n<p>When building production applications, I often encounter challenges related to Achieving 100/100 Core Web Vitals in Next.js: LCP, CLS & INP Optimization Playbook. In this comprehensive guide, I will share the strategies, code patterns, and practical trade-offs I use to build robust and scalable systems. Understanding these concepts is crucial for any developer aiming to deliver high-quality software.</p>\n<p>To dive deeper into Achieving 100/100 Core Web Vitals in Next.js: LCP, CLS & INP Optimization Playbook, we must first consider the fundamental architecture. When I approach this, I always prioritize maintainability and performance. In modern web development, these two pillars support everything we do. Without a solid foundation, applications become brittle and difficult to scale. Therefore, investing time in understanding the underlying mechanisms pays dividends in the long run. Let's break down the core components and see how they interact. By analyzing these interactions, we can identify potential bottlenecks and optimize our code accordingly. Furthermore, applying best practices ensures our solutions are robust against edge cases and unexpected behaviors.</p>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<h2>Core Principles and Architecture</h2>\n<p>Let's look at a practical example of how to implement the core logic:</p>\n<pre><code class="language-typescript">\n// Example Implementation\nexport async function processLogic(data: any) {\n  console.log('Processing:', data);\n  // Implement core logic here\n  return { success: true, timestamp: Date.now() };\n}\n</code></pre>\n<p>Another critical aspect of Achieving 100/100 Core Web Vitals in Next.js: LCP, CLS & INP Optimization Playbook is understanding the data flow. Data is the lifeblood of our applications, and managing it efficiently is paramount. I often use patterns that minimize redundant operations and maximize throughput. For instance, caching frequently accessed data can significantly reduce load times and server strain. However, caching introduces its own set of challenges, such as cache invalidation and stale data. Therefore, a nuanced approach is necessary. We must carefully weigh the trade-offs between performance and data freshness. In my experience, a hybrid approach often yields the best results.</p>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<h2>Advanced Techniques</h2>\n<p>Here are some advanced considerations to keep in mind:</p>\n<ul>\n  <li><strong>Performance Profiling:</strong> Always measure before you optimize.</li>\n  <li><strong>Scalability:</strong> Design with future growth in mind.</li>\n  <li><strong>Security:</strong> Implement zero-trust principles by default.</li>\n  <li><strong>Testing:</strong> Write comprehensive test suites for critical paths.</li>\n</ul>\n<p>When deploying systems that handle Achieving 100/100 Core Web Vitals in Next.js: LCP, CLS & INP Optimization Playbook, I also pay close attention to monitoring and observability. You cannot fix what you cannot see. Implementing robust logging and alerting mechanisms allows us to detect and resolve issues proactively. I prefer structured logging, as it facilitates querying and analysis. Furthermore, setting up meaningful alerts prevents alert fatigue and ensures we focus on genuinely critical events. A well-configured observability stack is an invaluable asset for any engineering team.</p>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<h2>Real-world Trade-offs</h2>\n<p>In the real world, we rarely have the luxury of perfect solutions. Building around Achieving 100/100 Core Web Vitals in Next.js: LCP, CLS & INP Optimization Playbook requires making pragmatic choices. Sometimes, shipping a slightly less optimal solution quickly is more valuable than spending weeks on a perfect one. I call this pragmatism. It's about finding the right balance between engineering excellence and business needs. By communicating these trade-offs transparently, we can build trust with stakeholders and ensure everyone is aligned on the project goals.</p>\n<p>Consider the implications of this approach. It impacts not only the technical implementation but also the team's workflow. I always encourage a culture of continuous learning and experimentation. By creating a safe environment to try new things and fail, we foster innovation and drive the project forward. In the context of Achieving 100/100 Core Web Vitals in Next.js: LCP, CLS & INP Optimization Playbook, this means constantly evaluating new tools and techniques to see if they offer a better way of doing things. Stagnation is the enemy of progress in software development.</p>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<h2>Conclusion</h2>\n<p>In conclusion, mastering Achieving 100/100 Core Web Vitals in Next.js: LCP, CLS & INP Optimization Playbook is a continuous journey. I hope this guide has provided you with valuable insights and practical strategies you can apply to your own projects. Remember that the best approach depends on your specific context and constraints. Keep exploring, keep learning, and keep building great things.</p>\n`
+    readTime: '7 min read',
+    image: '/images/hero_preview.jpg',
+    title: 'I Built 22 Browser Games With No Framework and No Build Step',
+    date: '2026-08-06',
+    featured: false,
+    tags: ['HTML5 Canvas', 'JavaScript', 'Performance', 'Game Dev'],
+    author: AUTHOR,
+    excerpt:
+      'Campus Dude is 22 games that run instantly with no login and no install. Choosing vanilla JavaScript and HTML5 Canvas over a framework was the decision that made every other constraint achievable.',
+    tableOfContents: [
+      { id: 'constraint', title: 'The constraint that shaped everything', level: 2 },
+      { id: 'no-framework', title: 'Why no framework', level: 2 },
+      { id: 'loop', title: 'One game loop, twenty-two games', level: 2 },
+      { id: 'no-login', title: 'Scores without accounts', level: 2 },
+      { id: 'tradeoffs', title: 'What this approach costs', level: 2 },
+    ],
+    content: `<h2 id="constraint">The constraint that shaped everything</h2>
+<p>Campus Dude exists for a specific moment: a student has ten minutes between classes, on campus wifi, on a phone or a shared library desktop. They want to play something. They do not want to make an account, install anything, or wait.</p>
+<p>That is the whole brief, and it turns out to be a demanding one. Ten minutes means the game has to be playable in under three seconds from tapping the link. Shared library desktop means no installs and no assumptions about the machine. Campus wifi means the payload has to be small. And "does not want to make an account" rules out most of the conventional scaffolding around a games site.</p>
+<p>Every technical decision below falls out of those four sentences.</p>
+
+<h2 id="no-framework">Why no framework</h2>
+<p>My day job is Next.js. My instinct was to reach for it here too. I did not, and the reason is the three-second budget.</p>
+<p>A framework-based game page has to ship the framework runtime, hydrate, and then start the game. For a content site that cost is well worth paying — you get routing, data fetching, and a component model. For a Canvas game, almost none of that is useful. The game is a single <code>&lt;canvas&gt;</code> element and a loop. Everything the framework provides sits between the user and the thing they came for.</p>
+<p>So each game is a plain HTML document, a stylesheet, and a JavaScript file. No bundler, no transpiler, no build step. The browser parses the HTML, runs the script, and the game starts. Deployment is copying files.</p>
+<p>The unglamorous benefit is that this has not broken once. There is no dependency tree to audit, no build that can fail, no framework major version to migrate across. A game I wrote in week one still runs identically today because nothing underneath it moved.</p>
+<p>Shared styling comes from CSS custom properties in a single file each game imports:</p>
+<pre><code class="language-css">:root {
+  --bg: #f4f1ec;
+  --ink: #16150f;
+  --accent: #ff4d2e;
+  --radius: 12px;
+  --font-display: 'Space Grotesk', system-ui, sans-serif;
+}</code></pre>
+<p>That gives twenty-two games one visual identity without a component library. When I changed the accent colour, I changed one line.</p>
+
+<h2 id="loop">One game loop, twenty-two games</h2>
+<p>The games differ enormously — Carrom Board is physics on a board, Neon Rush is an endless runner, Campus 2048 is a grid puzzle. What they share is the loop, and I wrote it once:</p>
+<pre><code class="language-javascript">function createLoop(update, render) {
+  let last = 0;
+  let rafId = null;
+
+  function frame(now) {
+    const dt = Math.min((now - last) / 1000, 0.05); // clamp tab-switch spikes
+    last = now;
+    update(dt);
+    render();
+    rafId = requestAnimationFrame(frame);
   }
+
+  return {
+    start() { last = performance.now(); rafId = requestAnimationFrame(frame); },
+    stop() { cancelAnimationFrame(rafId); },
+  };
+}</code></pre>
+<p>Two details in there earned their place the hard way. Passing delta time to <code>update</code> rather than assuming a fixed step means the game runs at the same speed on a 60Hz laptop and a 120Hz phone. And clamping <code>dt</code> to 50ms stops the physics exploding when someone switches tabs for a minute and <code>requestAnimationFrame</code> resumes with an enormous gap — without the clamp, a carrom striker teleports through the board.</p>
+<p>Pairing <code>stop()</code> with the Page Visibility API also stops a backgrounded tab burning battery, which matters when the audience is on phones all day.</p>
+
+<h2 id="no-login">Scores without accounts</h2>
+<p>No login was a product decision, not a technical one, but it forced a technical answer: where do scores live?</p>
+<p>They live in <code>localStorage</code>, keyed per game. A player gets a generated handle on first visit — <em>Player_2185</em> and similar — which persists in the same store. It is not an identity, it is a label on a high score.</p>
+<p>The honest trade-off: clear your browser data and your scores are gone, and your scores do not follow you to another device. For a study-break games site that is an acceptable loss, and it buys something valuable — there is no account system, no password reset, no personal data to protect, and no signup screen between the link and the game.</p>
+<p>Anything that reads storage is wrapped, because storage throws rather than returning null in private-browsing contexts and when a browser blocks site data:</p>
+<pre><code class="language-javascript">function readScore(gameId) {
+  try {
+    return Number(localStorage.getItem('cd:score:' + gameId)) || 0;
+  } catch {
+    return 0; // private mode, blocked storage — just play without a high score
+  }
+}</code></pre>
+
+<h2 id="tradeoffs">What this approach costs</h2>
+<p>I am not going to pretend this is free. Three things are genuinely worse without a framework.</p>
+<p><strong>There is real duplication.</strong> Every game page repeats its own header markup and script tags. With twenty-two games, changing the site header means changing twenty-two files. I use a small script for that, which is a build step in everything but name.</p>
+<p><strong>State-heavy UI is tedious.</strong> The Canvas rendering is fine — you are drawing every frame anyway. But the surrounding UI, menus and settings and score panels, is manual DOM work that a component model would have made shorter.</p>
+<p><strong>No type safety.</strong> On a codebase this size I feel it. Refactoring a shared helper means grepping and hoping rather than letting the compiler find the callers.</p>
+<p>Would I choose it again? For this site, yes. The constraint was time-to-playable on a bad connection, and nothing beats a document that starts working the moment it arrives. If Campus Dude grows features that need real state — accounts, multiplayer, a persistent profile — the calculation changes, and I will happily pay the framework cost then.</p>
+<p>Pick the constraint that actually matters first. The stack falls out of it.</p>`,
+  },
 ];
 
-
 export function getAllBlogPosts(): BlogPost[] {
-  return blogPosts;
+  return [...blogPosts].sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+  );
 }
 
 export function getBlogPostBySlug(slug: string): BlogPost | undefined {
   return blogPosts.find((post) => post.slug === slug);
 }
 
-export function getRelatedBlogPosts(currentSlug: string, category: string, limit = 3): BlogPost[] {
-  const related = blogPosts.filter((post) => post.slug !== currentSlug && post.category === category);
-  if (related.length < limit) {
-    const remaining = blogPosts.filter((post) => post.slug !== currentSlug && post.category !== category);
-    return [...related, ...remaining].slice(0, limit);
-  }
-  return related.slice(0, limit);
+export function getRelatedBlogPosts(
+  currentSlug: string,
+  category: string,
+  limit = 3
+): BlogPost[] {
+  const others = blogPosts.filter((post) => post.slug !== currentSlug);
+  const sameCategory = others.filter((post) => post.category === category);
+  const rest = others.filter((post) => post.category !== category);
+  return [...sameCategory, ...rest].slice(0, limit);
 }
 
 export function getAllCategories(): string[] {
-  const categories = Array.from(new Set(blogPosts.map((post) => post.category)));
-  return ['All', ...categories];
+  return ['All', ...Array.from(new Set(blogPosts.map((post) => post.category)))];
 }

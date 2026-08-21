@@ -28,13 +28,13 @@ export default function ContactForm() {
   const [serverError, setServerError] = useState<string | null>(null);
 
   useEffect(() => {
-    if (planParam === 'micro') {
+    if (planParam === 'starter-site') {
       setFormData((prev) => ({ ...prev, budget: BUDGET_RANGES[0], service: 'Web Applications' }));
-    } else if (planParam === 'starter') {
-      setFormData((prev) => ({ ...prev, budget: BUDGET_RANGES[0], service: 'Web Applications' }));
-    } else if (planParam === 'mobile-app') {
+    } else if (planParam === 'business-site' || planParam === 'shopify-launch' || planParam === 'shopify-growth') {
+      setFormData((prev) => ({ ...prev, budget: BUDGET_RANGES[1], service: 'Web Applications' }));
+    } else if (planParam === 'shopify-prestige' || planParam === 'cross-platform-app' || planParam === 'app-converter') {
       setFormData((prev) => ({ ...prev, budget: BUDGET_RANGES[2], service: 'Mobile Apps (iOS & Google Play Store)' }));
-    } else if (planParam === 'enterprise') {
+    } else if (planParam === 'custom-app' || planParam === 'enterprise') {
       setFormData((prev) => ({ ...prev, budget: BUDGET_RANGES[3], service: 'Custom Enterprise Consulting' }));
     }
   }, [planParam]);

@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Services | Raydrim Digital Agency',
     description:
-      'Enterprise Next.js Web Apps, Mobile Apps for Play Store & iOS, AI Orchestration, and Cloud Architecture.',
+      'Next.js Web Apps, Mobile Apps for Play Store & iOS, AI Feature Integration, and Cloud Architecture.',
     url: 'https://raydrim.com/services',
     type: 'website',
   },
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Services | Raydrim Digital Agency',
     description:
-      'Enterprise Next.js Web Apps, Mobile Apps for Play Store & iOS, AI Orchestration, and Cloud Architecture.',
+      'Next.js Web Apps, Mobile Apps for Play Store & iOS, AI Feature Integration, and Cloud Architecture.',
   },
 };
 
@@ -61,7 +61,7 @@ export default function ServicesPage() {
           '@type': 'Offer',
           itemOffered: {
             '@type': 'Service',
-            name: 'AI Orchestration & LLM Enterprise Integration',
+            name: 'AI Feature Integration  & LLM API Integration',
           },
         },
         {

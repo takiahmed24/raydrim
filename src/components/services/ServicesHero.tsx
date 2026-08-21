@@ -30,7 +30,7 @@ export default function ServicesHero() {
 
         <ScrollReveal direction="up" delay={0.3}>
           <p className={styles.subtitle}>
-            From high-velocity Next.js web applications to AI infrastructure, headless e-commerce, and luxury brand design systems—we deliver production-grade technical mastery.
+            From fast Next.js websites to AI feature integration, headless e-commerce, and brand and UI design systems—we deliver production-grade technical mastery.
           </p>
         </ScrollReveal>
 

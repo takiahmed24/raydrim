@@ -21,10 +21,10 @@ export const SERVICE_OPTIONS = [
 ] as const;
 
 export const BUDGET_RANGES = [
-  '$299 – $999 (Rapid Launch / Web)',
-  '$1,000 – $2,500 (Web & E-Commerce)',
-  '$2,500 – $5,000 (Mobile Apps & Custom)',
-  '$5,000+ (Custom Scope)',
+  '$149 – $449',
+  '$449 – $999',
+  '$999 – $2,499',
+  '$2,499+',
 ] as const;
 
 export const CONSULTATION_SLOTS: { time: string; label: string }[] = [];

@@ -121,7 +121,7 @@ export const FEATURED_PROJECTS: PortfolioProject[] = [
     slug: 'campus-dude',
     client: 'Personal Project',
     category: 'Web Application',
-    image: 'https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=1200&auto=format&fit=crop',
+    image: '/images/portfolio/campus-dude.jpg',
     description:
       'A free browser games platform built for students — 22 handcrafted games with zero logins, zero installs, and instant loading between classes.',
     summary: 'Full-stack web application featuring real-time gameplay, responsive design, SEO optimization, and Google AdSense integration.',
@@ -138,7 +138,7 @@ export const FEATURED_PROJECTS: PortfolioProject[] = [
     slug: 'raydrim-agency',
     client: 'Raydrim (Own Brand)',
     category: 'Web Application',
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop',
+    image: '/images/portfolio/raydrim.jpg',
     description:
       'A high-performance agency website built with Next.js 16, TypeScript, CSS Modules, and Framer Motion — featuring editorial design, full SEO, and structured data.',
     summary: 'Production Next.js application with 28 static pages, JSON-LD schemas, and sub-second load times.',
