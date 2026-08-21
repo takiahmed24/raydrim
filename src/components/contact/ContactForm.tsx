@@ -17,7 +17,7 @@ export default function ContactForm() {
     name: '',
     email: '',
     company: '',
-    service: 'Web Applications',
+    service: SERVICE_OPTIONS[0],
     budget: BUDGET_RANGES[0],
     message: '',
   });
@@ -29,13 +29,13 @@ export default function ContactForm() {
 
   useEffect(() => {
     if (planParam === 'starter-site') {
-      setFormData((prev) => ({ ...prev, budget: BUDGET_RANGES[0], service: 'Web Applications' }));
+      setFormData((prev) => ({ ...prev, budget: BUDGET_RANGES[0], service: SERVICE_OPTIONS[1] }));
     } else if (planParam === 'business-site' || planParam === 'shopify-launch' || planParam === 'shopify-growth') {
-      setFormData((prev) => ({ ...prev, budget: BUDGET_RANGES[1], service: 'Web Applications' }));
+      setFormData((prev) => ({ ...prev, budget: BUDGET_RANGES[1], service: SERVICE_OPTIONS[1] }));
     } else if (planParam === 'shopify-prestige' || planParam === 'cross-platform-app' || planParam === 'app-converter') {
-      setFormData((prev) => ({ ...prev, budget: BUDGET_RANGES[2], service: 'Mobile Apps (iOS & Google Play Store)' }));
+      setFormData((prev) => ({ ...prev, budget: BUDGET_RANGES[2], service: SERVICE_OPTIONS[4] }));
     } else if (planParam === 'custom-app' || planParam === 'enterprise') {
-      setFormData((prev) => ({ ...prev, budget: BUDGET_RANGES[3], service: 'Custom Enterprise Consulting' }));
+      setFormData((prev) => ({ ...prev, budget: BUDGET_RANGES[3], service: SERVICE_OPTIONS[5] }));
     }
   }, [planParam]);
 
@@ -76,6 +76,15 @@ export default function ContactForm() {
         body: JSON.stringify(formData),
       });
 
+      const contentType = res.headers.get('content-type') || '';
+      if (!contentType.includes('application/json')) {
+        // Endpoint missing or returned an HTML error page
+        setServerError(
+          'The form could not be delivered. Please email me directly at muhammadtakiahmed@icloud.com and I will reply within 24 hours.'
+        );
+        return;
+      }
+
       const result = await res.json();
 
       if (res.ok && result.success) {
@@ -84,10 +93,15 @@ export default function ContactForm() {
         if (result.errors) {
           setErrors(result.errors);
         }
-        setServerError(result.message || 'Failed to submit form. Please try again.');
+        setServerError(
+          result.message ||
+            'Something went wrong sending your message. Please email me directly at muhammadtakiahmed@icloud.com.'
+        );
       }
-    } catch (err: unknown) {
-      setServerError('Network error. Please check your connection and try again.');
+    } catch {
+      setServerError(
+        'Your message could not be sent. Please check your connection, or email me directly at muhammadtakiahmed@icloud.com.'
+      );
     } finally {
       setLoading(false);
     }
@@ -113,7 +127,7 @@ export default function ContactForm() {
                 name: '',
                 email: '',
                 company: '',
-                service: 'Web Applications',
+                service: SERVICE_OPTIONS[0],
                 budget: '$5k – $15k',
                 message: '',
               });
@@ -216,14 +230,14 @@ export default function ContactForm() {
             <label className={styles.label}>
               <span>Estimated Project Budget Range</span>
             </label>
-            <div className={styles.budgetGrid}>
+            <div className={styles.budgetOptions}>
               {BUDGET_RANGES.map((b) => {
                 const isSelected = formData.budget === b;
                 return (
                   <button
                     key={b}
                     type="button"
-                    className={`${styles.budgetButton} ${isSelected ? styles.activeBudget : ''}`}
+                    className={`${styles.budgetChip} ${isSelected ? styles.budgetChipActive : ''}`}
                     onClick={() => setFormData({ ...formData, budget: b })}
                   >
                     {b}

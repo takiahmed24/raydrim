@@ -68,7 +68,7 @@ export const PRICING_TIERS: PricingTier[] = [
     timeline: '10-Day Delivery · 3 Revisions',
     idealFor: 'Scaling e-commerce brands wanting higher conversion rates',
     popular: true,
-    badge: 'Most Popular',
+    badge: 'Recommended',
     ctaText: 'Order Shopify Growth ($549)',
     features: [
       'Everything in Shopify Launch included',
