@@ -1,6 +1,6 @@
 export const CONTACT_INFO = {
   owner: 'Muhammad Taki Ahmed',
-  email: 'muhammadtakiahmed@icloud.com',
+  email: 'ahmedmuhammadtaki@gmail.com',
   emailAlt: 'muhtakiahmed2004@gmail.com',
   phone: '+880 1873-691022',
   address: 'Dhaka-1230, Bangladesh',
@@ -37,7 +37,7 @@ export const QUICK_CONTACT_FAQS = [
   },
   {
     question: 'Can we sign an NDA before sharing sensitive details?',
-    answer: 'Yes! I respect your confidentiality. Simply request an NDA in the form message or contact me directly at muhammadtakiahmed@icloud.com and I will issue a standard NDA immediately.',
+    answer: 'Yes! I respect your confidentiality. Simply request an NDA in the form message or contact me directly at ahmedmuhammadtaki@gmail.com and I will issue a standard NDA immediately.',
   },
   {
     question: 'Do you work with non-technical founders?',

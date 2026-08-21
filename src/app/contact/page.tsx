@@ -39,7 +39,7 @@ export default function ContactPage() {
     mainEntity: {
       '@type': 'Organization',
       name: 'Raydrim Digital Agency',
-      email: 'muhammadtakiahmed@icloud.com',
+      email: 'ahmedmuhammadtaki@gmail.com',
       telephone: '+8801873691022',
       address: {
         '@type': 'PostalAddress',

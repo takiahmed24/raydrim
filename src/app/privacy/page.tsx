@@ -265,7 +265,7 @@ export default function PrivacyPolicyPage() {
               <div className={styles.contactBox}>
                 <p><strong>Raydrim Data Protection Office</strong></p>
                 <p><strong>Business Owner:</strong> Muhammad Taki Ahmed</p>
-                <p><strong>Email:</strong> <a href="mailto:muhammadtakiahmed@icloud.com" className={styles.contactLink}>muhammadtakiahmed@icloud.com</a></p>
+                <p><strong>Email:</strong> <a href="mailto:ahmedmuhammadtaki@gmail.com" className={styles.contactLink}>ahmedmuhammadtaki@gmail.com</a></p>
                 <p><strong>Phone / Mobile:</strong> +880 1873-691022</p>
                 <p><strong>Registered Address:</strong> Dhaka-1230, Bangladesh</p>
                 <p><strong>Website:</strong> <a href="https://raydrim.com" className={styles.contactLink}>https://raydrim.com</a></p>

@@ -197,7 +197,7 @@ export default function TermsOfServicePage() {
                   <strong>Whop Purchases:</strong> Purchases completed via Whop storefronts are also backed by Whop buyer guarantees.
                 </li>
                 <li className={styles.listItem}>
-                  <strong>Refund Requests:</strong> Submit requests to <code>muhammadtakiahmed@icloud.com</code>. All inquiries receive a response within 24 hours.
+                  <strong>Refund Requests:</strong> Submit requests to <code>ahmedmuhammadtaki@gmail.com</code>. All inquiries receive a response within 24 hours.
                 </li>
               </ul>
             </section>
@@ -258,7 +258,7 @@ export default function TermsOfServicePage() {
               <div className={styles.contactBox}>
                 <p><strong>Raydrim</strong></p>
                 <p><strong>Founder & Developer:</strong> Muhammad Taki Ahmed</p>
-                <p><strong>Email:</strong> <a href="mailto:muhammadtakiahmed@icloud.com" className={styles.contactLink}>muhammadtakiahmed@icloud.com</a></p>
+                <p><strong>Email:</strong> <a href="mailto:ahmedmuhammadtaki@gmail.com" className={styles.contactLink}>ahmedmuhammadtaki@gmail.com</a></p>
                 <p><strong>Phone:</strong> +880 1873-691022</p>
                 <p><strong>Location:</strong> Dhaka-1230, Bangladesh</p>
                 <p><strong>Website:</strong> <a href="https://raydrim.com" className={styles.contactLink}>https://raydrim.com</a></p>

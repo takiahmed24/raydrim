@@ -121,7 +121,7 @@ export default function Footer() {
             <ul className={styles.contactList}>
               <li className={styles.contactItem}>
                 <Mail size={18} className={styles.contactIcon} />
-                <span>muhammadtakiahmed@icloud.com</span>
+                <span>ahmedmuhammadtaki@gmail.com</span>
                 <span>muhtakiahmed2004@gmail.com</span>
               </li>
               <li className={styles.contactItem}>

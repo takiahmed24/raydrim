@@ -98,7 +98,7 @@ export default function RootLayout({
     logo: 'https://raydrim.com/logo.svg',
     description:
       'Raydrim builds high-performance web applications, mobile apps, e-commerce stores, and digital products.',
-    email: 'muhammadtakiahmed@icloud.com',
+    email: 'ahmedmuhammadtaki@gmail.com',
     telephone: '+8801873691022',
     address: {
       '@type': 'PostalAddress',
@@ -114,7 +114,7 @@ export default function RootLayout({
     ],
     contactPoint: {
       '@type': 'ContactPoint',
-      email: 'muhammadtakiahmed@icloud.com',
+      email: 'ahmedmuhammadtaki@gmail.com',
       telephone: '+8801873691022',
       contactType: 'customer support',
     },

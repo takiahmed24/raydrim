@@ -78,8 +78,8 @@ export default function CheckoutCompletePage() {
         <div className={styles.footerNote}>
           <p className={styles.footerText}>
             Something wrong with your order, or did not receive your invite? Email{' '}
-            <a href="mailto:muhammadtakiahmed@icloud.com" className={styles.inlineLink}>
-              muhammadtakiahmed@icloud.com
+            <a href="mailto:ahmedmuhammadtaki@gmail.com" className={styles.inlineLink}>
+              ahmedmuhammadtaki@gmail.com
             </a>{' '}
             and I will sort it out the same day.
           </p>
