@@ -3,9 +3,9 @@ export const CONTACT_INFO = {
   email: 'muhammadtakiahmed@icloud.com',
   phone: '+880 1873-691022',
   address: 'Dhaka-1230, Bangladesh',
-  usBankAddress: 'JPMorgan Chase Bank N.A., 270 Park Avenue, New York, NY 10017, USA',
+  paymentOptions: 'Payoneer, Wise, Direct Bank Transfer & bKash',
   hours: 'Mon – Fri: 8:00 AM – 6:00 PM EST / BST',
-  responseTime: '< 48 Hours',
+  responseTime: '< 24 Hours',
   whopStore: 'https://whop.com/raydrim',
 };
 
@@ -21,10 +21,10 @@ export const SERVICE_OPTIONS = [
 ] as const;
 
 export const BUDGET_RANGES = [
-  '$2.5k – $5k',
-  '$5k – $15k',
-  '$15k – $30k',
-  '$30k+',
+  '$299 – $999 (Rapid Launch / Web)',
+  '$1,000 – $2,500 (Web & E-Commerce)',
+  '$2,500 – $5,000 (Mobile Apps & Custom)',
+  '$5,000+ (Custom Scope)',
 ] as const;
 
 export const CONSULTATION_SLOTS: { time: string; label: string }[] = [];
@@ -32,7 +32,7 @@ export const CONSULTATION_SLOTS: { time: string; label: string }[] = [];
 export const QUICK_CONTACT_FAQS = [
   {
     question: 'How fast will I hear back after submitting?',
-    answer: 'I monitor inquiries continuously and will respond within 24–48 hours with a preliminary assessment or next steps.',
+    answer: 'I monitor inquiries continuously and will respond within 24 hours with a preliminary assessment or next steps.',
   },
   {
     question: 'Can we sign an NDA before sharing sensitive details?',

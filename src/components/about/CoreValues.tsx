@@ -20,7 +20,7 @@ export default function CoreValues() {
       icon: <Eye size={26} />,
       title: 'Radical Transparency',
       description:
-        'Clear roadmaps, direct access to senior architects, honest sprint velocity tracking, and zero hidden technical debt.',
+        'Clear roadmaps, direct communication with the developer, honest project tracking, and zero hidden technical debt.',
     },
     {
       icon: <Rocket size={26} />,

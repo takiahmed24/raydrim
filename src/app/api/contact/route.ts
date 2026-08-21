@@ -11,6 +11,33 @@ export interface ContactPayload {
   service?: string;
   budget?: string;
   message: string;
+  website?: string;
+  hp_field?: string;
+}
+
+// Basic HTML escaping helper to prevent HTML/script injection in email templates
+function escapeHtml(unsafe: string): string {
+  return unsafe
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#039;');
+}
+
+// In-memory rate limiting per IP (max 5 submissions per 10 minutes)
+const ipMap = new Map<string, number[]>();
+
+function isRateLimited(ip: string): boolean {
+  const now = Date.now();
+  const windowMs = 10 * 60 * 1000;
+  const timestamps = (ipMap.get(ip) || []).filter((t) => now - t < windowMs);
+  if (timestamps.length >= 5) {
+    return true;
+  }
+  timestamps.push(now);
+  ipMap.set(ip, timestamps);
+  return false;
 }
 
 export async function GET() {
@@ -22,7 +49,24 @@ export async function GET() {
 
 export async function POST(req: NextRequest) {
   try {
+    const ip = req.headers.get('x-forwarded-for') || 'anonymous';
+    if (isRateLimited(ip)) {
+      return NextResponse.json(
+        { success: false, message: 'Too many requests. Please try again in a few minutes.' },
+        { status: 429 }
+      );
+    }
+
     const body = (await req.json()) as ContactPayload;
+
+    // Honeypot check for spam bots
+    if (body.website || body.hp_field) {
+      return NextResponse.json({
+        success: true,
+        message: 'Thank you for reaching out to Raydrim!',
+      });
+    }
+
     const errors: Record<string, string> = {};
 
     // Validate Full Name
@@ -52,15 +96,15 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    const clientName = body.name.trim();
-    const clientEmail = body.email.trim();
-    const company = body.company?.trim() || 'Not specified';
-    const service = body.service || 'General Inquiry';
-    const budget = body.budget || 'Not specified';
-    const projectMessage = body.message.trim();
+    const clientName = escapeHtml(body.name.trim());
+    const clientEmail = escapeHtml(body.email.trim());
+    const company = escapeHtml(body.company?.trim() || 'Not specified');
+    const service = escapeHtml(body.service || 'General Inquiry');
+    const budget = escapeHtml(body.budget || 'Not specified');
+    const projectMessage = escapeHtml(body.message.trim());
     const timestamp = new Date().toISOString();
 
-    // Send notification email to you via Resend
+    // Send notification email to owner via Resend
     await resend.emails.send({
       from: 'Raydrim Contact Form <onboarding@resend.dev>',
       to: CONTACT_EMAIL,
@@ -105,7 +149,7 @@ export async function POST(req: NextRequest) {
       `,
     });
 
-    // Send auto-reply confirmation to the client
+    // Send auto-reply confirmation to client
     await resend.emails.send({
       from: 'Raydrim <onboarding@resend.dev>',
       to: clientEmail,
@@ -116,17 +160,16 @@ export async function POST(req: NextRequest) {
             <h1 style="margin: 0; font-size: 22px; color: #fff;">Thank you, ${clientName}! ✨</h1>
           </div>
           <div style="padding: 28px 32px;">
-            <p style="font-size: 15px; line-height: 1.7;">We've received your project inquiry and our senior strategy team is reviewing your requirements right now.</p>
+            <p style="font-size: 15px; line-height: 1.7;">I have received your project inquiry and will review your requirements personally.</p>
             <div style="background: #f0f0ec; padding: 20px; border-radius: 8px; margin: 20px 0;">
-              <p style="margin: 0; font-size: 14px;"><strong>⏱ What happens next:</strong></p>
+              <p style="margin: 0; font-size: 14px;"><strong>⏱ Next Steps:</strong></p>
               <ul style="margin: 10px 0 0; padding-left: 20px; font-size: 14px; line-height: 2;">
-                <li>Our team will review your project details within <strong>2 hours</strong></li>
-                <li>You'll receive a preliminary assessment or consultation booking link</li>
-                <li>We'll match you with the right specialists for your project</li>
+                <li>I will review your project details and respond within <strong>24 hours</strong></li>
+                <li>You will receive a preliminary technical assessment and cost estimate</li>
               </ul>
             </div>
-            <p style="font-size: 14px; color: #666;">If you have any urgent questions, reply to this email or reach us at <a href="mailto:muhammadtakiahmed@icloud.com" style="color: #0a6b3a;">muhammadtakiahmed@icloud.com</a>.</p>
-            <p style="margin-top: 24px; font-size: 14px;">Best regards,<br/><strong>Muhammad Taki Ahmed</strong><br/>Founder, Raydrim Digital Agency</p>
+            <p style="font-size: 14px; color: #666;">If you have any urgent details to add, reply directly to this email or reach me at <a href="mailto:muhammadtakiahmed@icloud.com" style="color: #0a6b3a;">muhammadtakiahmed@icloud.com</a>.</p>
+            <p style="margin-top: 24px; font-size: 14px;">Best regards,<br/><strong>Muhammad Taki Ahmed</strong><br/>Founder & Developer, Raydrim</p>
           </div>
         </div>
       `,
@@ -135,7 +178,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json(
       {
         success: true,
-        message: 'Thank you for reaching out to Raydrim! Our senior team will review your project details and contact you within 2 hours.',
+        message: 'Thank you for reaching out to Raydrim! I will review your project details and contact you within 24 hours.',
         timestamp,
       },
       { status: 200 }

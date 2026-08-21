@@ -64,7 +64,7 @@ export default function Hero() {
                 </div>
                 <div className={styles.cardMeta}>
                   <span className={styles.cardVal}>Enterprise Security</span>
-                  <span className={styles.cardLabel}>SOC2 Compliant Architecture</span>
+                  <span className={styles.cardLabel}>TLS 1.3 & AES-256 Encryption</span>
                 </div>
               </GlassCard>
 

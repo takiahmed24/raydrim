@@ -16,16 +16,16 @@ import { CONTACT_INFO } from '@/data/contactData';
 import styles from './security.module.css';
 
 export const metadata: Metadata = {
-  title: 'Security & Compliance Standards',
+  title: 'Security & Best Practices',
   description:
-    'Learn about Raydrim’s SOC-2, TLS 1.3, AES-256 encryption, zero-trust cloud architecture, and cybersecurity standards.',
+    'Learn about Raydrim’s security practices, TLS 1.3, AES-256 encryption, zero-trust cloud architecture, and data protection standards.',
   alternates: {
     canonical: 'https://raydrim.com/security',
   },
   openGraph: {
-    title: 'Security & Compliance Standards | Raydrim Digital Agency',
+    title: 'Security & Best Practices | Raydrim Digital Agency',
     description:
-      'Raydrim Security Standard — Comprehensive overview of cloud security, data encryption, and access controls.',
+      'Raydrim Security Standard — Overview of cloud security, data encryption, and access controls.',
     url: 'https://raydrim.com/security',
   },
 };
@@ -37,7 +37,7 @@ const SECTIONS = [
   { id: 'access-control', title: '4. Authentication & Access Control', icon: Key },
   { id: 'data-protection', title: '5. Database & Storage Isolation', icon: Database },
   { id: 'code-audits', title: '6. Code Audits & Vulnerability Scans', icon: Cpu },
-  { id: 'compliance', title: '7. Statutory Compliance', icon: FileCheck },
+  { id: 'compliance', title: '7. Payment & Privacy Practices', icon: FileCheck },
   { id: 'reporting', title: '8. Vulnerability Reporting', icon: Mail },
 ];
 
@@ -47,16 +47,16 @@ export default function SecurityPage() {
       <Container size="lg">
         <ScrollReveal direction="up">
           <SectionHeading
-            badge="Enterprise Cybersecurity"
+            badge="Cybersecurity Practices"
             title={
               <>
-                Security & <span className="text-gradient">Compliance</span>
+                Security & <span className="text-gradient">Practices</span>
               </>
             }
-            subtitle="Security is engineered into every line of code we ship. Explore Raydrim's zero-trust architecture, encryption protocols, and cloud compliance."
+            subtitle="Security is engineered into every project shipped. Explore Raydrim's zero-trust architecture, encryption protocols, and data protection practices."
             align="center"
           />
-          <p className={styles.lastUpdated}>Last Audited: July 30, 2024 • SOC-2 & OWASP Certified Standard</p>
+          <p className={styles.lastUpdated}>Last Updated: August 2026 • Security Best Practices Standard</p>
         </ScrollReveal>
 
         <div className={styles.legalLayout}>
@@ -161,10 +161,10 @@ export default function SecurityPage() {
             <section id="compliance" className={styles.section}>
               <h2 className={styles.sectionTitle}>
                 <FileCheck className={styles.sectionTitleIcon} size={22} />
-                7. Statutory & Payment Compliance
+                7. Payment & Privacy Practices
               </h2>
               <p className={styles.text}>
-                Raydrim architectures comply with major statutory frameworks including GDPR, CCPA, and PCI-DSS Level 1 payment gateway standards (Stripe, Payoneer, Wise, ACH).
+                Raydrim architectures adhere to global privacy principles (GDPR, CCPA) and integrate exclusively with industry-standard, secure payment processors (Stripe, Payoneer, Wise, ACH).
               </p>
             </section>
 

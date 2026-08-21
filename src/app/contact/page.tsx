@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Contact Us | Raydrim Digital Agency',
     description:
-      'Speak directly with senior partners and software architects at Raydrim. Sub-2 hour response guarantee.',
+      'Get in touch directly with Muhammad Taki Ahmed, founder and lead developer at Raydrim. 24-hour response guarantee.',
     url: 'https://raydrim.com/contact',
     type: 'website',
   },
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Contact Us | Raydrim Digital Agency',
     description:
-      'Speak directly with senior partners and software architects at Raydrim. Sub-2 hour response guarantee.',
+      'Get in touch directly with Muhammad Taki Ahmed, founder and lead developer at Raydrim. 24-hour response guarantee.',
   },
 };
 

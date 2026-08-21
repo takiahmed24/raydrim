@@ -29,14 +29,14 @@ export default function ContactHero() {
 
         <ScrollReveal direction="up" delay={0.3}>
           <p className={styles.subtitle}>
-            Have an upcoming digital product, web app, or cloud engineering roadmap? Speak directly with our senior partners and engineering architects.
+            Have an upcoming web application, mobile app, or e-commerce project? Speak directly with Muhammad Taki Ahmed, founder and lead software developer at Raydrim.
           </p>
         </ScrollReveal>
 
         <ScrollReveal direction="up" delay={0.4}>
           <div className={styles.guaranteeChip}>
             <Clock size={16} />
-            <span>Response Guarantee: Sub-2 Hour SLA During Business Hours</span>
+            <span>Response Guarantee: Within 24 Hours</span>
           </div>
         </ScrollReveal>
       </Container>

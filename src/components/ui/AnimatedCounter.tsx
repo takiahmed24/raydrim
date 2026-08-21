@@ -20,14 +20,16 @@ export default function AnimatedCounter({
   decimals = 0,
   className = '',
 }: AnimatedCounterProps) {
-  const [count, setCount] = useState(0);
+  // Initialize with target value so SSR and static HTML prerendering outputs actual numbers!
+  const [count, setCount] = useState(value);
   const ref = useRef<HTMLSpanElement>(null);
-  const isInView = useInView(ref, { once: true, amount: 0.5 });
+  const isInView = useInView(ref, { once: true, amount: 0.2 });
   const hasAnimated = useRef(false);
 
   useEffect(() => {
     if (!isInView || hasAnimated.current) return;
     hasAnimated.current = true;
+    setCount(0);
 
     let startTimestamp: number | null = null;
     const startValue = 0;

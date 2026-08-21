@@ -18,7 +18,7 @@ export default function ContactForm() {
     email: '',
     company: '',
     service: 'Web Applications',
-    budget: '$5k – $15k',
+    budget: BUDGET_RANGES[0],
     message: '',
   });
 
@@ -28,12 +28,14 @@ export default function ContactForm() {
   const [serverError, setServerError] = useState<string | null>(null);
 
   useEffect(() => {
-    if (planParam === 'starter') {
-      setFormData((prev) => ({ ...prev, budget: '$2.5k – $5k', service: 'Web Applications' }));
-    } else if (planParam === 'growth') {
-      setFormData((prev) => ({ ...prev, budget: '$5k – $15k', service: 'Web Applications' }));
+    if (planParam === 'micro') {
+      setFormData((prev) => ({ ...prev, budget: BUDGET_RANGES[0], service: 'Web Applications' }));
+    } else if (planParam === 'starter') {
+      setFormData((prev) => ({ ...prev, budget: BUDGET_RANGES[0], service: 'Web Applications' }));
+    } else if (planParam === 'mobile-app') {
+      setFormData((prev) => ({ ...prev, budget: BUDGET_RANGES[2], service: 'Mobile Apps (iOS & Google Play Store)' }));
     } else if (planParam === 'enterprise') {
-      setFormData((prev) => ({ ...prev, budget: '$30k+', service: 'Custom Enterprise Consulting' }));
+      setFormData((prev) => ({ ...prev, budget: BUDGET_RANGES[3], service: 'Custom Enterprise Consulting' }));
     }
   }, [planParam]);
 
@@ -100,7 +102,7 @@ export default function ContactForm() {
           </div>
           <h3 className={styles.successTitle}>Inquiry Received!</h3>
           <p className={styles.successMsg}>
-            Thank you, <strong>{formData.name}</strong>. Our senior architecture team has received your project details. We will contact you at <strong>{formData.email}</strong> within 2 hours.
+            Thank you, <strong>{formData.name}</strong>. I have received your project details and will review your message personally. I will contact you at <strong>{formData.email}</strong> within 24 hours.
           </p>
           <Button
             variant="secondary"

@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Space_Grotesk, Inter } from 'next/font/google';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
+import CookieBanner from '@/components/layout/CookieBanner';
 import './globals.css';
 
 const spaceGrotesk = Space_Grotesk({
@@ -19,30 +20,24 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL('https://raydrim.com'),
   title: {
-    default: 'Raydrim — Premium Digital Agency, Mobile Apps & Software House',
-    template: '%s | Raydrim Digital Agency',
+    default: 'Raydrim — Full-Stack Web, Mobile & Software Development',
+    template: '%s | Raydrim',
   },
   description:
-    'Raydrim builds high-performance web applications, iOS & Google Play Store mobile apps, technical e-books, and AI integrations for visionary global clients.',
+    'Raydrim builds production-grade web applications, Shopify e-commerce stores, mobile apps, and custom software built with Next.js, React, and TypeScript.',
   keywords: [
-    'Digital Agency',
-    'Next.js Development',
-    'Google Play Store App Development',
-    'iOS App Development',
-    'Technical E-Books & Software Guides',
-    'AI Solutions',
-    'Web Design',
-    'Software House',
-    'Raydrim',
-    'Software Engineering',
-    'Custom Software',
+    'Web Development',
+    'Next.js Studio',
+    'React Developer',
+    'TypeScript Developer',
+    'Shopify E-Commerce',
+    'Mobile App Development',
+    'Software Consulting',
+    'Dhaka Developer',
   ],
   authors: [{ name: 'Muhammad Taki Ahmed', url: 'https://raydrim.com' }],
   creator: 'Muhammad Taki Ahmed',
-  publisher: 'Raydrim Digital Agency',
-  alternates: {
-    canonical: '/',
-  },
+  publisher: 'Raydrim',
   robots: {
     index: true,
     follow: true,
@@ -54,24 +49,38 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
+  icons: {
+    icon: '/icon.svg',
+    shortcut: '/icon.svg',
+    apple: '/icon.svg',
+  },
+  manifest: '/manifest.json',
   openGraph: {
-    title: 'Raydrim — Premium Digital Agency & Software House',
-    description:
-      'Raydrim builds high-performance web applications, AI integrations, mobile apps, and luxury brand experiences.',
+    type: 'website',
+    locale: 'en_US',
     url: 'https://raydrim.com',
     siteName: 'Raydrim',
-    locale: 'en_US',
-    type: 'website',
+    title: 'Raydrim — Full-Stack Web, Mobile & Software Development',
+    description:
+      'High-performance Next.js web applications, Shopify e-commerce, and mobile app development by Muhammad Taki Ahmed.',
+    images: [
+      {
+        url: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop',
+        width: 1200,
+        height: 630,
+        alt: 'Raydrim Digital Studio',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Raydrim — Premium Digital Agency & Software House',
+    title: 'Raydrim — Full-Stack Web & Software Development Studio',
     description:
-      'Raydrim builds high-performance web applications, AI integrations, and luxury brand experiences.',
+      'Production Next.js web apps, Shopify e-commerce, and mobile app engineering.',
     creator: '@takiahmed24',
-  },
-  verification: {
-    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || '',
+    images: [
+      'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop',
+    ],
   },
 };
 
@@ -89,7 +98,7 @@ export default function RootLayout({
     url: 'https://raydrim.com',
     logo: 'https://raydrim.com/logo.svg',
     description:
-      'Raydrim builds high-performance web applications, AI integrations, and luxury brand experiences for visionary global clients.',
+      'Raydrim builds high-performance web applications, mobile apps, e-commerce stores, and digital products.',
     email: 'muhammadtakiahmed@icloud.com',
     telephone: '+8801873691022',
     address: {
@@ -150,6 +159,7 @@ export default function RootLayout({
         <Navbar />
         <main className="main-content">{children}</main>
         <Footer />
+        <CookieBanner />
       </body>
     </html>
   );

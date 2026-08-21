@@ -70,25 +70,25 @@ export default function ContactInfoCards() {
         </GlassCard>
       </ScrollReveal>
 
-      {/* Card 3: Address & Banking */}
+      {/* Card 3: Location & Payments */}
       <ScrollReveal direction="up" delay={0.3}>
         <GlassCard className={styles.card} hoverEffect={true}>
           <div className={styles.iconBox}>
             <MapPin size={22} />
           </div>
-          <h3 className={styles.title}>HQ & Banking Partner</h3>
+          <h3 className={styles.title}>Studio Location & Payments</h3>
           <p className={styles.subtitle}>Owner: {CONTACT_INFO.owner}</p>
           <div className={styles.mainValue}>
             <div className={styles.addressBlock}>
-              <strong>Recipient Address:</strong> {CONTACT_INFO.address}
+              <strong>Location:</strong> {CONTACT_INFO.address}
             </div>
             <div className={styles.addressBlock}>
-              <strong>US Bank Partner:</strong> {CONTACT_INFO.usBankAddress}
+              <strong>Payment Options:</strong> {CONTACT_INFO.paymentOptions}
             </div>
           </div>
 
           <div className={styles.actionRow}>
-            <span className={styles.locationTag}>Dhaka & New York</span>
+            <span className={styles.locationTag}>Dhaka, Bangladesh</span>
             <a
               href="https://maps.google.com/?q=Dhaka-1230,Bangladesh"
               target="_blank"

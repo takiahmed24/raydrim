@@ -29,7 +29,7 @@ export default function PricingHero() {
 
         <ScrollReveal direction="up" delay={0.3}>
           <p className={styles.subtitle}>
-            Zero hidden fees, zero vendor lock-in, and clear scope milestones. Invest with confidence in production-grade web architecture and senior engineering pods.
+            Zero hidden fees, zero vendor lock-in, and clear scope milestones. Invest with confidence in production-grade web architecture, mobile apps, and dedicated developer support.
           </p>
         </ScrollReveal>
 

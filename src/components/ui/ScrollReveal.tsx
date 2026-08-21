@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 
 interface ScrollRevealProps {
@@ -18,10 +18,16 @@ export default function ScrollReveal({
   delay = 0,
   duration = 0.6,
   className = '',
-  viewportAmount = 0.2,
+  viewportAmount = 0.05,
 }: ScrollRevealProps) {
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
   const getVariants = () => {
-    const offset = 40;
+    const offset = 30;
     let x = 0;
     let y = 0;
 
@@ -58,11 +64,16 @@ export default function ScrollReveal({
     };
   };
 
+  // For static HTML prerendering (SSG/SSR), render a plain div so content is 100% visible to crawlers and search engines!
+  if (!isMounted) {
+    return <div className={className}>{children}</div>;
+  }
+
   return (
     <motion.div
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: viewportAmount }}
+      viewport={{ once: true, amount: viewportAmount, margin: '0px 0px -20px 0px' }}
       variants={getVariants()}
       className={className}
     >
