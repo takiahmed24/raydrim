@@ -9,6 +9,7 @@ interface AnimatedCounterProps {
   prefix?: string;
   suffix?: string;
   decimals?: number;
+  format?: boolean;
   className?: string;
 }
 
@@ -18,6 +19,7 @@ export default function AnimatedCounter({
   prefix = '',
   suffix = '',
   decimals = 0,
+  format = true,
   className = '',
 }: AnimatedCounterProps) {
   // Initialize with target value so SSR and static HTML prerendering outputs actual numbers!
@@ -54,7 +56,13 @@ export default function AnimatedCounter({
     window.requestAnimationFrame(step);
   }, [isInView, value, duration]);
 
-  const formattedCount = decimals > 0 ? count.toFixed(decimals) : Math.round(count).toLocaleString();
+  const rounded = Math.round(count);
+  const formattedCount =
+    decimals > 0
+      ? count.toFixed(decimals)
+      : format
+      ? rounded.toLocaleString()
+      : rounded.toString();
 
   return (
     <span ref={ref} className={className}>

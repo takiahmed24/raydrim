@@ -37,7 +37,7 @@ export default function AboutHero() {
           <div className={styles.statsBar}>
             <div className={styles.statItem}>
               <span className={styles.statVal}>
-                <AnimatedCounter value={2026} suffix="" decimals={0} />
+                <AnimatedCounter value={2026} format={false} suffix="" decimals={0} />
               </span>
               <span className={styles.statLabel}>Founded</span>
             </div>
@@ -49,7 +49,7 @@ export default function AboutHero() {
             </div>
             <div className={styles.statItem}>
               <span className={styles.statVal}>
-                <AnimatedCounter value={2} suffix="+" />
+                <AnimatedCounter value={3} suffix="+" />
               </span>
               <span className={styles.statLabel}>Projects Shipped</span>
             </div>

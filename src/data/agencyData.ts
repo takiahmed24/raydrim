@@ -173,26 +173,26 @@ export const MILESTONES: Milestone[] = [
   {
     year: '2025',
     title: 'Started Building',
-    description: 'Began learning full-stack web development with JavaScript, React, and Node.js. Built early projects to sharpen skills.',
+    description: 'Began learning full-stack web development with JavaScript, React, and Node.js. Built early projects to sharpen engineering skills.',
     badge: 'Foundation',
   },
   {
     year: '2026',
     title: 'Launched Campus Dude',
     description: 'Shipped campusdude.site — a free browser games platform for students with 22 handcrafted games, responsive design, and AdSense integration.',
-    badge: 'First Product',
+    badge: 'Games Platform',
   },
   {
     year: '2026',
-    title: 'Launched Raydrim',
-    description: 'Built and deployed raydrim.com as a professional digital studio — offering web development, e-commerce, mobile apps, and software consulting services.',
+    title: 'Launched Watchie Store',
+    description: 'Built and launched watchie-3.myshopify.com — a high-converting Shopify e-commerce storefront for tactical and luxury timepieces.',
+    badge: 'Shopify E-Commerce',
+  },
+  {
+    year: '2026',
+    title: 'Launched Raydrim Agency',
+    description: 'Built and deployed raydrim.com as a professional digital studio — offering web development, Shopify stores, mobile apps, and custom software.',
     badge: 'Agency Launch',
-  },
-  {
-    year: '2026',
-    title: 'Expanding Services',
-    description: 'Growing into Shopify development, Google Play Books publishing, and cross-platform mobile app engineering with React Native.',
-    badge: 'Growth',
   },
 ];
 
