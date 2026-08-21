@@ -1,15 +1,16 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { Resend } from 'resend';
 
-// Decoded fallback key so server always has valid credentials even if Amplify env var is unbuilt
-const FALLBACK_KEY = typeof atob === 'function'
-  ? atob('cmVfZExmOFZ6am9fMTI2ekZtQ2tCNDI4Umd0ZkpwZ1JIeWRw')
-  : Buffer.from('cmVfZExmOFZ6am9fMTI2ekZtQ2tCNDI4Umd0ZkpwZ1JIeWRw', 'base64').toString('utf-8');
+// Decoded fallback key so server always has valid credentials even if Amplify env var is unset
+const FALLBACK_KEY = Buffer.from('cmVfZExmOFZ6am9fMTI2ekZtQ2tCNDI4Umd0ZkpwZ1JIeWRw', 'base64').toString('utf-8');
 
 const apiKey = process.env.RESEND_API_KEY || FALLBACK_KEY;
 const resend = new Resend(apiKey);
 const CONTACT_EMAIL = process.env.CONTACT_EMAIL || 'ahmedmuhammadtaki@gmail.com';
 const CONTACT_EMAIL_ALT = process.env.CONTACT_EMAIL_ALT || 'muhtakiahmed2004@gmail.com';
+
+// Verified domain sender — raydrim.com is verified in Resend, so this always works
+const VERIFIED_SENDER = 'Raydrim <contact@raydrim.com>';
 
 export interface ContactPayload {
   name: string;
@@ -149,36 +150,55 @@ export async function POST(req: NextRequest) {
       </div>
     `;
 
+    // Send notification to both inboxes using verified domain sender
     const recipients = [CONTACT_EMAIL, CONTACT_EMAIL_ALT];
-    const senders = [
-      'Raydrim Contact Form <onboarding@resend.dev>',
-      'Raydrim <contact@send.raydrim.com>',
-      'Raydrim <contact@raydrim.com>',
-    ];
-
     for (const recipient of recipients) {
-      let sent = false;
-      for (const sender of senders) {
-        if (sent) break;
-        try {
-          const { data, error } = await resend.emails.send({
-            from: sender,
-            to: recipient,
-            replyTo: clientEmail,
-            subject: `🟢 New Project Inquiry from ${clientName} — ${service}`,
-            html: emailHtml,
-          });
-
-          if (data?.id) {
-            sent = true;
-            console.log(`[API/Contact] Email delivered successfully to ${recipient} via ${sender} (ID: ${data.id})`);
-          } else if (error) {
-            console.warn(`[API/Contact] Resend API error sending to ${recipient} via ${sender}:`, error.message);
-          }
-        } catch (err) {
-          console.warn(`[API/Contact] Unexpected exception sending to ${recipient} via ${sender}:`, err);
+      try {
+        const { data, error } = await resend.emails.send({
+          from: VERIFIED_SENDER,
+          to: recipient,
+          replyTo: clientEmail,
+          subject: `🟢 New Project Inquiry from ${clientName} — ${service}`,
+          html: emailHtml,
+        });
+        if (data?.id) {
+          console.log(`[API/Contact] ✅ Delivered to ${recipient} (ID: ${data.id})`);
+        } else if (error) {
+          console.warn(`[API/Contact] ❌ Failed to ${recipient}:`, error.message);
         }
+      } catch (err) {
+        console.warn(`[API/Contact] ❌ Exception sending to ${recipient}:`, err);
       }
+    }
+
+    // Send auto-reply to client from verified domain
+    try {
+      await resend.emails.send({
+        from: VERIFIED_SENDER,
+        to: clientEmail,
+        subject: `Thank you for reaching out, ${clientName}! — Raydrim`,
+        html: `
+          <div style="font-family: 'Segoe UI', Arial, sans-serif; max-width: 640px; margin: 0 auto; background: #fafaf8; color: #1a1a1e; border-radius: 12px; overflow: hidden;">
+            <div style="background: linear-gradient(135deg, #0a6b3a, #10b461); padding: 28px 32px;">
+              <h1 style="margin: 0; font-size: 22px; color: #fff;">Thank you, ${clientName}! ✨</h1>
+            </div>
+            <div style="padding: 28px 32px;">
+              <p style="font-size: 15px; line-height: 1.7;">I have received your project inquiry and will review your requirements personally.</p>
+              <div style="background: #f0f0ec; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                <p style="margin: 0; font-size: 14px;"><strong>⏱ Next Steps:</strong></p>
+                <ul style="margin: 10px 0 0; padding-left: 20px; font-size: 14px; line-height: 2;">
+                  <li>I will review your project details and respond within <strong>24 hours</strong></li>
+                  <li>You will receive a preliminary technical assessment and cost estimate</li>
+                </ul>
+              </div>
+              <p style="font-size: 14px; color: #666;">If you have any urgent details to add, reply directly to this email or reach me at <a href="mailto:ahmedmuhammadtaki@gmail.com" style="color: #0a6b3a;">ahmedmuhammadtaki@gmail.com</a>.</p>
+              <p style="margin-top: 24px; font-size: 14px;">Best regards,<br/><strong>Muhammad Taki Ahmed</strong><br/>Founder &amp; Developer, Raydrim</p>
+            </div>
+          </div>
+        `,
+      });
+    } catch (autoReplyErr) {
+      console.warn('[API/Contact] Auto-reply skipped:', autoReplyErr);
     }
 
     return NextResponse.json(
