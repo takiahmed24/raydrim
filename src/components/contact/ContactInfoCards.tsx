@@ -27,6 +27,7 @@ export default function ContactInfoCards() {
           <h3 className={styles.title}>Direct Email</h3>
           <p className={styles.subtitle}>Inquiries, RFPs & Project Details</p>
           <div className={styles.mainValue}>{CONTACT_INFO.email}</div>
+          <div className={styles.mainValue}>{CONTACT_INFO.emailAlt}</div>
 
           <div className={styles.actionRow}>
             <button

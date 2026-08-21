@@ -122,6 +122,7 @@ export default function Footer() {
               <li className={styles.contactItem}>
                 <Mail size={18} className={styles.contactIcon} />
                 <span>muhammadtakiahmed@icloud.com</span>
+                <span>muhtakiahmed2004@gmail.com</span>
               </li>
               <li className={styles.contactItem}>
                 <MapPin size={18} className={styles.contactIcon} />

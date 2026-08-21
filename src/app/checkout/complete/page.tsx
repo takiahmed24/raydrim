@@ -67,6 +67,9 @@ export default function CheckoutCompletePage() {
             <a href="mailto:muhammadtakiahmed@icloud.com" className={styles.inlineLink}>
               muhammadtakiahmed@icloud.com
             </a>{' '}
+            or <a href="mailto:muhtakiahmed2004@gmail.com" className={styles.inlineLink}>
+              muhtakiahmed2004@gmail.com
+            </a>{' '}
             and I will sort it out the same day.
           </p>
           <div className={styles.actions}>

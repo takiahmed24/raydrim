@@ -1,6 +1,7 @@
 export const CONTACT_INFO = {
   owner: 'Muhammad Taki Ahmed',
   email: 'muhammadtakiahmed@icloud.com',
+  emailAlt: 'muhtakiahmed2004@gmail.com',
   phone: '+880 1873-691022',
   address: 'Dhaka-1230, Bangladesh',
   paymentOptions: 'Payoneer, Wise, Direct Bank Transfer & bKash',

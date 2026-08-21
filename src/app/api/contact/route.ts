@@ -3,6 +3,7 @@ import { Resend } from 'resend';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 const CONTACT_EMAIL = process.env.CONTACT_EMAIL || 'muhammadtakiahmed@icloud.com';
+const CONTACT_EMAIL_ALT = process.env.CONTACT_EMAIL_ALT || 'muhtakiahmed2004@gmail.com';
 
 export interface ContactPayload {
   name: string;
@@ -107,7 +108,7 @@ export async function POST(req: NextRequest) {
     // Send notification email to owner via Resend
     await resend.emails.send({
       from: 'Raydrim Contact Form <onboarding@resend.dev>',
-      to: CONTACT_EMAIL,
+      to: [CONTACT_EMAIL, CONTACT_EMAIL_ALT],
       replyTo: clientEmail,
       subject: `🟢 New Project Inquiry from ${clientName} — ${service}`,
       html: `
