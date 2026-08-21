@@ -20,8 +20,23 @@ export default function BlogFilter({
   onSearchChange,
 }: BlogFilterProps) {
   return (
-    <div className={styles.filterBar}>
-      <div className={styles.searchContainer}>
+    <div className={styles.wrapper}>
+      <div className={styles.categories}>
+        {categories.map((cat) => {
+          const isActive = activeCategory === cat;
+          return (
+            <button
+              key={cat}
+              onClick={() => onSelectCategory(cat)}
+              className={`${styles.chip} ${isActive ? styles.activeChip : ''}`}
+            >
+              {cat}
+            </button>
+          );
+        })}
+      </div>
+
+      <div className={styles.searchBox}>
         <Search size={18} className={styles.searchIcon} />
         <input
           type="text"
@@ -30,21 +45,6 @@ export default function BlogFilter({
           onChange={(e) => onSearchChange(e.target.value)}
           className={styles.searchInput}
         />
-      </div>
-
-      <div className={styles.categoriesList}>
-        {categories.map((cat) => {
-          const isActive = activeCategory === cat;
-          return (
-            <button
-              key={cat}
-              onClick={() => onSelectCategory(cat)}
-              className={`${styles.categoryPill} ${isActive ? styles.categoryPillActive : ''}`}
-            >
-              {cat}
-            </button>
-          );
-        })}
       </div>
     </div>
   );
