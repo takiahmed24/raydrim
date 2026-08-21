@@ -149,7 +149,7 @@ export const FEATURE_MATRIX: MatrixCategory[] = [
     category: 'Support & Communication',
     rows: [
       { feature: 'Post-Launch Warranty Period', starter: '14 Days', growth: '30 Days', enterprise: '90 Days / Retainer' },
-      { feature: 'Response SLA Time', starter: '< 24 Hours', growth: '< 12 Hours', enterprise: 'Priority Fast Response' },
+      { feature: 'Response SLA Time', starter: '< 24 Hours', growth: '< 24 Hours', enterprise: 'Priority (< 24 Hours)' },
       { feature: 'Direct Communication with Developer', starter: 'Email / Async', growth: 'Direct Slack / Messaging', enterprise: 'Priority Direct Access' },
       { feature: 'Slack / Dedicated Channel', starter: false, growth: true, enterprise: 'Priority Direct Channel' },
     ],

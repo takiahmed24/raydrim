@@ -138,6 +138,18 @@ export default function RootLayout({
       <head>
         <meta name="google-adsense-account" content="ca-pub-4263728957042690" />
         <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              if (typeof window !== 'undefined') {
+                var consent = localStorage.getItem('raydrim_cookie_consent');
+                if (consent === 'denied') {
+                  (window.adsbygoogle = window.adsbygoogle || []).pauseAdRequests = 1;
+                }
+              }
+            `,
+          }}
+        />
+        <script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4263728957042690"
           crossOrigin="anonymous"

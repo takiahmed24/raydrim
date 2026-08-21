@@ -105,11 +105,11 @@ export const HOME_STATS: StatItem[] = [
     description: 'Web apps, e-commerce, mobile, cloud, design & e-books.',
   },
   {
-    value: 48,
+    value: 24,
     suffix: 'hr',
     prefix: '<',
     label: 'Response Time',
-    description: 'All inquiries responded to within two business days.',
+    description: 'All inquiries responded to within 24 hours.',
   },
 ];
 

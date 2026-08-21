@@ -26,7 +26,7 @@ export default function CTABanner() {
               </h2>
 
               <p className={styles.subtitle}>
-                Let's turn your ambitious roadmap into enterprise-grade software. Schedule a 30-minute strategic architecture review with our team today.
+                Let's turn your ambitious roadmap into production-grade software. Schedule a 30-minute discovery session directly with founder and developer Muhammad Taki Ahmed today.
               </p>
 
               <div className={styles.buttons}>

@@ -18,11 +18,17 @@ export default function CookieBanner() {
   const handleAccept = () => {
     localStorage.setItem('raydrim_cookie_consent', 'granted');
     setShowBanner(false);
+    if (typeof window !== 'undefined') {
+      window.dispatchEvent(new Event('cookie_consent_granted'));
+    }
   };
 
   const handleDecline = () => {
     localStorage.setItem('raydrim_cookie_consent', 'denied');
     setShowBanner(false);
+    if (typeof window !== 'undefined') {
+      window.dispatchEvent(new Event('cookie_consent_denied'));
+    }
   };
 
   if (!mounted || !showBanner) return null;
@@ -31,11 +37,11 @@ export default function CookieBanner() {
     <div className={styles.banner} role="dialog" aria-label="Cookie consent banner">
       <div className={styles.container}>
         <p className={styles.text}>
-          We use essential and analytics cookies to deliver site functionality and measure performance. Read our{' '}
+          We use cookies for site analytics and Google AdSense personalization. Read our{' '}
           <a href="/privacy" className={styles.link}>
             Privacy Policy
           </a>{' '}
-          to learn more.
+          to manage your preferences.
         </p>
         <div className={styles.actions}>
           <button onClick={handleDecline} className={styles.declineBtn}>
