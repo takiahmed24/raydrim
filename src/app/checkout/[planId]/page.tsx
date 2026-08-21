@@ -74,15 +74,16 @@ export default async function CheckoutPage({
           <h2 className={styles.reassureTitle}>What happens after you pay</h2>
           <ol className={styles.steps}>
             <li>
-              You get instant access to the <strong>Raydrim Client Hub</strong> — a private chat
-              with me — and to the <strong>Project Updates</strong> feed.
+              You get access to the <strong>Raydrim Client Hub</strong> on Whop. Message me there
+              and I reply in a <strong>private DM</strong> — everything about your project stays
+              between the two of us.
             </li>
             <li>
               I reply within <strong>24 hours</strong> with a scoping summary and your confirmed
               start date.
             </li>
             <li>
-              I post each milestone to Project Updates with screenshots, so you can follow progress
+              I send you each milestone with screenshots as I go, so you can follow progress
               without chasing me.
             </li>
             <li>

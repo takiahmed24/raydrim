@@ -125,3 +125,15 @@
   .step { padding: 20px; gap: 14px; }
   .footerNote { padding: 24px 20px; }
 }
+
+.hubCta {
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.hubHint {
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  color: var(--ink-soft);
+  margin: 12px 0 0;
+}

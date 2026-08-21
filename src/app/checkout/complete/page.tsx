@@ -13,18 +13,18 @@ export const metadata: Metadata = {
 const STEPS = [
   {
     icon: MessageSquare,
-    title: 'Check your email',
-    body: 'Whop has sent your invite to the Raydrim Client Hub — a private chat with me — and to the Project Updates feed. If it is not in your inbox, check spam.',
+    title: 'Open your Client Hub',
+    body: 'Your order gives you access to the Raydrim Client Hub on Whop. Open it with the button below, or use the invite Whop just emailed you. Message me there and I reply in a private DM — your project details stay between the two of us.',
   },
   {
     icon: CalendarClock,
     title: 'I reply within 24 hours',
-    body: 'You will get a scoping summary and a confirmed start date in the Client Hub. If you already know what you want, reply with your brief and I will start sooner.',
+    body: 'You will get a scoping summary and a confirmed start date. If you already know what you want, send your brief straight away and I will start sooner.',
   },
   {
     icon: FolderGit2,
     title: 'Then you watch it get built',
-    body: 'Every milestone gets posted to Project Updates with screenshots, so you can follow progress without chasing me for status.',
+    body: 'I send each milestone with screenshots as I go, so you can follow progress without chasing me for status. At the end you get the deployed site, full source code and repository access, and a handover note.',
   },
 ];
 
@@ -39,6 +39,20 @@ export default function CheckoutCompletePage() {
           <h1 className={styles.title}>Order confirmed — thank you.</h1>
           <p className={styles.lede}>
             Your project is queued and I have been notified. Here is exactly what happens next.
+          </p>
+        </div>
+
+        <div className={styles.hubCta}>
+          <a
+            href="https://whop.com/raydrim"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.primaryLink}
+          >
+            Open Raydrim Client Hub →
+          </a>
+          <p className={styles.hubHint}>
+            Opens on Whop, where you and I message directly.
           </p>
         </div>
 
@@ -66,9 +80,6 @@ export default function CheckoutCompletePage() {
             Something wrong with your order, or did not receive your invite? Email{' '}
             <a href="mailto:muhammadtakiahmed@icloud.com" className={styles.inlineLink}>
               muhammadtakiahmed@icloud.com
-            </a>{' '}
-            or <a href="mailto:muhtakiahmed2004@gmail.com" className={styles.inlineLink}>
-              muhtakiahmed2004@gmail.com
             </a>{' '}
             and I will sort it out the same day.
           </p>
