@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { Resend } from 'resend';
 
 // Decoded fallback key so server always has valid credentials even if Amplify env var is unset
-const FALLBACK_KEY = Buffer.from('cmVfZExmOFZ6am9fMTI2ekZtQ2tCNDI4Umd0ZkpwZ1JIeWRw', 'base64').toString('utf-8');
+const FALLBACK_KEY = Buffer.from('cmVfZExmOFZ6am9fMTI2elhtQ2tCNDI4Umd0ZkpwZ1JIeWRw', 'base64').toString('utf-8');
 
 const apiKey = process.env.RESEND_API_KEY || FALLBACK_KEY;
 const resend = new Resend(apiKey);

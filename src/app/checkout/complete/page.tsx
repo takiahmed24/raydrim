@@ -44,7 +44,7 @@ export default function CheckoutCompletePage() {
 
         <div className={styles.hubCta}>
           <a
-            href="https://whop.com/raydrim"
+            href="https://whop.com/joined/raydrim/raydrim-client-hub-RKGKS86sQaVSuR/app/"
             target="_blank"
             rel="noopener noreferrer"
             className={styles.primaryLink}

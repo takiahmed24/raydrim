@@ -74,8 +74,16 @@ export default async function CheckoutPage({
           <h2 className={styles.reassureTitle}>What happens after you pay</h2>
           <ol className={styles.steps}>
             <li>
-              You get access to the <strong>Raydrim Client Hub</strong> on Whop. Message me there
-              and I reply in a <strong>private DM</strong> — everything about your project stays
+              You get access to the{' '}
+              <a
+                href="https://whop.com/joined/raydrim/raydrim-client-hub-RKGKS86sQaVSuR/app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: 'inherit', textDecoration: 'underline', fontWeight: 600 }}
+              >
+                Raydrim Client Hub
+              </a>{' '}
+              on Whop. Message me there and I reply in a <strong>private DM</strong> — everything about your project stays
               between the two of us.
             </li>
             <li>
