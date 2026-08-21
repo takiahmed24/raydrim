@@ -128,7 +128,7 @@ export const FEATURED_PROJECTS: PortfolioProject[] = [
     tags: ['Shopify', 'Liquid', 'E-Commerce', 'UI/UX', 'Payment Gateway'],
     metrics: [
       { label: 'Catalog Setup', value: 'Complete' },
-      { label: 'Mobile Optimized', value: '100%' },
+      { label: 'Store Password', value: 'watch' },
     ],
     featured: true,
   },
