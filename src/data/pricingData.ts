@@ -3,6 +3,7 @@ import { PricingTier } from '@/types';
 export const PRICING_TIERS: PricingTier[] = [
   {
     id: 'starter-site',
+    whopPlanId: 'plan_xH1Qhgqu2dQjS',
     name: 'Starter Site',
     price: '$149',
     period: 'one-time / project',
@@ -21,6 +22,7 @@ export const PRICING_TIERS: PricingTier[] = [
   },
   {
     id: 'business-site',
+    whopPlanId: 'plan_qvX8VgKjnZrkE',
     name: 'Business Website',
     price: '$449',
     period: 'one-time / project',
@@ -39,6 +41,7 @@ export const PRICING_TIERS: PricingTier[] = [
   },
   {
     id: 'shopify-launch',
+    whopPlanId: 'plan_fH1YRCj3k1Ak2',
     name: 'Shopify Launch',
     price: '$249',
     period: 'one-time / project',
@@ -57,6 +60,7 @@ export const PRICING_TIERS: PricingTier[] = [
   },
   {
     id: 'shopify-growth',
+    whopPlanId: 'plan_aPR516B4gx65m',
     name: 'Shopify Growth',
     price: '$549',
     period: 'one-time / project',
@@ -76,6 +80,7 @@ export const PRICING_TIERS: PricingTier[] = [
   },
   {
     id: 'shopify-prestige',
+    whopPlanId: 'plan_r8eroaYMbcvJh',
     name: 'Shopify Prestige',
     price: '$1,295',
     period: 'one-time / project',
@@ -94,6 +99,7 @@ export const PRICING_TIERS: PricingTier[] = [
   },
   {
     id: 'app-converter',
+    whopPlanId: 'plan_tBbLMBeZM2Lk4',
     name: 'Website to App (WebView)',
     price: '$299',
     period: 'one-time / project',
@@ -112,6 +118,7 @@ export const PRICING_TIERS: PricingTier[] = [
   },
   {
     id: 'cross-platform-app',
+    whopPlanId: 'plan_mv5KyZPPygZUq',
     name: 'Cross-Platform Mobile App',
     price: '$999',
     period: 'one-time / project',
@@ -131,6 +138,7 @@ export const PRICING_TIERS: PricingTier[] = [
   },
   {
     id: 'custom-app',
+    whopPlanId: 'plan_wus94g49qvUV7',
     name: 'Custom Web App / Custom Scope',
     price: 'from $2,499',
     period: 'bespoke project',

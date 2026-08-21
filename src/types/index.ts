@@ -67,6 +67,8 @@ export interface PricingTier {
   badge?: string;
   timeline?: string;
   idealFor?: string;
+  /** Whop plan ID (plan_XXXX). Empty string = no instant checkout yet. */
+  whopPlanId?: string;
 }
 
 export interface Testimonial {

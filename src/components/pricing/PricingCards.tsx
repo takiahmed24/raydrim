@@ -56,7 +56,11 @@ export default function PricingCards() {
 
               <div className={styles.ctaWrapper}>
                 <Button
-                  href={`/contact?plan=${tier.id}`}
+                  href={
+                    tier.whopPlanId
+                      ? `/checkout/${tier.whopPlanId}`
+                      : `/contact?plan=${tier.id}`
+                  }
                   variant={isPopular ? 'primary' : 'secondary'}
                   size="lg"
                   fullWidth={true}
