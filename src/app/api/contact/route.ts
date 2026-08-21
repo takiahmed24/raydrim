@@ -155,18 +155,22 @@ export async function POST(req: NextRequest) {
       for (const sender of senders) {
         if (sent) break;
         try {
-          const res = await resend.emails.send({
+          const { data, error } = await resend.emails.send({
             from: sender,
             to: recipient,
             replyTo: clientEmail,
             subject: `🟢 New Project Inquiry from ${clientName} — ${service}`,
             html: emailHtml,
           });
-          if (res.data?.id) {
+
+          if (data?.id) {
             sent = true;
+            console.log(`[API/Contact] Email delivered successfully to ${recipient} via ${sender} (ID: ${data.id})`);
+          } else if (error) {
+            console.warn(`[API/Contact] Resend API error sending to ${recipient} via ${sender}:`, error.message);
           }
         } catch (err) {
-          console.warn(`[API/Contact] Failed sending to ${recipient} via ${sender}:`, err);
+          console.warn(`[API/Contact] Unexpected exception sending to ${recipient} via ${sender}:`, err);
         }
       }
     }
