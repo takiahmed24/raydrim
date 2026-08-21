@@ -27,12 +27,12 @@ const QUICK_LINKS = [
 ];
 
 const SERVICE_LINKS = [
-  { label: 'Custom Web Applications', href: '/services#web', badge: 'Popular' },
-  { label: 'AI Solutions & Integration', href: '/services#ai', badge: 'Hot' },
-  { label: 'UI/UX Design Systems', href: '/services#design' },
-  { label: 'Cloud & Infrastructure', href: '/services#cloud' },
-  { label: 'Mobile App Development', href: '/services#mobile' },
-  { label: 'Growth & Strategy', href: '/services#growth' },
+  { label: 'Website Builds', href: '/pricing#websites', badge: 'From $149' },
+  { label: 'Shopify Store Builds', href: '/pricing#shopify', badge: 'Popular' },
+  { label: 'Website to App (WebView)', href: '/pricing#mobile' },
+  { label: 'Cross-Platform Mobile Apps', href: '/pricing#mobile' },
+  { label: 'Custom Web Applications', href: '/pricing#custom' },
+  { label: 'Monthly Care Plans', href: '/pricing' },
 ];
 
 export default function Footer() {

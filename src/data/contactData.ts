@@ -10,14 +10,14 @@ export const CONTACT_INFO = {
 };
 
 export const SERVICE_OPTIONS = [
-  'Web Applications',
-  'Mobile Apps (iOS & Google Play Store)',
-  'E-Commerce Platforms',
-  'Cloud Architecture',
-  'Brand Identity & UI/UX',
-  'AI Solutions & Automation',
-  'Digital E-Books & Technical Guides',
-  'Custom Enterprise Consulting',
+  'Starter Site ($149)',
+  'Business Website ($449)',
+  'Shopify Store Build ($249 – $1,295)',
+  'Website to App / WebView ($299)',
+  'Cross-Platform Mobile App ($999)',
+  'Custom Web App (from $2,499)',
+  'Monthly Care Plan',
+  'Something Else / Not Sure Yet',
 ] as const;
 
 export const BUDGET_RANGES = [
