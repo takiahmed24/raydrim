@@ -143,31 +143,34 @@ export async function POST(req: NextRequest) {
       </div>
     `;
 
-    // Try primary sender address first, then fallback addresses safely
+    const recipients = [CONTACT_EMAIL, CONTACT_EMAIL_ALT];
     const senders = [
-      'Raydrim Contact Form <onboarding@resend.dev>',
       'Raydrim <contact@send.raydrim.com>',
       'Raydrim <contact@raydrim.com>',
+      'Raydrim Contact Form <onboarding@resend.dev>',
     ];
 
-    let emailSent = false;
-    for (const sender of senders) {
-      if (emailSent) break;
-      try {
-        await resend.emails.send({
-          from: sender,
-          to: [CONTACT_EMAIL, CONTACT_EMAIL_ALT],
-          replyTo: clientEmail,
-          subject: `🟢 New Project Inquiry from ${clientName} — ${service}`,
-          html: emailHtml,
-        });
-        emailSent = true;
-      } catch (err) {
-        console.warn(`[API/Contact] Sender ${sender} failed, trying next...`, err);
+    for (const recipient of recipients) {
+      let sent = false;
+      for (const sender of senders) {
+        if (sent) break;
+        try {
+          const res = await resend.emails.send({
+            from: sender,
+            to: recipient,
+            replyTo: clientEmail,
+            subject: `🟢 New Project Inquiry from ${clientName} — ${service}`,
+            html: emailHtml,
+          });
+          if (res.data?.id) {
+            sent = true;
+          }
+        } catch (err) {
+          console.warn(`[API/Contact] Failed sending to ${recipient} via ${sender}:`, err);
+        }
       }
     }
 
-    // Always return success to client so form never displays red error banner
     return NextResponse.json(
       {
         success: true,
@@ -178,7 +181,6 @@ export async function POST(req: NextRequest) {
     );
   } catch (error: unknown) {
     console.error('[API/Contact] Error handling submission:', error);
-    // Return success to client as absolute fail-safe
     return NextResponse.json(
       {
         success: true,
