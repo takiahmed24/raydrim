@@ -3,6 +3,7 @@ import { Resend } from 'resend';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 const CONTACT_EMAIL = process.env.CONTACT_EMAIL || 'muhammadtakiahmed@icloud.com';
+const CONTACT_EMAIL_ALT = process.env.CONTACT_EMAIL_ALT || 'ahmedmuhammadtaki@gmail.com';
 
 export interface ContactPayload {
   name: string;
@@ -108,7 +109,7 @@ export async function POST(req: NextRequest) {
     try {
       await resend.emails.send({
         from: 'Raydrim Contact Form <onboarding@resend.dev>',
-        to: CONTACT_EMAIL,
+        to: [CONTACT_EMAIL, CONTACT_EMAIL_ALT],
         replyTo: clientEmail,
         subject: `🟢 New Project Inquiry from ${clientName} — ${service}`,
         html: `
@@ -153,7 +154,7 @@ export async function POST(req: NextRequest) {
       console.error('[API/Contact] Failed to send owner email notification:', ownerEmailErr);
     }
 
-    // Try sending auto-reply (guarded so unverified testing domain never breaks client response)
+    // Try sending auto-reply (guarded so testing domain restrictions never fail client response)
     try {
       await resend.emails.send({
         from: 'Raydrim <onboarding@resend.dev>',
@@ -180,7 +181,7 @@ export async function POST(req: NextRequest) {
         `,
       });
     } catch (autoReplyErr) {
-      console.warn('[API/Contact] Auto-reply omitted (Resend testing domain restriction):', autoReplyErr);
+      console.warn('[API/Contact] Auto-reply omitted:', autoReplyErr);
     }
 
     return NextResponse.json(
