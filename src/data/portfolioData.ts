@@ -2,20 +2,49 @@ import { PortfolioProject } from '@/types';
 
 export const PORTFOLIO_CATEGORIES = [
   'All',
+  'Shopify & E-Commerce',
   'Web Applications',
   'Browser Games',
 ] as const;
 
 // ─── Honest Portfolio Stats ───
 export const PORTFOLIO_STATS = [
-  { value: 2, suffix: '+', label: 'Projects Shipped', description: 'Live production applications deployed and running' },
-  { value: 100, suffix: '%', label: 'Code Ownership', description: 'Every client gets full source code and repo access' },
+  { value: 3, suffix: '+', label: 'Projects Shipped', description: 'Live production applications & Shopify stores deployed' },
+  { value: 100, suffix: '%', label: 'Code Ownership', description: 'Every client gets full source code and store ownership' },
   { value: 1, prefix: '<', suffix: 's', label: 'Page Load Speed', description: 'Optimized for Core Web Vitals performance' },
   { value: 28, suffix: '', label: 'Static Pages Built', description: 'Production-optimized Next.js static generation' },
 ];
 
 // ─── Real Portfolio Projects ───
 export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
+  {
+    id: 'watchie-store',
+    title: 'Watchie — Shopify E-Commerce Store Build',
+    slug: 'watchie-shopify-store',
+    client: 'Watchie (E-Commerce Brand)',
+    category: 'Shopify & E-Commerce',
+    image: '/images/portfolio/watchie.jpg',
+    description: 'A modern, conversion-focused Shopify storefront built for timepiece collections. Features high-contrast hero visuals, mobile-optimized checkout, and streamlined catalog navigation.',
+    summary: 'Custom Shopify store design featuring responsive theme layout, product catalog setup, payment gateway configuration, and high-conversion storefront sections.',
+    tags: ['Shopify', 'Liquid', 'E-Commerce', 'UI/UX', 'CRO', 'Payment Gateway'],
+    metrics: [
+      { label: 'Catalog Setup', value: 'Complete' },
+      { label: 'Mobile Optimized', value: '100%' },
+    ],
+    featured: true,
+    problem: 'The brand required an elegant, high-impact e-commerce storefront to showcase modern timepiece collections with fast mobile browsing and a seamless checkout experience.',
+    solution: 'I designed and customized a high-converting Shopify store using liquid theme optimization, custom hero typography overlay, streamlined product navigation, and integrated payment processing.',
+    techStack: ['Shopify Storefront', 'Liquid Theme Engine', 'Responsive CSS3', 'Shopify Payments', 'CRO Pass'],
+    keyResults: [
+      'Built and launched responsive Shopify storefront at watchie-3.myshopify.com',
+      'Customized full-width hero banner and product action triggers',
+      'Configured payment gateways, shipping rules, and tax settings',
+      'Transferred full store ownership to the client upon completion',
+    ],
+    timeline: '1 Week',
+    year: '2026',
+    liveUrl: 'https://watchie-3.myshopify.com',
+  },
   {
     id: 'campus-dude',
     title: 'Campus Dude — Free Browser Games for Students',

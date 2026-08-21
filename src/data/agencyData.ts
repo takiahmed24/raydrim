@@ -87,10 +87,10 @@ export const FOUNDER_PROFILE: TeamMember = {
 // ─── Honest Home Stats ───
 export const HOME_STATS: StatItem[] = [
   {
-    value: 2,
+    value: 3,
     suffix: '+',
     label: 'Projects Shipped',
-    description: 'Live, production web applications deployed and running.',
+    description: 'Live, production web applications & Shopify stores deployed.',
   },
   {
     value: 100,
@@ -115,6 +115,23 @@ export const HOME_STATS: StatItem[] = [
 
 // ─── Real Featured Projects ───
 export const FEATURED_PROJECTS: PortfolioProject[] = [
+  {
+    id: 'watchie-store',
+    title: 'Watchie — Shopify Store Build',
+    slug: 'watchie-store',
+    client: 'Watchie (E-Commerce Brand)',
+    category: 'Shopify & E-Commerce',
+    image: '/images/portfolio/watchie.jpg',
+    description:
+      'A modern, conversion-focused Shopify storefront built for luxury & tactical timepieces — featuring mobile-optimized checkout and custom hero typography.',
+    summary: 'Custom Shopify storefront with Liquid theme optimization, responsive product layout, and streamlined checkout.',
+    tags: ['Shopify', 'Liquid', 'E-Commerce', 'UI/UX', 'Payment Gateway'],
+    metrics: [
+      { label: 'Catalog Setup', value: 'Complete' },
+      { label: 'Mobile Optimized', value: '100%' },
+    ],
+    featured: true,
+  },
   {
     id: 'campus-dude',
     title: 'Campus Dude — Browser Games Platform',
