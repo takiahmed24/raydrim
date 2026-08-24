@@ -9,6 +9,9 @@ export const metadata = {
   title: 'Raydrim — Websites, Shopify Stores & Mobile Apps Built to Order',
   description:
     'Raydrim is the independent studio of Muhammad Taki Ahmed, building fast Next.js websites, Shopify stores and mobile apps. Fixed prices, clear timelines, full source code ownership.',
+  alternates: {
+    canonical: 'https://raydrim.com',
+  },
 };
 
 export default function HomePage() {

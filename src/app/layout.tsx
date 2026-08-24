@@ -18,6 +18,9 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://raydrim.com'),
+  alternates: {
+    canonical: '/',
+  },
   title: {
     default: 'Raydrim — Full-Stack Web, Mobile & Software Development',
     template: '%s | Raydrim',
