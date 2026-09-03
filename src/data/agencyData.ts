@@ -166,6 +166,23 @@ export const FEATURED_PROJECTS: PortfolioProject[] = [
     ],
     featured: true,
   },
+  {
+    id: 'react-native-builds',
+    title: 'React Native App Builds — Mobile Storefront',
+    slug: 'react-native-app-builds',
+    client: 'Raydrim Product / Whop Store',
+    category: 'Mobile Application',
+    image: '/images/portfolio/raydrim.jpg',
+    description:
+      'A dedicated mobile engineering storefront offering production React Native iOS and Android builds with transparent 3-week delivery and instant Whop checkout.',
+    summary: 'High-performance cross-platform mobile app development platform built on Whop with instant embedded checkout.',
+    tags: ['React Native', 'Expo', 'iOS', 'Android', 'Whop Checkout', 'Mobile Architecture'],
+    metrics: [
+      { label: 'Platforms', value: 'iOS & Android' },
+      { label: 'Storefront', value: 'Live on Whop' },
+    ],
+    featured: true,
+  },
 ];
 
 // ─── Honest Milestones ───

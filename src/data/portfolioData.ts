@@ -5,11 +5,12 @@ export const PORTFOLIO_CATEGORIES = [
   'Shopify & E-Commerce',
   'Web Applications',
   'Browser Games',
+  'Mobile Applications',
 ] as const;
 
 // ─── Honest Portfolio Stats ───
 export const PORTFOLIO_STATS = [
-  { value: 3, suffix: '+', label: 'Projects Shipped', description: 'Live production applications & Shopify stores deployed' },
+  { value: 4, suffix: '+', label: 'Projects Shipped', description: 'Live production applications, mobile platforms & Shopify stores deployed' },
   { value: 100, suffix: '%', label: 'Code Ownership', description: 'Every client gets full source code and store ownership' },
   { value: 1, prefix: '<', suffix: 's', label: 'Page Load Speed', description: 'Optimized for Core Web Vitals performance' },
   { value: 28, suffix: '', label: 'Static Pages Built', description: 'Production-optimized Next.js static generation' },
@@ -100,5 +101,33 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
     timeline: '2 Weeks',
     year: '2026',
     liveUrl: 'https://raydrim.com',
+  },
+  {
+    id: 'react-native-builds',
+    title: 'React Native App Builds — Mobile Development Storefront',
+    slug: 'react-native-app-builds',
+    client: 'Raydrim Product / Whop Store',
+    category: 'Mobile Applications',
+    image: '/images/portfolio/raydrim.jpg',
+    description: 'A dedicated mobile engineering storefront built on Whop offering native iOS and Android application builds in React Native, with 3-week delivery and instant embedded checkouts.',
+    summary: 'Production cross-platform mobile app development service featuring Whop payment integration, direct client hub collaboration, and store-ready native binaries.',
+    tags: ['React Native', 'Expo', 'iOS', 'Android', 'Whop', 'Mobile App', 'Stripe'],
+    metrics: [
+      { label: 'Delivery Time', value: '3 Weeks' },
+      { label: 'Storefront', value: 'Live on Whop' },
+    ],
+    featured: true,
+    problem: 'Businesses and startups often struggle to get store-ready native iOS and Android apps without hiring multiple platform developers or paying agency premiums for wrapped webviews.',
+    solution: 'I launched a dedicated React Native development storefront on Whop providing transparent fixed-price mobile app development ($999 full build, $130 planning session) with direct collaboration via the Raydrim Client Hub.',
+    techStack: ['React Native', 'Expo Application Services', 'Whop Storefront API', 'Stripe Embedded Checkout', 'TypeScript'],
+    keyResults: [
+      'Launched standalone storefront at react-native-app-builds.whop.site',
+      'Configured 3-week delivery pipeline for dual-platform native builds',
+      'Provided 1-on-1 architecture scoping sessions via Whop checkout',
+      'Direct client communication through private Raydrim Client Hub',
+    ],
+    timeline: 'Ongoing',
+    year: '2026',
+    liveUrl: 'https://react-native-app-builds.whop.site/',
   },
 ];
