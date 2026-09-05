@@ -116,6 +116,23 @@ export const HOME_STATS: StatItem[] = [
 // ─── Real Featured Projects ───
 export const FEATURED_PROJECTS: PortfolioProject[] = [
   {
+    id: 'nyxeris-store',
+    title: 'Nyxeris — Luxury DTC E-Commerce',
+    slug: 'nyxeris-luxury-hardware-store',
+    client: 'Nyxeris (Flagship DTC Brand)',
+    category: 'Shopify & E-Commerce',
+    image: '/images/portfolio/nyxeris.jpg',
+    description:
+      'A high-performance luxury hardware storefront with 1,024 physical products, real-time Whop checkout plans, 828 verified customer reviews, and AWS Lightsail cloud deployment.',
+    summary: 'Full-stack luxury hardware storefront with 1,024 synced products, Whop payment engine, 828 verified reviews, and sub-70ms response latency.',
+    tags: ['FastAPI', 'Python', 'Whop API', 'E-Commerce', 'AWS Lightsail', 'CJ Dropshipping'],
+    metrics: [
+      { label: 'Active Catalog', value: '1,024 Items' },
+      { label: 'Verified Reviews', value: '828' },
+    ],
+    featured: true,
+  },
+  {
     id: 'watchie-store',
     title: 'Watchie — Shopify Store Build',
     slug: 'watchie-store',
@@ -210,6 +227,12 @@ export const MILESTONES: Milestone[] = [
     title: 'Launched Raydrim Agency',
     description: 'Built and deployed raydrim.com as a professional digital studio — offering web development, Shopify stores, mobile apps, and custom software.',
     badge: 'Agency Launch',
+  },
+  {
+    year: '2026',
+    title: 'Architected Nyxeris Luxury DTC Platform',
+    description: 'Engineered a 1,024-product luxury hardware storefront with live Whop payment billing, 828 verified reviews, and AWS Lightsail cloud deployment.',
+    badge: 'E-Commerce Scale',
   },
 ];
 

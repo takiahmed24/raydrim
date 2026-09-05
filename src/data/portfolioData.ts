@@ -10,7 +10,7 @@ export const PORTFOLIO_CATEGORIES = [
 
 // ─── Honest Portfolio Stats ───
 export const PORTFOLIO_STATS = [
-  { value: 4, suffix: '+', label: 'Projects Shipped', description: 'Live production applications, mobile platforms & Shopify stores deployed' },
+  { value: 5, suffix: '+', label: 'Projects Shipped', description: 'Live production applications, mobile platforms & Shopify stores deployed' },
   { value: 100, suffix: '%', label: 'Code Ownership', description: 'Every client gets full source code and store ownership' },
   { value: 1, prefix: '<', suffix: 's', label: 'Page Load Speed', description: 'Optimized for Core Web Vitals performance' },
   { value: 28, suffix: '', label: 'Static Pages Built', description: 'Production-optimized Next.js static generation' },
@@ -18,6 +18,37 @@ export const PORTFOLIO_STATS = [
 
 // ─── Real Portfolio Projects ───
 export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
+  {
+    id: 'nyxeris-store',
+    title: 'Nyxeris — Luxury DTC Hardware E-Commerce',
+    slug: 'nyxeris-luxury-hardware-store',
+    client: 'Nyxeris (Flagship DTC Brand)',
+    category: 'Shopify & E-Commerce',
+    image: '/images/portfolio/nyxeris.jpg',
+    description: 'An editorial luxury DTC e-commerce platform engineered for everyday carry hardware and luxury gear. Features 1,024 physical products, real-time Whop checkout integration, sub-70ms response latency, and automated dropshipping fulfillment.',
+    summary: 'Full-stack luxury hardware storefront with 1,024 synced products, Whop payment engine, 828 verified customer reviews, 60 FPS virtualized pagination, and production AWS Lightsail deployment.',
+    tags: ['FastAPI', 'Python', 'Whop API', 'E-Commerce', 'SQLite', 'Tailwind/CSS', 'AWS Lightsail', 'CJ Dropshipping'],
+    metrics: [
+      { label: 'Active Catalog', value: '1,024 Items' },
+      { label: 'Verified Reviews', value: '828' },
+      { label: 'Response Latency', value: '< 70ms' },
+      { label: 'Deployment', value: 'AWS Lightsail' },
+    ],
+    featured: true,
+    problem: 'Scaling a bespoke hardware and luxury DTC brand to 1,000+ catalog SKUs required instantaneous navigation without client-side lag, seamless Whop payment gateway integrations with automated receipt dispatch, and verified social proof.',
+    solution: 'I architected and deployed a production-grade FastAPI and SQLite storefront on AWS Lightsail, synchronizing 1,024 physical items with real Whop checkout plans, 828 verified customer reviews, sub-70ms dynamic rendering, and automated supplier fulfillment via CJ Dropshipping.',
+    techStack: ['FastAPI', 'Python 3.11', 'SQLite', 'Whop API v2', 'Tailwind CSS', 'AWS Lightsail', 'CJ Dropshipping Bridge', 'Jinja2'],
+    keyResults: [
+      'Scaled physical product catalog to 1,024 items across 5 core departments',
+      'Synchronized 100% of SKUs with live Whop product IDs and one-time payment plans',
+      'Integrated 828 authentic customer reviews with dynamic star distributions',
+      'Engineered 60 FPS virtualized pagination and sub-70ms server response latency',
+      'Deployed live in production on AWS Lightsail instance (http://54.251.148.171)',
+    ],
+    timeline: '2 Weeks',
+    year: '2026',
+    liveUrl: 'http://54.251.148.171',
+  },
   {
     id: 'watchie-store',
     title: 'Watchie — Shopify E-Commerce Store Build',
