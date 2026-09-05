@@ -1,10 +1,12 @@
 'use client';
 
 import React from 'react';
+import Link from 'next/link';
 import Container from '@/components/ui/Container';
 import SectionHeading from '@/components/ui/SectionHeading';
 import ScrollReveal from '@/components/ui/ScrollReveal';
 import { FEATURED_PROJECTS } from '@/data/agencyData';
+import { ArrowUpRight } from 'lucide-react';
 import styles from './FeaturedWork.module.css';
 
 export default function FeaturedWork() {
@@ -63,6 +65,24 @@ export default function FeaturedWork() {
                       ))}
                     </div>
                   )}
+
+                  <div className={styles.cardFooter}>
+                    {project.liveUrl ? (
+                      <a
+                        href={project.liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={styles.viewLiveLink}
+                      >
+                        Visit Live Platform <ArrowUpRight size={14} />
+                      </a>
+                    ) : (
+                      <span />
+                    )}
+                    <Link href="/portfolio" className={styles.viewCaseStudyLink}>
+                      Case Study →
+                    </Link>
+                  </div>
                 </div>
               </article>
             </ScrollReveal>

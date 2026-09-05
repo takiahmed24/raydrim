@@ -87,10 +87,10 @@ export const FOUNDER_PROFILE: TeamMember = {
 // ─── Honest Home Stats ───
 export const HOME_STATS: StatItem[] = [
   {
-    value: 3,
+    value: 5,
     suffix: '+',
     label: 'Projects Shipped',
-    description: 'Live, production web applications & Shopify stores deployed.',
+    description: 'Live, production web applications, mobile platforms & Shopify stores deployed.',
   },
   {
     value: 100,
@@ -131,6 +131,7 @@ export const FEATURED_PROJECTS: PortfolioProject[] = [
       { label: 'Verified Reviews', value: '828' },
     ],
     featured: true,
+    liveUrl: 'http://54.251.148.171',
   },
   {
     id: 'watchie-store',
@@ -148,6 +149,7 @@ export const FEATURED_PROJECTS: PortfolioProject[] = [
       { label: 'Store Password', value: 'watch' },
     ],
     featured: true,
+    liveUrl: 'https://watchie-3.myshopify.com',
   },
   {
     id: 'campus-dude',
@@ -165,6 +167,7 @@ export const FEATURED_PROJECTS: PortfolioProject[] = [
       { label: 'Login Required', value: 'Zero' },
     ],
     featured: true,
+    liveUrl: 'https://campusdude.site',
   },
   {
     id: 'raydrim-agency',
@@ -182,6 +185,7 @@ export const FEATURED_PROJECTS: PortfolioProject[] = [
       { label: 'Build Time', value: '<4s' },
     ],
     featured: true,
+    liveUrl: 'https://raydrim.com',
   },
   {
     id: 'react-native-builds',
@@ -199,6 +203,7 @@ export const FEATURED_PROJECTS: PortfolioProject[] = [
       { label: 'Storefront', value: 'Live on Whop' },
     ],
     featured: true,
+    liveUrl: 'https://react-native-app-builds.whop.site/',
   },
 ];
 

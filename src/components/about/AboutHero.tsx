@@ -49,7 +49,7 @@ export default function AboutHero() {
             </div>
             <div className={styles.statItem}>
               <span className={styles.statVal}>
-                <AnimatedCounter value={3} suffix="+" />
+                <AnimatedCounter value={5} suffix="+" />
               </span>
               <span className={styles.statLabel}>Projects Shipped</span>
             </div>
