@@ -69,6 +69,15 @@ const VIDEOS: ShowcaseVideo[] = [
     icon: <Bot size={18} />,
     src: '/videos/raydrim_ai_agent_showcase.mp4',
     description: 'Multi-agent orchestration, pgvector semantic search, self-correcting loops, and sub-50ms inference workflows.'
+  },
+  {
+    id: 'financial-ai',
+    title: 'Financial Intel & RAG',
+    subtitle: 'SEC EDGAR & Market Feeds',
+    badge: 'Trending Reel',
+    icon: <Cpu size={18} />,
+    src: '/videos/raydrim_financial_ai_showcase.mp4',
+    description: 'Autonomous financial intelligence engine parsing SEC EDGAR real-time filings with sub-50ms vector search.'
   }
 ];
 

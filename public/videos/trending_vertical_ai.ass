@@ -1,0 +1,22 @@
+[Script Info]
+Title: Raydrim Trending Kinetic Captions - Vertical Financial AI
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 720
+PlayResY: 1280
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: TrendingViral,Impact,58,&H00FFFFFF,&H0000FFFF,&H0008080C,&H99000000,-1,0,0,0,100,100,1.5,0,1,5.2,3.8,2,30,30,420,1
+
+[Events]
+Format: Layer, Start, End, Style, Text
+Dialogue: 0,0:00:00.15,0:00:01.50,TrendingViral,{\an2\t(0,70,\fscx122\fscy122)\t(70,140,\fscx100\fscy100)}BUILD {\c&H00FFF000&}AI AGENTS
+Dialogue: 0,0:00:01.50,0:00:02.90,TrendingViral,{\an2\t(0,70,\fscx122\fscy122)\t(70,140,\fscx100\fscy100)}REAL-TIME {\c&H0000E6FF&}FINANCIAL INTEL
+Dialogue: 0,0:00:02.90,0:00:04.30,TrendingViral,{\an2\t(0,70,\fscx122\fscy122)\t(70,140,\fscx100\fscy100)}{\c&H00FFF000&}SEC EDGAR{\c&H00FFFFFF&} + {\c&H0066FF00&}RAG
+Dialogue: 0,0:00:04.30,0:00:05.70,TrendingViral,{\an2\t(0,70,\fscx122\fscy122)\t(70,140,\fscx100\fscy100)}SUB-{\c&H0066FF00&}50MS{\c&H00FFFFFF&} INFERENCE
+Dialogue: 0,0:00:05.70,0:00:07.10,TrendingViral,{\an2\t(0,70,\fscx122\fscy122)\t(70,140,\fscx100\fscy100)}ZERO {\c&H0000E6FF&}HALLUCINATIONS
+Dialogue: 0,0:00:07.10,0:00:08.50,TrendingViral,{\an2\t(0,70,\fscx122\fscy122)\t(70,140,\fscx100\fscy100)}{\c&H00FFF000&}100%{\c&H00FFFFFF&} PRODUCTION READY
+Dialogue: 0,0:00:08.50,0:00:10.00,TrendingViral,{\an2\t(0,70,\fscx122\fscy122)\t(70,140,\fscx100\fscy100)}GET BLUEPRINTS AT {\c&H00FFF000&}RAYDRIM.COM
