@@ -10,6 +10,9 @@ import WeeklyDrops from '@/components/vault/WeeklyDrops';
 import ArchitectureGenerator from '@/components/vault/ArchitectureGenerator';
 import StackCostEstimator from '@/components/vault/StackCostEstimator';
 import CoreWebVitalsAuditor from '@/components/vault/CoreWebVitalsAuditor';
+import SecurityHeadersAuditor from '@/components/vault/SecurityHeadersAuditor';
+import RaydrimUiPlayground from '@/components/vault/RaydrimUiPlayground';
+import CodeClinicWidget from '@/components/vault/CodeClinicWidget';
 import { Sparkles, ArrowRight, ShieldCheck, Zap, Users, MessageSquare, Terminal, ExternalLink } from 'lucide-react';
 import styles from './page.module.css';
 
@@ -150,6 +153,42 @@ export default function VaultPage() {
             subtitle="Real-world code recipes to eliminate layout shifts, slash LCP times, and achieve guaranteed 100/100 Lighthouse scores."
           />
           <CoreWebVitalsAuditor />
+        </Container>
+      </section>
+
+      {/* Production Security & CSP Auditor */}
+      <section className={styles.sectionStandard}>
+        <Container size="lg">
+          <SectionHeading
+            badge="EDGE ZERO-TRUST"
+            title="Production Security & CSP Auditor"
+            subtitle="Hardened Content-Security-Policy directives, HSTS preload, and permissions headers ready to copy directly into your Next.js 16 app."
+          />
+          <SecurityHeadersAuditor />
+        </Container>
+      </section>
+
+      {/* Cybernetic Glass UI Sandbox */}
+      <section className={styles.sectionAlt}>
+        <Container size="lg">
+          <SectionHeading
+            badge="COMPONENT LAB"
+            title="Cybernetic Glass UI Sandbox"
+            subtitle="Interactive live preview of our signature dark glassmorphic components, telemetry badges, and micro-interactions."
+          />
+          <RaydrimUiPlayground />
+        </Container>
+      </section>
+
+      {/* 24-Hour Code Clinic Teardown Widget */}
+      <section className={styles.sectionStandard}>
+        <Container size="lg">
+          <SectionHeading
+            badge="FREE AUDIT"
+            title="24-Hour Code Clinic & Architecture Review"
+            subtitle="Have founder Muhammad Taki Ahmed teardown your stack, identify hidden cloud costs, and optimize your Core Web Vitals."
+          />
+          <CodeClinicWidget />
         </Container>
       </section>
 
