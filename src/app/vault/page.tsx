@@ -8,6 +8,8 @@ import ScrollReveal from '@/components/ui/ScrollReveal';
 import VideoTheater from '@/components/vault/VideoTheater';
 import WeeklyDrops from '@/components/vault/WeeklyDrops';
 import ArchitectureGenerator from '@/components/vault/ArchitectureGenerator';
+import StackCostEstimator from '@/components/vault/StackCostEstimator';
+import CoreWebVitalsAuditor from '@/components/vault/CoreWebVitalsAuditor';
 import { Sparkles, ArrowRight, ShieldCheck, Zap, Users, MessageSquare, Terminal, ExternalLink } from 'lucide-react';
 import styles from './page.module.css';
 
@@ -124,6 +126,30 @@ export default function VaultPage() {
             subtitle="Design your tech stack in seconds. Get instant folder structures, data flow specs, and sprint estimates."
           />
           <ArchitectureGenerator />
+        </Container>
+      </section>
+
+      {/* Cloud Infrastructure & Cost Estimator */}
+      <section className={styles.sectionStandard}>
+        <Container size="lg">
+          <SectionHeading
+            badge="CLOUD COST ENGINE"
+            title="Stack & Cloud Infrastructure Estimator"
+            subtitle="Model your monthly hosting and database bills before shipping. Export ready-to-run docker-compose.yml files in one click."
+          />
+          <StackCostEstimator />
+        </Container>
+      </section>
+
+      {/* Core Web Vitals & Velocity Lab */}
+      <section className={styles.sectionAlt}>
+        <Container size="lg">
+          <SectionHeading
+            badge="PERFORMANCE PROTOCOL"
+            title="Core Web Vitals & Velocity Lab"
+            subtitle="Real-world code recipes to eliminate layout shifts, slash LCP times, and achieve guaranteed 100/100 Lighthouse scores."
+          />
+          <CoreWebVitalsAuditor />
         </Container>
       </section>
 
