@@ -3,6 +3,7 @@ import Hero from '@/components/home/Hero';
 import ServicesOverview from '@/components/home/ServicesOverview';
 import Stats from '@/components/home/Stats';
 import FeaturedWork from '@/components/home/FeaturedWork';
+import VaultTeaser from '@/components/home/VaultTeaser';
 import CTABanner from '@/components/home/CTABanner';
 
 export const metadata = {
@@ -21,6 +22,7 @@ export default function HomePage() {
       <ServicesOverview />
       <Stats />
       <FeaturedWork />
+      <VaultTeaser />
       <CTABanner />
     </>
   );

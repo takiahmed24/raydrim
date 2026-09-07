@@ -1,0 +1,32 @@
+[Script Info]
+Title: Raydrim Architecture Showcase
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1280
+PlayResY: 720
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: TitleAnim,Arial,34,&H00FFFFFF,&H0000FFFF,&H000A0A0C,&HCC000000,-1,0,0,0,100,100,1.2,0,3,4,0,2,40,40,70,1
+Style: SubAnim,Arial,21,&H00E0F7FF,&H0000FFFF,&H000A0A0C,&HCC000000,0,0,0,0,100,100,0.6,0,3,3,0,2,40,40,28,1
+Style: AccentBadge,Arial,17,&H0000FFFF,&H00FFFFFF,&H000A0A0C,&H88000000,-1,0,0,0,100,100,1.5,0,3,2,0,2,40,40,118,1
+
+[Events]
+Format: Layer, Start, End, Style, Text
+Dialogue: 0,0:00:00.20,0:00:02.10,AccentBadge,{\fad(180,180)}[ SYSTEM ARCHITECTURE ]
+Dialogue: 0,0:00:00.20,0:00:02.10,TitleAnim,{\fad(200,200)\t(0,300,\fscx106\fscy106)\t(300,600,\fscx100\fscy100)}FULL-STACK SOFTWARE SYSTEMS
+Dialogue: 0,0:00:00.20,0:00:02.10,SubAnim,{\fad(200,200)}Robust Cloud Backends · Scalable APIs · Clean Code
+
+Dialogue: 0,0:00:02.10,0:00:04.50,AccentBadge,{\fad(180,180)}[ ZERO-TECH-DEBT CODEBASES ]
+Dialogue: 0,0:00:02.10,0:00:04.50,TitleAnim,{\fad(200,200)\t(0,300,\fscx106\fscy106)\t(300,600,\fscx100\fscy100)}PRODUCTION NEXT.JS & TYPESCRIPT
+Dialogue: 0,0:00:02.10,0:00:04.50,SubAnim,{\fad(200,200)}Type-Safe APIs · Server Actions · Modern Database Schemas
+
+Dialogue: 0,0:00:04.50,0:00:06.50,AccentBadge,{\fad(180,180)}[ ENTERPRISE RELIABILITY ]
+Dialogue: 0,0:00:04.50,0:00:06.50,TitleAnim,{\fad(200,200)\t(0,300,\fscx106\fscy106)\t(300,600,\fscx100\fscy100)}BUILT TO SCALE WITH ZERO DOWNTIME
+Dialogue: 0,0:00:04.50,0:00:06.50,SubAnim,{\fad(200,200)}Audited Security · Automated CI/CD Pipelines · Cloud Ready
+
+Dialogue: 0,0:00:06.50,0:00:08.00,AccentBadge,{\fad(180,180)}[ BUILD WITH RAYDRIM ]
+Dialogue: 0,0:00:06.50,0:00:08.00,TitleAnim,{\fad(200,200)\t(0,300,\fscx106\fscy106)\t(300,600,\fscx100\fscy100)}EXPLORE OUR ARCHITECTURE
+Dialogue: 0,0:00:06.50,0:00:08.00,SubAnim,{\fad(200,200)}raydrim.com · Direct Developer Access

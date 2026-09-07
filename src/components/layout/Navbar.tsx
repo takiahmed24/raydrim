@@ -14,6 +14,7 @@ const NAV_LINKS = [
   { label: 'Home', href: '/' },
   { label: 'Services', href: '/services' },
   { label: 'Portfolio', href: '/portfolio' },
+  { label: 'Vault', href: '/vault', badge: 'Free' },
   { label: 'Pricing', href: '/pricing' },
   { label: 'About', href: '/about' },
   { label: 'Blog', href: '/blog' },
@@ -62,6 +63,7 @@ export default function Navbar() {
                         className={`${styles.navLink} ${isActive ? styles.navLinkActive : ''}`}
                       >
                         {link.label}
+                        {link.badge && <span className={styles.freeBadge}>{link.badge}</span>}
                       </Link>
                     </li>
                   );

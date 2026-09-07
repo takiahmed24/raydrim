@@ -1,0 +1,27 @@
+[Script Info]
+Title: Raydrim Services Showcase
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1280
+PlayResY: 720
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Title,Arial,32,&H00FFFFFF,&H0000FFFF,&H00121214,&HCC000000,-1,0,0,0,100,100,1,0,3,4,0,2,40,40,65,1
+Style: Subtitle,Arial,20,&H00D0F5FF,&H0000FFFF,&H00121214,&HCC000000,0,0,0,0,100,100,0.5,0,3,3,0,2,40,40,25,1
+
+[Events]
+Format: Layer, Start, End, Style, Text
+Dialogue: 0,0:00:00.20,0:00:02.10,Title,{\fad(150,150)}RAYDRIM DIGITAL STUDIO
+Dialogue: 0,0:00:00.20,0:00:02.10,Subtitle,{\fad(150,150)}High-Performance Full-Stack & Mobile Engineering
+
+Dialogue: 0,0:00:02.10,0:00:04.50,Title,{\fad(150,150)}NEXT.JS 16 & REACT NATIVE
+Dialogue: 0,0:00:02.10,0:00:04.50,Subtitle,{\fad(150,150)}Native iOS & Android Apps · Sub-Second Web Platforms
+
+Dialogue: 0,0:00:04.50,0:00:06.50,Title,{\fad(150,150)}BESPOKE E-COMMERCE & SCALING
+Dialogue: 0,0:00:04.50,0:00:06.50,Subtitle,{\fad(150,150)}100% Full Source Code Ownership · Store-Ready Builds
+
+Dialogue: 0,0:00:06.50,0:00:08.00,Title,{\fad(150,150)}START YOUR BUILD TODAY
+Dialogue: 0,0:00:06.50,0:00:08.00,Subtitle,{\fad(150,150)}raydrim.com · Available on Whop

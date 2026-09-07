@@ -12,7 +12,7 @@ import styles from './MobileMenu.module.css';
 interface MobileMenuProps {
   isOpen: boolean;
   onClose: () => void;
-  links: { label: string; href: string }[];
+  links: { label: string; href: string; badge?: string }[];
 }
 
 export default function MobileMenu({ isOpen, onClose, links }: MobileMenuProps) {
@@ -64,7 +64,22 @@ export default function MobileMenu({ isOpen, onClose, links }: MobileMenuProps) 
                   className={`${styles.navLink} ${isActive ? styles.navLinkActive : ''}`}
                   onClick={onClose}
                 >
-                  <span>{link.label}</span>
+                  <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                    {link.label}
+                    {link.badge && (
+                      <span style={{
+                        fontSize: '0.65rem',
+                        fontWeight: 700,
+                        padding: '0.1rem 0.4rem',
+                        borderRadius: '999px',
+                        background: 'rgba(0, 160, 100, 0.12)',
+                        color: 'var(--accent)',
+                        border: '1px solid var(--accent)'
+                      }}>
+                        {link.badge}
+                      </span>
+                    )}
+                  </span>
                   <ArrowRight size={18} opacity={isActive ? 1 : 0.4} />
                 </Link>
               );

@@ -1,0 +1,249 @@
+.dropsSection {
+  width: 100%;
+}
+
+.dropsGrid {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 1.5rem;
+}
+
+@media (max-width: 992px) {
+  .dropsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.sidebarList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.dropTab {
+  background: rgba(18, 18, 22, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 1rem;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  backdrop-filter: blur(12px);
+}
+
+.dropTab:hover {
+  background: rgba(26, 26, 32, 0.8);
+  border-color: rgba(0, 255, 255, 0.3);
+  transform: translateX(4px);
+}
+
+.dropTabActive {
+  background: rgba(0, 255, 255, 0.08);
+  border-color: rgba(0, 255, 255, 0.5);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.12);
+}
+
+.tabTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dropTag {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #00ffff;
+  letter-spacing: 0.05em;
+}
+
+.dateTag {
+  font-size: 0.7rem;
+  color: #64748b;
+}
+
+.tabHeading {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #f1f5f9;
+  line-height: 1.35;
+  margin: 0;
+}
+
+.catTag {
+  font-size: 0.75rem;
+  color: #94a3b8;
+}
+
+.codeViewerCard {
+  padding: 1.5rem !important;
+  border-radius: 16px;
+  background: rgba(14, 14, 18, 0.8) !important;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.viewerHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 1.25rem;
+}
+
+@media (max-width: 640px) {
+  .viewerHeader {
+    flex-direction: column;
+  }
+}
+
+.headerMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.badgeRow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.activeDropBadge {
+  background: rgba(0, 255, 255, 0.15);
+  color: #00ffff;
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  letter-spacing: 0.05em;
+}
+
+.categoryBadge {
+  font-size: 0.75rem;
+  color: #94a3b8;
+}
+
+.activeTitle {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.activeDesc {
+  font-size: 0.9rem;
+  color: #cbd5e1;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.highlightList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  margin-top: 0.3rem;
+}
+
+.highlightItem {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.78rem;
+  color: #a5f3fc;
+}
+
+.zapIcon {
+  color: #00ffff;
+  flex-shrink: 0;
+}
+
+.headerActions {
+  flex-shrink: 0;
+}
+
+.copyButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(0, 255, 255, 0.12);
+  border: 1px solid rgba(0, 255, 255, 0.4);
+  color: #00ffff;
+  font-weight: 600;
+  font-size: 0.85rem;
+  padding: 0.6rem 1.1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.copyButton:hover {
+  background: rgba(0, 255, 255, 0.25);
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.25);
+}
+
+.checkIcon {
+  color: #4ade80;
+}
+
+.codeWindow {
+  background: #09090c;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+}
+
+.codeToolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.6rem 1rem;
+  background: rgba(18, 18, 22, 0.9);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.windowDots {
+  display: flex;
+  gap: 6px;
+}
+
+.dotRed, .dotYellow, .dotGreen {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+.dotRed { background: #ef4444; }
+.dotYellow { background: #f59e0b; }
+.dotGreen { background: #10b981; }
+
+.fileName {
+  font-family: monospace;
+  font-size: 0.8rem;
+  color: #cbd5e1;
+}
+
+.fileLang {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #64748b;
+  letter-spacing: 0.05em;
+}
+
+.preBlock {
+  margin: 0;
+  padding: 1.25rem;
+  overflow-x: auto;
+  font-family: 'Fira Code', 'Cascadia Code', Consolas, monospace;
+  font-size: 0.82rem;
+  line-height: 1.6;
+  color: #e2e8f0;
+  max-height: 420px;
+}

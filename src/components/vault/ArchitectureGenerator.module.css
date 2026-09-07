@@ -1,0 +1,329 @@
+.generatorSection {
+  width: 100%;
+}
+
+.configGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+@media (max-width: 992px) {
+  .configGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.controlsColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.stepGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.stepHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.stepNum {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: rgba(0, 255, 255, 0.15);
+  border: 1px solid rgba(0, 255, 255, 0.4);
+  color: #00ffff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stepTitle {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #f1f5f9;
+  margin: 0;
+}
+
+.platformGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+}
+
+@media (max-width: 480px) {
+  .platformGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.optionBtn {
+  background: rgba(18, 18, 22, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 1rem;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  backdrop-filter: blur(12px);
+}
+
+.optionBtn:hover {
+  background: rgba(26, 26, 32, 0.8);
+  border-color: rgba(0, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.optionActive {
+  background: rgba(0, 255, 255, 0.08);
+  border-color: rgba(0, 255, 255, 0.5);
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.15);
+}
+
+.optionTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.optionIcon {
+  color: #00ffff;
+}
+
+.selCheck {
+  color: #00ffff;
+}
+
+.optionName {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #f1f5f9;
+}
+
+.dbGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.dbBtn {
+  background: rgba(18, 18, 22, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  padding: 0.85rem 1rem;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  backdrop-filter: blur(12px);
+}
+
+.dbBtn:hover {
+  background: rgba(26, 26, 32, 0.8);
+  border-color: rgba(0, 255, 255, 0.3);
+}
+
+.dbHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.dbIcon {
+  color: #00ffff;
+}
+
+.dbName {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #f1f5f9;
+}
+
+.dbDesc {
+  font-size: 0.78rem;
+  color: #94a3b8;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.featuresGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.featPill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background: rgba(18, 18, 22, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+  padding: 0.45rem 0.85rem;
+  font-size: 0.78rem;
+  color: #cbd5e1;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.featPill:hover {
+  background: rgba(26, 26, 32, 0.8);
+  border-color: rgba(0, 255, 255, 0.3);
+}
+
+.featActive {
+  background: rgba(0, 255, 255, 0.12);
+  border-color: rgba(0, 255, 255, 0.45);
+  color: #ffffff;
+}
+
+.featIcon {
+  color: #00ffff;
+}
+
+.featCheck {
+  color: #00ffff;
+}
+
+.blueprintColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.blueprintCard {
+  padding: 1.5rem !important;
+  border-radius: 16px;
+  background: rgba(12, 12, 16, 0.85) !important;
+  border: 1px solid rgba(0, 255, 255, 0.25) !important;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 25px rgba(0, 255, 255, 0.08) !important;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  height: 100%;
+}
+
+.blueprintHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 1rem;
+}
+
+.blueprintTitleArea {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.liveBadge {
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: #00ffff;
+  letter-spacing: 0.08em;
+}
+
+.bpHeading {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+}
+
+.timelineBox {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  background: rgba(0, 255, 255, 0.08);
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  padding: 0.35rem 0.75rem;
+  border-radius: 8px;
+}
+
+.timeLabel {
+  font-size: 0.65rem;
+  color: #94a3b8;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.timeVal {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #00ffff;
+}
+
+.specDisplay {
+  background: #08080b;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  overflow: hidden;
+  flex-grow: 1;
+}
+
+.specPre {
+  margin: 0;
+  padding: 1.25rem;
+  font-family: 'Fira Code', Consolas, monospace;
+  font-size: 0.78rem;
+  line-height: 1.6;
+  color: #cbd5e1;
+  max-height: 380px;
+  overflow-y: auto;
+}
+
+.blueprintActions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-top: 0.5rem;
+}
+
+@media (max-width: 480px) {
+  .blueprintActions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+.copySpecBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #e2e8f0;
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 0.55rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.copySpecBtn:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(0, 255, 255, 0.3);
+  color: #00ffff;
+}
+
+.checkIcon {
+  color: #4ade80;
+}
