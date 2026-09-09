@@ -50,12 +50,12 @@ export default function VaultTeaser() {
                     Enter Dev Vault
                   </Button>
                   <Button
-                    href="https://whop.com/raydrim/"
+                    href="/vault#drops"
                     variant="secondary"
                     size="sm"
-                    icon={<ExternalLink size={16} />}
+                    icon={<Terminal size={16} />}
                   >
-                    Join on Whop
+                    View Code Drops
                   </Button>
                 </div>
               </div>
@@ -105,11 +105,11 @@ export default function VaultTeaser() {
                 </div>
                 <div className={styles.perkContent}>
                   <div className={styles.perkTop}>
-                    <span className={styles.perkBadge}>FREE COMMUNITY</span>
+                    <span className={styles.perkBadge}>FREE REVIEWS</span>
                     <h4 className={styles.perkTitle}>Community Code Clinic</h4>
                   </div>
                   <p className={styles.perkDesc}>
-                    Submit your web or mobile app in our Whop community for free architectural reviews, speed audits, and direct developer feedback.
+                    Submit your web or mobile app in our Code Clinic for free architectural reviews, speed audits, and direct developer feedback.
                   </p>
                 </div>
               </GlassCard>

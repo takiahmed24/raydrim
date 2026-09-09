@@ -22,9 +22,9 @@ export default function CustomQuoteBanner() {
                   <Zap size={14} style={{ marginRight: '4px', verticalAlign: 'middle' }} />
                   Enterprise Engineering Pods
                 </span>
-                <h2 className={styles.title}>Custom Enterprise Scope or Instant Digital Passes?</h2>
+                <h2 className={styles.title}>Custom Enterprise Scope or Dedicated Engineering?</h2>
                 <p className={styles.description}>
-                  Choose a custom contract for multi-cloud migrations, AI agent deployment, and dedicated engineering pods, or visit our instant digital storefront on Whop for pre-built Passes & Memberships.
+                  Choose a tailored contract for multi-cloud migrations, AI agent deployment, and dedicated engineering pods, or explore our curated developer resources in the Vault.
                 </p>
               </div>
 
@@ -38,12 +38,12 @@ export default function CustomQuoteBanner() {
                   Request Custom Proposal
                 </Button>
                 <Button
-                  href="https://whop.com/raydrim"
+                  href="/vault"
                   variant="secondary"
                   size="lg"
-                  icon={<ShoppingBag size={18} />}
+                  icon={<ArrowRight size={18} />}
                 >
-                  Visit Whop Marketplace 🛍️
+                  Explore Engineering Vault
                 </Button>
               </div>
             </div>

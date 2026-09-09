@@ -55,20 +55,20 @@ export default function VaultPage() {
             <ScrollReveal direction="up" delay={0.4}>
               <div className={styles.ctaGroup}>
                 <Button
-                  href="https://whop.com/raydrim/"
-                  variant="primary"
-                  size="lg"
-                  icon={<ExternalLink size={18} />}
-                >
-                  Join Free on Whop
-                </Button>
-                <Button
                   href="#drops"
-                  variant="secondary"
+                  variant="primary"
                   size="lg"
                   icon={<Terminal size={18} />}
                 >
-                  Browse Weekly Drops
+                  Explore Drops & Code
+                </Button>
+                <Button
+                  href="/contact"
+                  variant="secondary"
+                  size="lg"
+                  icon={<ArrowRight size={18} />}
+                >
+                  Request Custom Boilerplate
                 </Button>
               </div>
             </ScrollReveal>
@@ -202,20 +202,20 @@ export default function VaultPage() {
               </div>
               <div className={styles.communityText}>
                 <h2 className={styles.communityTitle}>
-                  Join the Raydrim Community on Whop
+                  Engineering Insights & Architectural Teardowns
                 </h2>
                 <p className={styles.communityDesc}>
-                  Get immediate notification of every weekly drop, submit your React/Next.js/React Native app for a free architecture teardown in our Code Clinic, and network with indie hackers and founders.
+                  Get immediate access to open-source drops, submit your React/Next.js/React Native app for a free architecture teardown in our Code Clinic, and accelerate your engineering roadmap.
                 </p>
               </div>
               <div className={styles.communityAction}>
                 <Button
-                  href="https://whop.com/raydrim/"
+                  href="/contact"
                   variant="primary"
                   size="lg"
                   icon={<ArrowRight size={20} />}
                 >
-                  Join Free Pass
+                  Request Free Teardown
                 </Button>
               </div>
             </div>

@@ -91,10 +91,10 @@ export default function TermsOfServicePage() {
                 1. Introduction & Agreement to Terms
               </h2>
               <p className={styles.text}>
-                Welcome to <strong>Raydrim</strong> (“Raydrim”, “Company”, “we”, “us”, or “our”). These Terms of Service (“Terms”) constitute a legally binding agreement between Raydrim (operated by Muhammad Taki Ahmed) and you (“Client”, “User”, or “you”), governing your access to and use of <code>raydrim.com</code> and all associated custom web development, Shopify stores, mobile applications, and software engineering services.
+                Welcome to <strong>Raydrim</strong> (“Raydrim”, “Company”, “we”, “us”, or “our”). These Terms of Service (“Terms”) constitute a legally binding agreement between Raydrim and you (“Client”, “User”, or “you”), governing your access to and use of <code>raydrim.com</code> and all associated custom web development, Shopify stores, mobile applications, and software engineering services.
               </p>
               <p className={styles.text}>
-                By placing an order, executing a Statement of Work (“SOW”), paying an invoice, or purchasing via Whop, you acknowledge that you agree to be bound by these Terms in full.
+                By placing an order, executing a Statement of Work (“SOW”), paying an invoice, or engaging our software engineering services, you acknowledge that you agree to be bound by these Terms in full.
               </p>
             </section>
 
@@ -160,7 +160,7 @@ export default function TermsOfServicePage() {
               </p>
               <ul className={styles.list}>
                 <li className={styles.listItem}>
-                  <strong>Fixed Packages:</strong> 50% deposit upfront and 50% upon final delivery, or 100% upfront via Whop checkout.
+                  <strong>Fixed Packages:</strong> 50% deposit upfront and 50% upon final milestone delivery, or full upfront settlement via formal invoice.
                 </li>
                 <li className={styles.listItem}>
                   <strong>Accepted Payment Methods:</strong> Payoneer, Wise, Cards (Visa/Mastercard), US ACH, bKash, Nagad, and Rocket.
@@ -194,10 +194,7 @@ export default function TermsOfServicePage() {
                   <strong>Monthly Care Plans:</strong> Subscriptions can be cancelled anytime; current billing months are non-prorated.
                 </li>
                 <li className={styles.listItem}>
-                  <strong>Whop Purchases:</strong> Purchases completed via Whop storefronts are also backed by Whop buyer guarantees.
-                </li>
-                <li className={styles.listItem}>
-                  <strong>Refund Requests:</strong> Submit requests to <code>ahmedmuhammadtaki@gmail.com</code>. All inquiries receive a response within 24 hours.
+                  <strong>Refund Requests:</strong> Submit requests directly to <code>contact@raydrim.com</code>. All inquiries receive a response within 24 hours.
                 </li>
               </ul>
             </section>
@@ -257,10 +254,9 @@ export default function TermsOfServicePage() {
               </p>
               <div className={styles.contactBox}>
                 <p><strong>Raydrim</strong></p>
-                <p><strong>Founder & Developer:</strong> Muhammad Taki Ahmed</p>
-                <p><strong>Email:</strong> <a href="mailto:ahmedmuhammadtaki@gmail.com" className={styles.contactLink}>ahmedmuhammadtaki@gmail.com</a></p>
-                <p><strong>Phone:</strong> +880 1873-691022</p>
-                <p><strong>Location:</strong> Dhaka-1230, Bangladesh</p>
+                <p><strong>Studio:</strong> Raydrim Engineering & Digital Solutions</p>
+                <p><strong>Email:</strong> <a href="mailto:contact@raydrim.com" className={styles.contactLink}>contact@raydrim.com</a></p>
+                <p><strong>Location:</strong> Dhaka, Bangladesh</p>
                 <p><strong>Website:</strong> <a href="https://raydrim.com" className={styles.contactLink}>https://raydrim.com</a></p>
               </div>
             </section>

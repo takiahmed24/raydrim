@@ -64,7 +64,7 @@ export const metadata: Metadata = {
     siteName: 'Raydrim',
     title: 'Raydrim — Full-Stack Web, Mobile & Software Development',
     description:
-      'High-performance Next.js web applications, Shopify e-commerce, and mobile app development by Muhammad Taki Ahmed.',
+      'High-performance Next.js web applications, Shopify e-commerce, and mobile app development by Raydrim Studio.',
     images: [
       {
         url: '/images/portfolio/raydrim.jpg',
@@ -96,29 +96,23 @@ export default function RootLayout({
     '@type': 'Organization',
     name: 'Raydrim',
     legalName: 'Raydrim Digital Agency',
-    founder: 'Muhammad Taki Ahmed',
     url: 'https://raydrim.com',
     logo: 'https://raydrim.com/logo.svg',
     description:
       'Raydrim builds high-performance web applications, mobile apps, e-commerce stores, and digital products.',
-    email: 'ahmedmuhammadtaki@gmail.com',
-    telephone: '+8801873691022',
+    email: 'contact@raydrim.com',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: 'Dhaka-1230',
       addressLocality: 'Dhaka',
-      postalCode: '1230',
       addressCountry: 'BD',
     },
     sameAs: [
       'https://x.com/takiahmed24',
-      'https://www.linkedin.com/in/muhammad-taki-ahmed-49059b426',
       'https://github.com/takiahmed24',
     ],
     contactPoint: {
       '@type': 'ContactPoint',
-      email: 'ahmedmuhammadtaki@gmail.com',
-      telephone: '+8801873691022',
+      email: 'contact@raydrim.com',
       contactType: 'customer support',
     },
   };

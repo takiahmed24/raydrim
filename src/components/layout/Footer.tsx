@@ -22,8 +22,8 @@ const QUICK_LINKS = [
   { label: 'Portfolio', href: '/portfolio' },
   { label: 'Pricing', href: '/pricing' },
   { label: 'Blog', href: '/blog' },
+  { label: 'Engineering Vault', href: '/vault' },
   { label: 'Contact Us', href: '/contact' },
-  { label: 'Whop Store 🛍️', href: 'https://whop.com/raydrim', external: true },
 ];
 
 const SERVICE_LINKS = [
@@ -86,15 +86,9 @@ export default function Footer() {
             <ul className={styles.linksList}>
               {QUICK_LINKS.map((link) => (
                 <li key={link.href}>
-                  {link.external ? (
-                    <a href={link.href} target="_blank" rel="noopener noreferrer" className={styles.link}>
-                      {link.label}
-                    </a>
-                  ) : (
-                    <Link href={link.href} className={styles.link}>
-                      {link.label}
-                    </Link>
-                  )}
+                  <Link href={link.href} className={styles.link}>
+                    {link.label}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -121,16 +115,11 @@ export default function Footer() {
             <ul className={styles.contactList}>
               <li className={styles.contactItem}>
                 <Mail size={18} className={styles.contactIcon} />
-                <span>ahmedmuhammadtaki@gmail.com</span>
-                <span>muhtakiahmed2004@gmail.com</span>
+                <span>contact@raydrim.com</span>
               </li>
               <li className={styles.contactItem}>
                 <MapPin size={18} className={styles.contactIcon} />
-                <span>Dhaka-1230, Bangladesh</span>
-              </li>
-              <li className={styles.contactItem}>
-                <Phone size={18} className={styles.contactIcon} />
-                <span>+880 1873-691022</span>
+                <span>Dhaka, Bangladesh</span>
               </li>
             </ul>
 

@@ -22,27 +22,27 @@ export default function ConsultationScheduler() {
                 Start a Conversation
               </h3>
               <p className={styles.cardDesc}>
-                Have a project idea or want to discuss requirements? Send me a message directly via WhatsApp or email and I will respond within 24 hours.
+                Have a project idea or want to discuss requirements? Reach out directly to our engineering desk and we will respond within 24 hours with a preliminary assessment.
               </p>
 
               <div className={styles.contactOptions}>
                 <Button
-                  href="https://wa.me/8801873691022?text=Hi%20Taki%2C%20I%27d%20like%20to%20discuss%20a%20project%20with%20Raydrim."
+                  href="mailto:contact@raydrim.com?subject=Project%20Inquiry%20-%20Raydrim"
                   variant="primary"
                   size="md"
                   fullWidth={true}
                   icon={<ArrowRight size={18} />}
                 >
-                  Message on WhatsApp
+                  Send Email Directly
                 </Button>
                 <Button
-                  href="mailto:ahmedmuhammadtaki@gmail.com?subject=Project%20Inquiry%20-%20Raydrim"
+                  href="/contact"
                   variant="secondary"
                   size="md"
                   fullWidth={true}
                   icon={<ArrowRight size={18} />}
                 >
-                  Send Email Directly
+                  Submit Project Scope Form
                 </Button>
               </div>
             </GlassCard>

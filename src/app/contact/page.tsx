@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Contact Us | Raydrim Digital Agency',
     description:
-      'Get in touch directly with Muhammad Taki Ahmed, founder and lead developer at Raydrim. 24-hour response guarantee.',
+      'Get in touch directly with Raydrim Studio for Next.js web applications, mobile engineering, and digital solutions. 24-hour response guarantee.',
     url: 'https://raydrim.com/contact',
     type: 'website',
   },
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Contact Us | Raydrim Digital Agency',
     description:
-      'Get in touch directly with Muhammad Taki Ahmed, founder and lead developer at Raydrim. 24-hour response guarantee.',
+      'Get in touch directly with Raydrim Studio for Next.js web applications, mobile engineering, and digital solutions. 24-hour response guarantee.',
   },
 };
 
@@ -39,13 +39,10 @@ export default function ContactPage() {
     mainEntity: {
       '@type': 'Organization',
       name: 'Raydrim Digital Agency',
-      email: 'ahmedmuhammadtaki@gmail.com',
-      telephone: '+8801873691022',
+      email: 'contact@raydrim.com',
       address: {
         '@type': 'PostalAddress',
-        streetAddress: 'Dhaka-1230',
         addressLocality: 'Dhaka',
-        postalCode: '1230',
         addressCountry: 'BD',
       },
     },

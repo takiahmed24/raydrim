@@ -114,16 +114,14 @@ export default function CodeClinicWidget() {
           <div className={styles.ticketBadge}>Audit Ticket: {ticketId}</div>
           <h4 className={styles.successTitle}>Teardown Scheduled for {appName || 'Your Project'}</h4>
           <p className={styles.successDesc}>
-            Your architecture dossier has been queued. Muhammad Taki Ahmed is reviewing the {stack} configuration against our production benchmarks for {challenge.toLowerCase()}.
+            Your architecture dossier has been queued. Our engineering team is reviewing the {stack} configuration against our production benchmarks for {challenge.toLowerCase()}.
           </p>
           <div className={styles.successActions}>
             <a
-              href="https://whop.com/raydrim/"
-              target="_blank"
-              rel="noreferrer"
-              className={styles.whopPriorityBtn}
+              href="/contact"
+              className={styles.priorityActionBtn}
             >
-              <span>Join Whop Community for Live Teardown Stream</span>
+              <span>Connect with Engineering for Live Review</span>
               <ExternalLink size={16} />
             </a>
             <button

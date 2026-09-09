@@ -457,13 +457,13 @@ off-axis to avoid plosives.
 |---|---|---|
 | Vertical master | 1080 × 1920 | Reels, Shorts, TikTok |
 | Square | 1080 × 1080 | Feed posts |
-| Landscape | 1920 × 1080 | Whop product page |
+| Landscape | 1920 × 1080 | Services landing page |
 
 H.264 MP4, 30fps, 8–10 Mbps. Every still has empty top and bottom precisely so
 the square and landscape crops work without re-rendering.
 
 If Omni Flash offers 1080p above 720p, take it — the landscape cut plays at
-desktop width on your Whop page, where upscaled 720p looks soft.
+desktop width on your website, where upscaled 720p looks soft.
 
 ---
 
@@ -487,7 +487,7 @@ team you don't have. No fabricated dashboards or interfaces. No "trusted by
 thousands."
 
 Every claim is checkable in about ninety seconds: the prices are on your
-pricing page, the delivery times are on your Whop products, Campus Dude is
+pricing page, the delivery times are on your pricing packages, Campus Dude is
 live with 22 games, raydrim.com is live and built exactly as described.
 
 For a studio nobody has heard of yet, that verifiability is the entire pitch.

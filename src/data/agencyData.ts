@@ -123,9 +123,9 @@ export const FEATURED_PROJECTS: PortfolioProject[] = [
     category: 'Shopify & E-Commerce',
     image: '/images/portfolio/nyxeris.jpg',
     description:
-      'A high-performance luxury hardware storefront with 1,024 physical products, real-time Whop checkout plans, 828 verified customer reviews, and AWS Lightsail cloud deployment.',
-    summary: 'Full-stack luxury hardware storefront with 1,024 synced products, Whop payment engine, 828 verified reviews, and sub-70ms response latency.',
-    tags: ['FastAPI', 'Python', 'Whop API', 'E-Commerce', 'AWS Lightsail', 'CJ Dropshipping'],
+      'A high-performance luxury hardware storefront with 1,024 physical products, automated checkout pipelines, 828 verified customer reviews, and AWS Lightsail cloud deployment.',
+    summary: 'Full-stack luxury hardware storefront with 1,024 synced products, custom payment engine, 828 verified reviews, and sub-70ms response latency.',
+    tags: ['FastAPI', 'Python', 'Stripe API', 'E-Commerce', 'AWS Lightsail', 'CJ Dropshipping'],
     metrics: [
       { label: 'Active Catalog', value: '1,024 Items' },
       { label: 'Verified Reviews', value: '828' },
@@ -189,21 +189,21 @@ export const FEATURED_PROJECTS: PortfolioProject[] = [
   },
   {
     id: 'react-native-builds',
-    title: 'React Native App Builds — Mobile Storefront',
+    title: 'React Native App Builds — Mobile Engineering',
     slug: 'react-native-app-builds',
-    client: 'Raydrim Product / Whop Store',
+    client: 'Raydrim Studio',
     category: 'Mobile Application',
     image: '/images/portfolio/raydrim.jpg',
     description:
-      'A dedicated mobile engineering storefront offering production React Native iOS and Android builds with transparent 3-week delivery and instant Whop checkout.',
-    summary: 'High-performance cross-platform mobile app development platform built on Whop with instant embedded checkout.',
-    tags: ['React Native', 'Expo', 'iOS', 'Android', 'Whop Checkout', 'Mobile Architecture'],
+      'A dedicated mobile engineering service offering production React Native iOS and Android builds with transparent 3-week delivery and store compliance.',
+    summary: 'High-performance cross-platform mobile app development platform delivering store-ready native binaries.',
+    tags: ['React Native', 'Expo', 'iOS', 'Android', 'TypeScript', 'Mobile Architecture'],
     metrics: [
       { label: 'Platforms', value: 'iOS & Android' },
-      { label: 'Storefront', value: 'Live on Whop' },
+      { label: 'Delivery', value: 'Store-Ready' },
     ],
     featured: true,
-    liveUrl: 'https://react-native-app-builds.whop.site/',
+    liveUrl: 'https://raydrim.com/services',
   },
 ];
 
@@ -236,7 +236,7 @@ export const MILESTONES: Milestone[] = [
   {
     year: '2026',
     title: 'Architected Nyxeris Luxury DTC Platform',
-    description: 'Engineered a 1,024-product luxury hardware storefront with live Whop payment billing, 828 verified reviews, and AWS Lightsail cloud deployment.',
+    description: 'Engineered a 1,024-product luxury hardware storefront with automated payment billing, 828 verified reviews, and AWS Lightsail cloud deployment.',
     badge: 'E-Commerce Scale',
   },
 ];
@@ -246,7 +246,7 @@ export const OFFICE_LOCATIONS: OfficeLocation[] = [
   {
     city: 'Dhaka',
     country: 'Bangladesh',
-    address: 'Dhaka-1230',
+    address: 'Dhaka, Bangladesh',
     timezone: 'BST (UTC+6)',
     coordinates: { x: 72, y: 48 },
     isHQ: true,
@@ -396,7 +396,7 @@ export const SERVICE_VERTICALS: ServiceVerticalDetail[] = [
     title: 'Digital E-Books & Publishing',
     subtitle: 'Technical E-Books, Google Play Books & Digital Products',
     description:
-      'I write, format, and publish technical e-books and digital guides to Google Play Books, Apple Books, and direct marketplaces like Whop and Gumroad.',
+      'I write, format, and publish technical e-books and digital guides to Google Play Books, Apple Books, and direct digital storefronts.',
     iconName: 'BookOpen',
     capabilities: [
       'Technical E-Book Writing & Editing',

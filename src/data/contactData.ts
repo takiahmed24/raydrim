@@ -1,13 +1,13 @@
 export const CONTACT_INFO = {
-  owner: 'Muhammad Taki Ahmed',
-  email: 'ahmedmuhammadtaki@gmail.com',
-  emailAlt: 'muhtakiahmed2004@gmail.com',
-  phone: '+880 1873-691022',
-  address: 'Dhaka-1230, Bangladesh',
-  paymentOptions: 'Payoneer, Wise, Direct Bank Transfer & bKash',
+  owner: 'Raydrim Studio',
+  email: 'contact@raydrim.com',
+  emailAlt: 'contact@raydrim.com',
+  phone: 'Available upon formal RFP request',
+  address: 'Dhaka, Bangladesh',
+  paymentOptions: 'Payoneer, Wise, Direct Bank Transfer & Cards',
   hours: 'Mon – Fri: 8:00 AM – 6:00 PM EST / BST',
   responseTime: '< 24 Hours',
-  whopStore: 'https://whop.com/raydrim',
+  vault: '/vault',
 };
 
 export const SERVICE_OPTIONS = [
@@ -37,7 +37,7 @@ export const QUICK_CONTACT_FAQS = [
   },
   {
     question: 'Can we sign an NDA before sharing sensitive details?',
-    answer: 'Yes! I respect your confidentiality. Simply request an NDA in the form message or contact me directly at ahmedmuhammadtaki@gmail.com and I will issue a standard NDA immediately.',
+    answer: 'Yes! I respect your confidentiality. Simply request an NDA in the form message or contact me directly at contact@raydrim.com and I will issue a standard NDA immediately.',
   },
   {
     question: 'Do you work with non-technical founders?',

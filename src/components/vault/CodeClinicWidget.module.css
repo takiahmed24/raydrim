@@ -225,7 +225,7 @@
   justify-content: center;
 }
 
-.whopPriorityBtn {
+.priorityActionBtn {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
@@ -239,7 +239,7 @@
   transition: all 0.2s ease;
 }
 
-.whopPriorityBtn:hover {
+.priorityActionBtn:hover {
   background: #38bdf8;
   transform: translateY(-2px);
 }

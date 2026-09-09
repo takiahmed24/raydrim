@@ -191,8 +191,8 @@ export async function POST(req: NextRequest) {
                   <li>You will receive a preliminary technical assessment and cost estimate</li>
                 </ul>
               </div>
-              <p style="font-size: 14px; color: #666;">If you have any urgent details to add, reply directly to this email or reach me at <a href="mailto:ahmedmuhammadtaki@gmail.com" style="color: #0a6b3a;">ahmedmuhammadtaki@gmail.com</a>.</p>
-              <p style="margin-top: 24px; font-size: 14px;">Best regards,<br/><strong>Muhammad Taki Ahmed</strong><br/>Founder &amp; Developer, Raydrim</p>
+              <p style="font-size: 14px; color: #666;">If you have any urgent details to add, reply directly to this email or reach our desk at <a href="mailto:contact@raydrim.com" style="color: #0a6b3a;">contact@raydrim.com</a>.</p>
+              <p style="margin-top: 24px; font-size: 14px;">Best regards,<br/><strong>Raydrim Engineering Team</strong><br/>Raydrim Studio</p>
             </div>
           </div>
         `,

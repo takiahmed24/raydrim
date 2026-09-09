@@ -451,12 +451,12 @@ export default function StackCostEstimator() {
         </div>
         <div className={styles.footerButtons}>
           <Button
-            href="https://whop.com/raydrim/"
+            href="#drops"
             variant="secondary"
             size="sm"
-            icon={<ExternalLink size={15} />}
+            icon={<ArrowRight size={15} />}
           >
-            Get Free Boilerplates on Whop
+            Explore Vault Boilerplates
           </Button>
           <Button
             href="/contact"

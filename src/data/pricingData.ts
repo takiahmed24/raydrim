@@ -3,7 +3,6 @@ import { PricingTier } from '@/types';
 export const PRICING_TIERS: PricingTier[] = [
   {
     id: 'starter-site',
-    whopPlanId: 'plan_xH1Qhgqu2dQjS',
     name: 'Starter Site',
     price: '$149',
     period: 'one-time / project',
@@ -22,7 +21,6 @@ export const PRICING_TIERS: PricingTier[] = [
   },
   {
     id: 'business-site',
-    whopPlanId: 'plan_qvX8VgKjnZrkE',
     name: 'Business Website',
     price: '$449',
     period: 'one-time / project',
@@ -41,7 +39,6 @@ export const PRICING_TIERS: PricingTier[] = [
   },
   {
     id: 'shopify-launch',
-    whopPlanId: 'plan_fH1YRCj3k1Ak2',
     name: 'Shopify Launch',
     price: '$249',
     period: 'one-time / project',
@@ -60,7 +57,6 @@ export const PRICING_TIERS: PricingTier[] = [
   },
   {
     id: 'shopify-growth',
-    whopPlanId: 'plan_aPR516B4gx65m',
     name: 'Shopify Growth',
     price: '$549',
     period: 'one-time / project',
@@ -80,7 +76,6 @@ export const PRICING_TIERS: PricingTier[] = [
   },
   {
     id: 'shopify-prestige',
-    whopPlanId: 'plan_r8eroaYMbcvJh',
     name: 'Shopify Prestige',
     price: '$1,295',
     period: 'one-time / project',
@@ -99,7 +94,6 @@ export const PRICING_TIERS: PricingTier[] = [
   },
   {
     id: 'app-converter',
-    whopPlanId: 'plan_tBbLMBeZM2Lk4',
     name: 'Website to App (WebView)',
     price: '$299',
     period: 'one-time / project',
@@ -118,7 +112,6 @@ export const PRICING_TIERS: PricingTier[] = [
   },
   {
     id: 'app-planning-session',
-    whopPlanId: 'plan_pBVPZkpvHgZ6M',
     name: 'Mobile App Planning Session',
     price: '$130',
     period: 'one-time / session',
@@ -138,7 +131,6 @@ export const PRICING_TIERS: PricingTier[] = [
   },
   {
     id: 'cross-platform-app',
-    whopPlanId: 'plan_mv5KyZPPygZUq',
     name: 'Cross-Platform Mobile App',
     price: '$999',
     period: 'one-time / project',
@@ -158,7 +150,6 @@ export const PRICING_TIERS: PricingTier[] = [
   },
   {
     id: 'custom-app',
-    whopPlanId: 'plan_wus94g49qvUV7',
     name: 'Custom Web App / Custom Scope',
     price: 'from $2,499',
     period: 'bespoke project',
@@ -211,7 +202,7 @@ export const FEATURE_MATRIX: MatrixGroup[] = [
 export const PRICING_FAQS = [
   {
     question: 'How do payment terms and supported payment methods work?',
-    answer: 'I support flexible global and local payment options! You can pay via Payoneer, Wise, Credit/Debit Cards (Visa, Mastercard, AMEX), US Direct ACH Bank Transfer, or local Bangladesh options including bKash, Nagad, and Rocket. For fixed packages, 50% upfront and 50% upon final delivery is standard, or 100% upfront via Whop checkout.',
+    answer: 'I support flexible global and local payment options! You can pay via Payoneer, Wise, Credit/Debit Cards (Visa, Mastercard, AMEX), US Direct ACH Bank Transfer, or local Bangladesh options including bKash, Nagad, and Rocket. For fixed packages, 50% upfront and 50% upon final delivery is standard.',
   },
   {
     question: 'Do I get full ownership of the source code?',

@@ -45,26 +45,19 @@ export default function ContactInfoCards() {
         </GlassCard>
       </ScrollReveal>
 
-      {/* Card 2: Phone */}
+      {/* Card 2: Project Scoping */}
       <ScrollReveal direction="up" delay={0.2}>
         <GlassCard className={styles.card} hoverEffect={true}>
           <div className={styles.iconBox}>
-            <Phone size={22} />
+            <ShieldCheck size={22} />
           </div>
-          <h3 className={styles.title}>Telephone & WhatsApp</h3>
-          <p className={styles.subtitle}>Direct Mobile Line</p>
-          <div className={styles.mainValue}>{CONTACT_INFO.phone}</div>
+          <h3 className={styles.title}>Project Scoping</h3>
+          <p className={styles.subtitle}>Direct Consultation Desk</p>
+          <div className={styles.mainValue}>Fast Technical Scoping & Architecture</div>
 
           <div className={styles.actionRow}>
-            <button
-              className={styles.copyButton}
-              onClick={() => copyToClipboard(CONTACT_INFO.phone, 'phone')}
-            >
-              {copiedField === 'phone' ? <Check size={14} /> : <Copy size={14} />}
-              <span>{copiedField === 'phone' ? 'Copied' : 'Copy Number'}</span>
-            </button>
-            <a href={`tel:${CONTACT_INFO.phone.replace(/[\s-]/g, '')}`} className={styles.directLink}>
-              <span>Call Now</span>
+            <a href="mailto:contact@raydrim.com?subject=Technical%20Consultation%20Request" className={styles.directLink}>
+              <span>Request Scoping Session</span>
               <ExternalLink size={12} />
             </a>
           </div>
@@ -78,7 +71,7 @@ export default function ContactInfoCards() {
             <MapPin size={22} />
           </div>
           <h3 className={styles.title}>Studio Location & Payments</h3>
-          <p className={styles.subtitle}>Owner: {CONTACT_INFO.owner}</p>
+          <p className={styles.subtitle}>Studio: {CONTACT_INFO.owner}</p>
           <div className={styles.mainValue}>
             <div className={styles.addressBlock}>
               <strong>Location:</strong> {CONTACT_INFO.address}
@@ -91,7 +84,7 @@ export default function ContactInfoCards() {
           <div className={styles.actionRow}>
             <span className={styles.locationTag}>Dhaka, Bangladesh</span>
             <a
-              href="https://maps.google.com/?q=Dhaka-1230,Bangladesh"
+              href="https://maps.google.com/?q=Dhaka,Bangladesh"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.directLink}
