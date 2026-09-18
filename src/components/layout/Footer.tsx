@@ -149,6 +149,23 @@ export default function Footer() {
           </div>
         </div>
 
+        {/* Brand Ecosystem & Network */}
+        <div style={{ borderTop: '1px solid rgba(255, 255, 255, 0.08)', marginTop: '2.5rem', paddingTop: '1.5rem', display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', gap: '1rem' }}>
+          <div style={{ fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--slate-400)' }}>
+            Raydrim Venture Ecosystem
+          </div>
+          <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
+            <a href="https://nyxeris.store" target="_blank" rel="noopener noreferrer" style={{ fontSize: '0.85rem', color: 'var(--slate-300)', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '6px' }}>
+              <span>✦ Nyxeris</span>
+              <span style={{ fontSize: '0.75rem', color: 'var(--slate-500)' }}>(Curated Modern Hardware & Desk Tech)</span>
+            </a>
+            <a href="https://campusdude.site" target="_blank" rel="noopener noreferrer" style={{ fontSize: '0.85rem', color: 'var(--slate-300)', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '6px' }}>
+              <span>✦ CampusDude</span>
+              <span style={{ fontSize: '0.75rem', color: 'var(--slate-500)' }}>(Distraction-Free Student Gaming)</span>
+            </a>
+          </div>
+        </div>
+
         {/* Bottom Bar */}
         <div className={styles.bottomBar}>
           <p>© {new Date().getFullYear()} Raydrim Digital Agency. All rights reserved.</p>
@@ -162,6 +179,9 @@ export default function Footer() {
             <Link href="/security" className={styles.bottomLink}>
               Security
             </Link>
+            <a href="/llms.txt" target="_blank" className={styles.bottomLink}>
+              llms.txt
+            </a>
           </div>
         </div>
       </Container>

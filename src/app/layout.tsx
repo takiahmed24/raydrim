@@ -109,6 +109,8 @@ export default function RootLayout({
     sameAs: [
       'https://x.com/takiahmed24',
       'https://github.com/takiahmed24',
+      'https://nyxeris.store',
+      'https://campusdude.site',
     ],
     contactPoint: {
       '@type': 'ContactPoint',
