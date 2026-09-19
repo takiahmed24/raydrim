@@ -1,0 +1,16 @@
+{
+  "name": "Raydrim — Full-Stack Web & Software Development",
+  "short_name": "Raydrim",
+  "description": "Raydrim builds production-grade web applications, Shopify e-commerce stores, mobile apps, and custom software.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0a",
+  "theme_color": "#10b461",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
